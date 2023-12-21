@@ -1,0 +1,130 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test HAVE_SANITIZERS
+-- Performing Test HAVE_SANITIZERS - Success
+-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_index_cpp: 1.1.0 (/opt/ros/foxy/share/ament_index_cpp/cmake)
+-- Found pluginlib: 2.5.4 (/opt/ros/foxy/share/pluginlib/cmake)
+-- Found rosbag2_storage: 0.3.11 (/home/administrator/husky_ws2/src/install/rosbag2_storage/share/rosbag2_storage/cmake)
+-- Setting yaml-cpp_DIR to: '/opt/ros/foxy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/lib/cmake/yaml-cpp'
+-- Found rosidl_runtime_c: 1.2.1 (/opt/ros/foxy/share/rosidl_runtime_c/cmake)
+-- Found rosidl_runtime_cpp: 1.2.1 (/opt/ros/foxy/share/rosidl_runtime_cpp/cmake)
+-- Found rosidl_typesupport_cpp: 1.0.2 (/opt/ros/foxy/share/rosidl_typesupport_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found FastRTPS: /opt/ros/foxy/include  
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found ament_cmake_gmock: 0.9.9 (/opt/ros/foxy/share/ament_cmake_gmock/cmake)
+-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Found test_msgs: 1.0.0 (/opt/ros/foxy/share/test_msgs/cmake)
+-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found gmock sources under '/opt/ros/foxy/src/gmock_vendor': C++ tests using 'Google Mock' will be built
+-- Found ament_cmake_gtest: 0.9.9 (/opt/ros/foxy/share/ament_cmake_gtest/cmake)
+-- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/administrator/husky_ws2/src/rosbag2/rosbag2_cpp/include>;/home/administrator/husky_ws2/src/rosbag2/rosbag2_cpp/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/administrator/husky_ws2/src/build/rosbag2_cpp
+[35m[1mScanning dependencies of target gmock[0m
+[  2%] [32mBuilding CXX object gmock/CMakeFiles/gmock.dir/opt/ros/foxy/src/gtest_vendor/src/gtest-all.cc.o[0m
+[  5%] [32mBuilding CXX object gmock/CMakeFiles/gmock.dir/src/gmock-all.cc.o[0m
+[  8%] [32m[1mLinking CXX static library libgmock.a[0m
+[  8%] Built target gmock
+[35m[1mScanning dependencies of target gmock_main[0m
+[ 11%] [32mBuilding CXX object gmock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o[0m
+[ 13%] [32m[1mLinking CXX static library libgmock_main.a[0m
+[ 13%] Built target gmock_main
+[35m[1mScanning dependencies of target rosbag2_cpp[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/rosbag2_cpp.dir/src/rosbag2_cpp/converter.cpp.o[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/rosbag2_cpp.dir/src/rosbag2_cpp/typesupport_helpers.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/rosbag2_cpp.dir/src/rosbag2_cpp/writer.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/rosbag2_cpp.dir/src/rosbag2_cpp/writers/sequential_writer.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/rosbag2_cpp.dir/src/rosbag2_cpp/types/introspection_message.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/rosbag2_cpp.dir/src/rosbag2_cpp/serialization_format_converter_factory.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/rosbag2_cpp.dir/src/rosbag2_cpp/readers/sequential_reader.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/rosbag2_cpp.dir/src/rosbag2_cpp/reader.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/rosbag2_cpp.dir/src/rosbag2_cpp/info.cpp.o[0m
+[ 41%] [32m[1mLinking CXX shared library librosbag2_cpp.so[0m
+[ 41%] Built target rosbag2_cpp
+[35m[1mScanning dependencies of target test_ros2_message[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/test_ros2_message.dir/test/rosbag2_cpp/types/test_ros2_message.cpp.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/test_ros2_message.dir/src/rosbag2_cpp/typesupport_helpers.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/test_ros2_message.dir/src/rosbag2_cpp/types/introspection_message.cpp.o[0m
+[ 52%] [32m[1mLinking CXX executable test_ros2_message[0m
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__uint32__Sequence__copy'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__U16String__Sequence__copy'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__octet__Sequence__copy'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__uint64__Sequence__copy'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `builtin_interfaces__msg__Duration__copy'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `builtin_interfaces__msg__Time__are_equal'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__uint8__Sequence__are_equal'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__boolean__Sequence__are_equal'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__int64__Sequence__copy'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `unique_identifier_msgs__msg__UUID__are_equal'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `unique_identifier_msgs__msg__UUID__copy'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__float__Sequence__copy'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__String__are_equal'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__double__Sequence__are_equal'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__String__Sequence__are_equal'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `builtin_interfaces__msg__Duration__are_equal'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__int8__Sequence__are_equal'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__int16__Sequence__are_equal'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__uint16__Sequence__copy'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__int8__Sequence__copy'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__String__Sequence__copy'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__float__Sequence__are_equal'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__uint32__Sequence__are_equal'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__uint16__Sequence__are_equal'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__uint64__Sequence__are_equal'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__boolean__Sequence__copy'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__int16__Sequence__copy'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__octet__Sequence__are_equal'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__int64__Sequence__are_equal'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__int32__Sequence__are_equal'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__String__copy'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__uint8__Sequence__copy'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__int32__Sequence__copy'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__U16String__Sequence__are_equal'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `builtin_interfaces__msg__Time__copy'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__double__Sequence__copy'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__U16String__copy'
+/usr/bin/ld: /opt/ros/foxy/lib/libtest_msgs__rosidl_generator_c.so: undefined reference to `rosidl_runtime_c__U16String__are_equal'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/test_ros2_message.dir/build.make:149: test_ros2_message] Error 1
+make[1]: *** [CMakeFiles/Makefile2:281: CMakeFiles/test_ros2_message.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

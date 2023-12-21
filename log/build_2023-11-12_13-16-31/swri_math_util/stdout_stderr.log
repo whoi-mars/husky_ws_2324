@@ -1,0 +1,101 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found FastRTPS: /opt/ros/foxy/include  
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: random 
+-- Found ament_cmake_gtest: 0.9.9 (/opt/ros/foxy/share/ament_cmake_gtest/cmake)
+-- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Check if compiler accepts -pthread
+-- Check if compiler accepts -pthread - yes
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/administrator/husky_ws2/src/build/swri_math_util
+[35m[1mScanning dependencies of target swri_math_util[0m
+[  6%] [32mBuilding CXX object CMakeFiles/swri_math_util.dir/src/math_util.cpp.o[0m
+[ 13%] [32mBuilding CXX object CMakeFiles/swri_math_util.dir/src/interpolation_1d.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/swri_math_util.dir/src/random.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/swri_math_util.dir/src/trig_util.cpp.o[0m
+[ 33%] [32m[1mLinking CXX shared library libswri_math_util.so[0m
+[ 33%] Built target swri_math_util
+[35m[1mScanning dependencies of target gtest[0m
+[ 40%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[ 46%] [32m[1mLinking CXX static library libgtest.a[0m
+[ 46%] Built target gtest
+[35m[1mScanning dependencies of target gtest_main[0m
+[ 53%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[ 60%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[ 60%] Built target gtest_main
+[35m[1mScanning dependencies of target test_random[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/test_random.dir/test/test_random.cpp.o[0m
+[ 73%] [32m[1mLinking CXX executable test_random[0m
+[ 73%] Built target test_random
+[35m[1mScanning dependencies of target test_trig_util[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/test_trig_util.dir/test/test_trig_util.cpp.o[0m
+[ 86%] [32m[1mLinking CXX executable test_trig_util[0m
+[ 86%] Built target test_trig_util
+[35m[1mScanning dependencies of target test_math_util[0m
+[ 93%] [32mBuilding CXX object CMakeFiles/test_math_util.dir/test/test_math_util.cpp.o[0m
+[100%] [32m[1mLinking CXX executable test_math_util[0m
+[100%] Built target test_math_util
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/include/swri_math_util/constants.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/include/swri_math_util/generic_ring_buffer.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/include/swri_math_util/interpolation_1d.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/include/swri_math_util/math_util.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/include/swri_math_util/random.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/include/swri_math_util/ransac.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/include/swri_math_util/stat_buffer.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/include/swri_math_util/trig_util.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/lib/libswri_math_util.so
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/swri_math_util/environment/library_path.sh
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/swri_math_util/environment/library_path.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/ament_index/resource_index/package_run_dependencies/swri_math_util
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/ament_index/resource_index/parent_prefix_path/swri_math_util
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/swri_math_util/environment/ament_prefix_path.sh
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/swri_math_util/environment/ament_prefix_path.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/swri_math_util/environment/path.sh
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/swri_math_util/environment/path.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/swri_math_util/local_setup.bash
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/swri_math_util/local_setup.sh
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/swri_math_util/local_setup.zsh
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/swri_math_util/local_setup.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/swri_math_util/package.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/ament_index/resource_index/packages/swri_math_util
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/swri_math_util/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/swri_math_util/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/swri_math_util/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/swri_math_util/cmake/swri_math_utilConfig.cmake
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/swri_math_util/cmake/swri_math_utilConfig-version.cmake
+-- Symlinking: /home/administrator/husky_ws2/src/install/swri_math_util/share/swri_math_util/package.xml

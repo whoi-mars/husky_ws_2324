@@ -1,0 +1,1 @@
+local_nav_pkg/PenguinInference[] penguin_inference

@@ -1,0 +1,493 @@
+[0.050s] Invoking command in '/home/administrator/husky_ws2/src/build/zed_interfaces': CMAKE_PREFIX_PATH=/home/administrator/husky_ws2/install/zed_ros2:/home/administrator/husky_ws2/install/zed_display_rviz2:/home/administrator/husky_ws2/install/zed_wrapper:/home/administrator/husky_ws2/install/zed_tutorial_video:/home/administrator/husky_ws2/install/zed_tutorial_pos_tracking:/home/administrator/husky_ws2/install/zed_tutorial_depth:/home/administrator/husky_ws2/install/zed_rgb_convert:/home/administrator/husky_ws2/install/zed_components:/home/administrator/husky_ws2/install/rviz_plugin_zed_od:/home/administrator/husky_ws2/install/zed_interfaces:/home/administrator/husky_ws2/install/velodyne_simulator:/home/administrator/husky_ws2/install/velodyne_gazebo_plugins:/home/administrator/husky_ws2/install/husky_desktop:/home/administrator/husky_ws2/install/husky_viz:/home/administrator/husky_ws2/install/husky_simulator:/home/administrator/husky_ws2/install/husky_robot:/home/administrator/husky_ws2/install/husky_gazebo:/home/administrator/husky_ws2/install/husky_bringup:/home/administrator/husky_ws2/install/husky_control:/home/administrator/husky_ws2/install/husky_description:/home/administrator/husky_ws2/install/velodyne_description:/home/administrator/husky_ws2/install/um7:/home/administrator/husky_ws2/install/swri_route_util:/home/administrator/husky_ws2/install/swri_transform_util:/home/administrator/husky_ws2/install/swri_system_util:/home/administrator/husky_ws2/install/swri_serial_util:/home/administrator/husky_ws2/install/swri_image_util:/home/administrator/husky_ws2/install/swri_roscpp:/home/administrator/husky_ws2/install/swri_prefix_tools:/home/administrator/husky_ws2/install/swri_opencv_util:/home/administrator/husky_ws2/install/swri_math_util:/home/administrator/husky_ws2/install/swri_geometry_util:/home/administrator/husky_ws2/install/swri_dbw_interface:/home/administrator/husky_ws2/install/swri_console_util:/home/administrator/husky_ws2/install/nav2_system_tests:/home/administrator/husky_ws2/install/nav2_bringup:/home/administrator/husky_ws2/install/navigation2:/home/administrator/husky_ws2/install/smac_planner:/home/administrator/husky_ws2/install/pointcloud_to_laserscan:/home/administrator/husky_ws2/install/nav2_dwb_controller:/home/administrator/husky_ws2/install/nav2_controller:/home/administrator/husky_ws2/install/dwb_plugins:/home/administrator/husky_ws2/install/dwb_critics:/home/administrator/husky_ws2/install/dwb_core:/home/administrator/husky_ws2/install/nav_2d_utils:/home/administrator/husky_ws2/install/dwb_msgs:/home/administrator/husky_ws2/install/nav_2d_msgs:/home/administrator/husky_ws2/install/nav2_waypoint_follower:/home/administrator/husky_ws2/install/nav2_regulated_pure_pursuit_controller:/home/administrator/husky_ws2/install/nav2_recoveries:/home/administrator/husky_ws2/install/nav2_planner:/home/administrator/husky_ws2/install/nav2_navfn_planner:/home/administrator/husky_ws2/install/nav2_core:/home/administrator/husky_ws2/install/costmap_queue:/home/administrator/husky_ws2/install/nav2_costmap_2d:/home/administrator/husky_ws2/install/nav2_voxel_grid:/home/administrator/husky_ws2/install/nav2_rviz_plugins:/home/administrator/husky_ws2/install/nav2_map_server:/home/administrator/husky_ws2/install/nav2_lifecycle_manager:/home/administrator/husky_ws2/install/nav2_bt_navigator:/home/administrator/husky_ws2/install/nav2_behavior_tree:/home/administrator/husky_ws2/install/nav2_amcl:/home/administrator/husky_ws2/install/nav2_util:/home/administrator/husky_ws2/install/nav2_msgs:/home/administrator/husky_ws2/install/nav2_common:/home/administrator/husky_ws2/install/microstrain_inertial_examples:/home/administrator/husky_ws2/install/microstrain_inertial_driver:/home/administrator/husky_ws2/install/microstrain_inertial_msgs:/home/administrator/husky_ws2/install/local_nav_pkg:/home/administrator/husky_ws2/install/image_common:/home/administrator/husky_ws2/install/image_transport:/home/administrator/husky_ws2/install/husky_base:/home/administrator/husky_ws2/install/husky_msgs:/home/administrator/husky_ws2/install/hector_gazebo:/home/administrator/husky_ws2/install/hector_gazebo_worlds:/home/administrator/husky_ws2/install/hector_gazebo_plugins:/home/administrator/husky_ws2/install/custom_nav_stack_pkg:/home/administrator/husky_ws2/install/camera_info_manager:/home/administrator/husky_ws2/install/camera_calibration_parsers:/home/administrator/richo_theta_ws/install/penguin_detection:/home/administrator/husky_ws2/install/nav2_gazebo_spawner:/home/administrator/husky_ws2/install/microstrain_inertial_rqt:/home/administrator/husky_ws2/install/gps_goal:/opt/ros/foxy:/opt/ros/noetic /usr/bin/cmake /home/administrator/husky_ws2/src/zed-ros2-wrapper/zed-ros2-interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/administrator/husky_ws2/src/install/zed_interfaces
+[0.492s] -- The C compiler identification is GNU 9.4.0
+[0.492s] -- The CXX compiler identification is GNU 9.4.0
+[0.493s] -- Check for working C compiler: /usr/bin/cc
+[0.493s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.494s] -- Detecting C compiler ABI info
+[0.599s] -- Detecting C compiler ABI info - done
+[0.608s] -- Detecting C compile features
+[0.608s] -- Detecting C compile features - done
+[0.610s] -- Check for working CXX compiler: /usr/bin/c++
+[0.729s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.730s] -- Detecting CXX compiler ABI info
+[0.880s] -- Detecting CXX compiler ABI info - done
+[0.890s] -- Detecting CXX compile features
+[0.890s] -- Detecting CXX compile features - done
+[0.897s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.949s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.949s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.234s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.326s] -- Found builtin_interfaces: 1.0.0 (/opt/ros/foxy/share/builtin_interfaces/cmake)
+[1.391s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.413s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.660s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.721s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.857s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.902s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.932s] -- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)
+[1.955s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.999s] -- Found shape_msgs: 2.0.5 (/opt/ros/foxy/share/shape_msgs/cmake)
+[2.107s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[2.431s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[2.796s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.975s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.053s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[3.055s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[3.096s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[3.096s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.096s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[3.096s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[3.127s] -- Found PythonExtra: .so  
+[3.374s] -- Configuring done
+[3.536s] -- Generating done
+[3.539s] -- Build files have been written to: /home/administrator/husky_ws2/src/build/zed_interfaces
+[3.642s] Invoked command in '/home/administrator/husky_ws2/src/build/zed_interfaces' returned '0': CMAKE_PREFIX_PATH=/home/administrator/husky_ws2/install/zed_ros2:/home/administrator/husky_ws2/install/zed_display_rviz2:/home/administrator/husky_ws2/install/zed_wrapper:/home/administrator/husky_ws2/install/zed_tutorial_video:/home/administrator/husky_ws2/install/zed_tutorial_pos_tracking:/home/administrator/husky_ws2/install/zed_tutorial_depth:/home/administrator/husky_ws2/install/zed_rgb_convert:/home/administrator/husky_ws2/install/zed_components:/home/administrator/husky_ws2/install/rviz_plugin_zed_od:/home/administrator/husky_ws2/install/zed_interfaces:/home/administrator/husky_ws2/install/velodyne_simulator:/home/administrator/husky_ws2/install/velodyne_gazebo_plugins:/home/administrator/husky_ws2/install/husky_desktop:/home/administrator/husky_ws2/install/husky_viz:/home/administrator/husky_ws2/install/husky_simulator:/home/administrator/husky_ws2/install/husky_robot:/home/administrator/husky_ws2/install/husky_gazebo:/home/administrator/husky_ws2/install/husky_bringup:/home/administrator/husky_ws2/install/husky_control:/home/administrator/husky_ws2/install/husky_description:/home/administrator/husky_ws2/install/velodyne_description:/home/administrator/husky_ws2/install/um7:/home/administrator/husky_ws2/install/swri_route_util:/home/administrator/husky_ws2/install/swri_transform_util:/home/administrator/husky_ws2/install/swri_system_util:/home/administrator/husky_ws2/install/swri_serial_util:/home/administrator/husky_ws2/install/swri_image_util:/home/administrator/husky_ws2/install/swri_roscpp:/home/administrator/husky_ws2/install/swri_prefix_tools:/home/administrator/husky_ws2/install/swri_opencv_util:/home/administrator/husky_ws2/install/swri_math_util:/home/administrator/husky_ws2/install/swri_geometry_util:/home/administrator/husky_ws2/install/swri_dbw_interface:/home/administrator/husky_ws2/install/swri_console_util:/home/administrator/husky_ws2/install/nav2_system_tests:/home/administrator/husky_ws2/install/nav2_bringup:/home/administrator/husky_ws2/install/navigation2:/home/administrator/husky_ws2/install/smac_planner:/home/administrator/husky_ws2/install/pointcloud_to_laserscan:/home/administrator/husky_ws2/install/nav2_dwb_controller:/home/administrator/husky_ws2/install/nav2_controller:/home/administrator/husky_ws2/install/dwb_plugins:/home/administrator/husky_ws2/install/dwb_critics:/home/administrator/husky_ws2/install/dwb_core:/home/administrator/husky_ws2/install/nav_2d_utils:/home/administrator/husky_ws2/install/dwb_msgs:/home/administrator/husky_ws2/install/nav_2d_msgs:/home/administrator/husky_ws2/install/nav2_waypoint_follower:/home/administrator/husky_ws2/install/nav2_regulated_pure_pursuit_controller:/home/administrator/husky_ws2/install/nav2_recoveries:/home/administrator/husky_ws2/install/nav2_planner:/home/administrator/husky_ws2/install/nav2_navfn_planner:/home/administrator/husky_ws2/install/nav2_core:/home/administrator/husky_ws2/install/costmap_queue:/home/administrator/husky_ws2/install/nav2_costmap_2d:/home/administrator/husky_ws2/install/nav2_voxel_grid:/home/administrator/husky_ws2/install/nav2_rviz_plugins:/home/administrator/husky_ws2/install/nav2_map_server:/home/administrator/husky_ws2/install/nav2_lifecycle_manager:/home/administrator/husky_ws2/install/nav2_bt_navigator:/home/administrator/husky_ws2/install/nav2_behavior_tree:/home/administrator/husky_ws2/install/nav2_amcl:/home/administrator/husky_ws2/install/nav2_util:/home/administrator/husky_ws2/install/nav2_msgs:/home/administrator/husky_ws2/install/nav2_common:/home/administrator/husky_ws2/install/microstrain_inertial_examples:/home/administrator/husky_ws2/install/microstrain_inertial_driver:/home/administrator/husky_ws2/install/microstrain_inertial_msgs:/home/administrator/husky_ws2/install/local_nav_pkg:/home/administrator/husky_ws2/install/image_common:/home/administrator/husky_ws2/install/image_transport:/home/administrator/husky_ws2/install/husky_base:/home/administrator/husky_ws2/install/husky_msgs:/home/administrator/husky_ws2/install/hector_gazebo:/home/administrator/husky_ws2/install/hector_gazebo_worlds:/home/administrator/husky_ws2/install/hector_gazebo_plugins:/home/administrator/husky_ws2/install/custom_nav_stack_pkg:/home/administrator/husky_ws2/install/camera_info_manager:/home/administrator/husky_ws2/install/camera_calibration_parsers:/home/administrator/richo_theta_ws/install/penguin_detection:/home/administrator/husky_ws2/install/nav2_gazebo_spawner:/home/administrator/husky_ws2/install/microstrain_inertial_rqt:/home/administrator/husky_ws2/install/gps_goal:/opt/ros/foxy:/opt/ros/noetic /usr/bin/cmake /home/administrator/husky_ws2/src/zed-ros2-wrapper/zed-ros2-interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/administrator/husky_ws2/src/install/zed_interfaces
+[3.645s] Invoking command in '/home/administrator/husky_ws2/src/build/zed_interfaces': CMAKE_PREFIX_PATH=/home/administrator/husky_ws2/install/zed_ros2:/home/administrator/husky_ws2/install/zed_display_rviz2:/home/administrator/husky_ws2/install/zed_wrapper:/home/administrator/husky_ws2/install/zed_tutorial_video:/home/administrator/husky_ws2/install/zed_tutorial_pos_tracking:/home/administrator/husky_ws2/install/zed_tutorial_depth:/home/administrator/husky_ws2/install/zed_rgb_convert:/home/administrator/husky_ws2/install/zed_components:/home/administrator/husky_ws2/install/rviz_plugin_zed_od:/home/administrator/husky_ws2/install/zed_interfaces:/home/administrator/husky_ws2/install/velodyne_simulator:/home/administrator/husky_ws2/install/velodyne_gazebo_plugins:/home/administrator/husky_ws2/install/husky_desktop:/home/administrator/husky_ws2/install/husky_viz:/home/administrator/husky_ws2/install/husky_simulator:/home/administrator/husky_ws2/install/husky_robot:/home/administrator/husky_ws2/install/husky_gazebo:/home/administrator/husky_ws2/install/husky_bringup:/home/administrator/husky_ws2/install/husky_control:/home/administrator/husky_ws2/install/husky_description:/home/administrator/husky_ws2/install/velodyne_description:/home/administrator/husky_ws2/install/um7:/home/administrator/husky_ws2/install/swri_route_util:/home/administrator/husky_ws2/install/swri_transform_util:/home/administrator/husky_ws2/install/swri_system_util:/home/administrator/husky_ws2/install/swri_serial_util:/home/administrator/husky_ws2/install/swri_image_util:/home/administrator/husky_ws2/install/swri_roscpp:/home/administrator/husky_ws2/install/swri_prefix_tools:/home/administrator/husky_ws2/install/swri_opencv_util:/home/administrator/husky_ws2/install/swri_math_util:/home/administrator/husky_ws2/install/swri_geometry_util:/home/administrator/husky_ws2/install/swri_dbw_interface:/home/administrator/husky_ws2/install/swri_console_util:/home/administrator/husky_ws2/install/nav2_system_tests:/home/administrator/husky_ws2/install/nav2_bringup:/home/administrator/husky_ws2/install/navigation2:/home/administrator/husky_ws2/install/smac_planner:/home/administrator/husky_ws2/install/pointcloud_to_laserscan:/home/administrator/husky_ws2/install/nav2_dwb_controller:/home/administrator/husky_ws2/install/nav2_controller:/home/administrator/husky_ws2/install/dwb_plugins:/home/administrator/husky_ws2/install/dwb_critics:/home/administrator/husky_ws2/install/dwb_core:/home/administrator/husky_ws2/install/nav_2d_utils:/home/administrator/husky_ws2/install/dwb_msgs:/home/administrator/husky_ws2/install/nav_2d_msgs:/home/administrator/husky_ws2/install/nav2_waypoint_follower:/home/administrator/husky_ws2/install/nav2_regulated_pure_pursuit_controller:/home/administrator/husky_ws2/install/nav2_recoveries:/home/administrator/husky_ws2/install/nav2_planner:/home/administrator/husky_ws2/install/nav2_navfn_planner:/home/administrator/husky_ws2/install/nav2_core:/home/administrator/husky_ws2/install/costmap_queue:/home/administrator/husky_ws2/install/nav2_costmap_2d:/home/administrator/husky_ws2/install/nav2_voxel_grid:/home/administrator/husky_ws2/install/nav2_rviz_plugins:/home/administrator/husky_ws2/install/nav2_map_server:/home/administrator/husky_ws2/install/nav2_lifecycle_manager:/home/administrator/husky_ws2/install/nav2_bt_navigator:/home/administrator/husky_ws2/install/nav2_behavior_tree:/home/administrator/husky_ws2/install/nav2_amcl:/home/administrator/husky_ws2/install/nav2_util:/home/administrator/husky_ws2/install/nav2_msgs:/home/administrator/husky_ws2/install/nav2_common:/home/administrator/husky_ws2/install/microstrain_inertial_examples:/home/administrator/husky_ws2/install/microstrain_inertial_driver:/home/administrator/husky_ws2/install/microstrain_inertial_msgs:/home/administrator/husky_ws2/install/local_nav_pkg:/home/administrator/husky_ws2/install/image_common:/home/administrator/husky_ws2/install/image_transport:/home/administrator/husky_ws2/install/husky_base:/home/administrator/husky_ws2/install/husky_msgs:/home/administrator/husky_ws2/install/hector_gazebo:/home/administrator/husky_ws2/install/hector_gazebo_worlds:/home/administrator/husky_ws2/install/hector_gazebo_plugins:/home/administrator/husky_ws2/install/custom_nav_stack_pkg:/home/administrator/husky_ws2/install/camera_info_manager:/home/administrator/husky_ws2/install/camera_calibration_parsers:/home/administrator/richo_theta_ws/install/penguin_detection:/home/administrator/husky_ws2/install/nav2_gazebo_spawner:/home/administrator/husky_ws2/install/microstrain_inertial_rqt:/home/administrator/husky_ws2/install/gps_goal:/opt/ros/foxy:/opt/ros/noetic /usr/bin/cmake --build /home/administrator/husky_ws2/src/build/zed_interfaces -- -j8 -l8
+[4.748s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[4.748s] [35m[1mScanning dependencies of target zed_interfaces__cpp[0m
+[4.748s] [  1%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[9.677s] [  1%] Built target zed_interfaces__cpp
+[9.756s] [  2%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[9.769s] [  3%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[9.832s] [  3%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[10.315s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_generator_c[0m
+[10.425s] [  4%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/object__functions.c.o[0m
+[10.447s] [  4%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/objects_stamped__functions.c.o[0m
+[10.454s] [  5%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/keypoint2_di__functions.c.o[0m
+[10.484s] [  6%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/keypoint2_df__functions.c.o[0m
+[10.558s] [  7%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/keypoint3_d__functions.c.o[0m
+[10.655s] [  7%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/bounding_box2_di__functions.c.o[0m
+[10.706s] [  8%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/bounding_box3_d__functions.c.o[0m
+[10.709s] [  9%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/bounding_box2_df__functions.c.o[0m
+[10.744s] [ 10%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/skeleton2_d__functions.c.o[0m
+[10.859s] [ 10%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/skeleton3_d__functions.c.o[0m
+[10.921s] [ 11%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/depth_info_stamped__functions.c.o[0m
+[10.975s] [ 11%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/srv/detail/set_pose__functions.c.o[0m
+[10.990s] [ 12%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/msg/detail/plane_stamped__functions.c.o[0m
+[11.052s] [ 13%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_generator_c.dir/rosidl_generator_c/zed_interfaces/srv/detail/start_svo_rec__functions.c.o[0m
+[11.270s] [ 14%] [32m[1mLinking C shared library libzed_interfaces__rosidl_generator_c.so[0m
+[11.516s] [ 14%] Built target zed_interfaces__rosidl_generator_c
+[11.633s] [ 15%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[11.645s] [ 16%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[12.738s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[12.822s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_introspection_cpp[0m
+[12.883s] [ 17%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/object__type_support.cpp.o[0m
+[12.893s] [ 18%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/keypoint2_df__type_support.cpp.o[0m
+[12.893s] [ 19%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/objects_stamped__type_support.cpp.o[0m
+[12.895s] [ 19%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/keypoint2_di__type_support.cpp.o[0m
+[12.966s] [ 20%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/object__type_support.cpp.o[0m
+[13.882s] [ 21%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/keypoint3_d__type_support.cpp.o[0m
+[14.108s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_cpp[0m
+[14.153s] [ 22%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/objects_stamped__type_support.cpp.o[0m
+[14.290s] [ 23%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/object__type_support.cpp.o[0m
+[14.320s] [ 24%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/objects_stamped__type_support.cpp.o[0m
+[14.467s] [ 25%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/bounding_box2_di__type_support.cpp.o[0m
+[14.674s] [ 25%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/bounding_box2_df__type_support.cpp.o[0m
+[14.827s] [ 26%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/keypoint2_di__type_support.cpp.o[0m
+[15.307s] [ 27%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/bounding_box3_d__type_support.cpp.o[0m
+[15.383s] [ 27%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/keypoint2_di__type_support.cpp.o[0m
+[15.655s] [ 28%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/keypoint2_df__type_support.cpp.o[0m
+[15.906s] [ 28%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/keypoint2_df__type_support.cpp.o[0m
+[15.913s] [ 29%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/keypoint3_d__type_support.cpp.o[0m
+[16.110s] [ 29%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/bounding_box2_di__type_support.cpp.o[0m
+[16.193s] [ 30%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/skeleton2_d__type_support.cpp.o[0m
+[16.750s] [ 31%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/keypoint3_d__type_support.cpp.o[0m
+[16.832s] [ 32%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/bounding_box2_df__type_support.cpp.o[0m
+[16.913s] [ 33%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/skeleton3_d__type_support.cpp.o[0m
+[17.037s] [ 34%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/bounding_box3_d__type_support.cpp.o[0m
+[17.064s] [ 35%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/skeleton2_d__type_support.cpp.o[0m
+[17.121s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_c[0m
+[17.216s] [ 35%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/object__type_support.cpp.o[0m
+[17.414s] [ 36%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/objects_stamped__type_support.cpp.o[0m
+[17.477s] [ 36%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/depth_info_stamped__type_support.cpp.o[0m
+[17.611s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_introspection_c[0m
+[17.717s] [ 37%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/keypoint2_di__type_support.cpp.o[0m
+[17.734s] [ 38%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/msg/detail/dds_fastrtps/plane_stamped__type_support.cpp.o[0m
+[17.822s] [ 39%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/object__type_support.c.o[0m
+[17.908s] [ 40%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/objects_stamped__type_support.c.o[0m
+[17.921s] [ 41%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/bounding_box2_di__type_support.cpp.o[0m
+[17.971s] [ 42%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/keypoint2_df__type_support.cpp.o[0m
+[18.078s] [ 42%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/skeleton3_d__type_support.cpp.o[0m
+[18.176s] [ 42%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/keypoint2_di__type_support.c.o[0m
+[18.192s] [ 42%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/keypoint3_d__type_support.cpp.o[0m
+[18.238s] [ 43%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/depth_info_stamped__type_support.cpp.o[0m
+[18.300s] [ 44%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/srv/detail/dds_fastrtps/set_pose__type_support.cpp.o[0m
+[18.339s] [ 45%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/keypoint2_df__type_support.c.o[0m
+[18.455s] [ 46%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/bounding_box2_di__type_support.cpp.o[0m
+[18.520s] [ 47%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_interfaces/srv/detail/dds_fastrtps/start_svo_rec__type_support.cpp.o[0m
+[18.587s] [ 48%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/keypoint3_d__type_support.c.o[0m
+[18.661s] [ 49%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/bounding_box2_df__type_support.cpp.o[0m
+[18.887s] [ 50%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/bounding_box3_d__type_support.cpp.o[0m
+[18.890s] [ 51%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/bounding_box2_di__type_support.c.o[0m
+[18.908s] [ 52%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/bounding_box2_df__type_support.cpp.o[0m
+[18.954s] [ 52%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/bounding_box3_d__type_support.cpp.o[0m
+[19.057s] [ 52%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/bounding_box2_df__type_support.c.o[0m
+[19.057s] [ 53%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/msg/plane_stamped__type_support.cpp.o[0m
+[19.103s] [ 53%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/skeleton2_d__type_support.cpp.o[0m
+[19.150s] [ 54%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/srv/set_pose__type_support.cpp.o[0m
+[19.317s] [ 54%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_interfaces/srv/start_svo_rec__type_support.cpp.o[0m
+[19.369s] [ 55%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/bounding_box3_d__type_support.c.o[0m
+[19.372s] [ 56%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/skeleton3_d__type_support.cpp.o[0m
+[19.430s] [ 57%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/skeleton2_d__type_support.cpp.o[0m
+[19.521s] [ 57%] [32m[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[19.581s] [ 58%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/skeleton2_d__type_support.c.o[0m
+[19.595s] [ 59%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/depth_info_stamped__type_support.cpp.o[0m
+[19.798s] [ 60%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/msg/plane_stamped__type_support.cpp.o[0m
+[19.831s] [ 60%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/skeleton3_d__type_support.c.o[0m
+[19.875s] [ 61%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/depth_info_stamped__type_support.c.o[0m
+[20.042s] [ 62%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/skeleton3_d__type_support.cpp.o[0m
+[20.057s] [ 63%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/msg/detail/plane_stamped__type_support.c.o[0m
+[20.060s] [ 63%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/srv/set_pose__type_support.cpp.o[0m
+[20.060s] [ 63%] Built target zed_interfaces__rosidl_typesupport_fastrtps_cpp
+[20.063s] [ 64%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/depth_info_stamped__type_support.cpp.o[0m
+[20.111s] [ 65%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_interfaces/srv/start_svo_rec__type_support.cpp.o[0m
+[20.114s] [ 66%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/srv/detail/set_pose__type_support.c.o[0m
+[20.125s] [ 66%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/msg/detail/plane_stamped__type_support.cpp.o[0m
+[20.250s] [ 67%] [32m[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_cpp.so[0m
+[20.270s] [ 68%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/srv/detail/set_pose__type_support.cpp.o[0m
+[20.275s] [ 68%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_interfaces/srv/detail/start_svo_rec__type_support.c.o[0m
+[20.322s] [ 69%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_interfaces/srv/detail/start_svo_rec__type_support.cpp.o[0m
+[20.360s] [ 70%] [32m[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_c.so[0m
+[20.525s] [ 71%] [32m[1mLinking C shared library libzed_interfaces__rosidl_typesupport_introspection_c.so[0m
+[20.566s] [ 72%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[20.580s] [ 72%] Built target zed_interfaces__rosidl_typesupport_cpp
+[20.622s] [ 72%] Built target zed_interfaces__rosidl_typesupport_c
+[20.763s] [ 72%] Built target zed_interfaces__rosidl_typesupport_introspection_c
+[20.991s] [ 73%] [32m[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[21.281s] [ 73%] Built target zed_interfaces__rosidl_typesupport_introspection_cpp
+[25.367s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_fastrtps_c[0m
+[25.563s] [ 74%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/object__type_support_c.cpp.o[0m
+[25.574s] [ 74%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/objects_stamped__type_support_c.cpp.o[0m
+[26.682s] [ 75%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/bounding_box3_d__type_support_c.cpp.o[0m
+[27.167s] [ 76%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/bounding_box2_df__type_support_c.cpp.o[0m
+[27.213s] [ 76%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/bounding_box2_di__type_support_c.cpp.o[0m
+[27.317s] [ 77%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/skeleton2_d__type_support_c.cpp.o[0m
+[28.343s] [ 78%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/srv/detail/set_pose__type_support_c.cpp.o[0m
+[28.959s] [ 78%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/srv/detail/start_svo_rec__type_support_c.cpp.o[0m
+[29.971s] [ 79%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/plane_stamped__type_support_c.cpp.o[0m
+[30.859s] [ 80%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/depth_info_stamped__type_support_c.cpp.o[0m
+[31.414s] [ 80%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/skeleton3_d__type_support_c.cpp.o[0m
+[31.966s] [ 81%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/keypoint3_d__type_support_c.cpp.o[0m
+[32.553s] [ 82%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/keypoint2_df__type_support_c.cpp.o[0m
+[33.149s] [ 83%] [32mBuilding CXX object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_interfaces/msg/detail/keypoint2_di__type_support_c.cpp.o[0m
+[33.542s] [ 84%] [32m[1mLinking CXX shared library libzed_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[33.750s] [ 84%] Built target zed_interfaces__rosidl_typesupport_fastrtps_c
+[33.801s] [35m[1mScanning dependencies of target zed_interfaces[0m
+[33.854s] [ 84%] Built target zed_interfaces
+[33.900s] [35m[1mScanning dependencies of target zed_interfaces__py[0m
+[33.960s] [ 85%] [34m[1mGenerating Python code for ROS interfaces[0m
+[39.045s] [ 85%] Built target zed_interfaces__py
+[39.129s] [35m[1mScanning dependencies of target zed_interfaces__python[0m
+[39.278s] [ 86%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_object_s.c.o[0m
+[39.518s] [ 87%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_bounding_box3_d_s.c.o[0m
+[39.842s] [ 88%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_skeleton2_d_s.c.o[0m
+[40.139s] [ 88%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_skeleton3_d_s.c.o[0m
+[40.375s] [ 89%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_depth_info_stamped_s.c.o[0m
+[40.522s] [ 90%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_plane_stamped_s.c.o[0m
+[40.718s] [ 91%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/srv/_set_pose_s.c.o[0m
+[40.883s] [ 91%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/srv/_start_svo_rec_s.c.o[0m
+[41.078s] [ 92%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_bounding_box2_df_s.c.o[0m
+[41.276s] [ 92%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_bounding_box2_di_s.c.o[0m
+[41.456s] [ 93%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_keypoint3_d_s.c.o[0m
+[41.675s] [ 94%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_keypoint2_df_s.c.o[0m
+[41.851s] [ 95%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_keypoint2_di_s.c.o[0m
+[41.998s] [ 95%] [32mBuilding C object CMakeFiles/zed_interfaces__python.dir/rosidl_generator_py/zed_interfaces/msg/_objects_stamped_s.c.o[0m
+[42.225s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/zed_interfaces/libzed_interfaces__python.so[0m
+[42.361s] [ 96%] Built target zed_interfaces__python
+[42.422s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[42.477s] [ 97%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[42.721s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/zed_interfaces/zed_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[42.896s] [ 98%] Built target zed_interfaces__rosidl_typesupport_introspection_c__pyext
+[42.990s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_c__pyext[0m
+[43.038s] [ 99%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[43.240s] [ 99%] [32m[1mLinking C shared library rosidl_generator_py/zed_interfaces/zed_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[43.393s] [ 99%] Built target zed_interfaces__rosidl_typesupport_c__pyext
+[43.452s] [35m[1mScanning dependencies of target zed_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[43.524s] [100%] [32mBuilding C object CMakeFiles/zed_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/zed_interfaces/_zed_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[43.808s] [100%] [32m[1mLinking CXX shared library rosidl_generator_py/zed_interfaces/zed_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[44.034s] [100%] Built target zed_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[44.079s] Invoked command in '/home/administrator/husky_ws2/src/build/zed_interfaces' returned '0': CMAKE_PREFIX_PATH=/home/administrator/husky_ws2/install/zed_ros2:/home/administrator/husky_ws2/install/zed_display_rviz2:/home/administrator/husky_ws2/install/zed_wrapper:/home/administrator/husky_ws2/install/zed_tutorial_video:/home/administrator/husky_ws2/install/zed_tutorial_pos_tracking:/home/administrator/husky_ws2/install/zed_tutorial_depth:/home/administrator/husky_ws2/install/zed_rgb_convert:/home/administrator/husky_ws2/install/zed_components:/home/administrator/husky_ws2/install/rviz_plugin_zed_od:/home/administrator/husky_ws2/install/zed_interfaces:/home/administrator/husky_ws2/install/velodyne_simulator:/home/administrator/husky_ws2/install/velodyne_gazebo_plugins:/home/administrator/husky_ws2/install/husky_desktop:/home/administrator/husky_ws2/install/husky_viz:/home/administrator/husky_ws2/install/husky_simulator:/home/administrator/husky_ws2/install/husky_robot:/home/administrator/husky_ws2/install/husky_gazebo:/home/administrator/husky_ws2/install/husky_bringup:/home/administrator/husky_ws2/install/husky_control:/home/administrator/husky_ws2/install/husky_description:/home/administrator/husky_ws2/install/velodyne_description:/home/administrator/husky_ws2/install/um7:/home/administrator/husky_ws2/install/swri_route_util:/home/administrator/husky_ws2/install/swri_transform_util:/home/administrator/husky_ws2/install/swri_system_util:/home/administrator/husky_ws2/install/swri_serial_util:/home/administrator/husky_ws2/install/swri_image_util:/home/administrator/husky_ws2/install/swri_roscpp:/home/administrator/husky_ws2/install/swri_prefix_tools:/home/administrator/husky_ws2/install/swri_opencv_util:/home/administrator/husky_ws2/install/swri_math_util:/home/administrator/husky_ws2/install/swri_geometry_util:/home/administrator/husky_ws2/install/swri_dbw_interface:/home/administrator/husky_ws2/install/swri_console_util:/home/administrator/husky_ws2/install/nav2_system_tests:/home/administrator/husky_ws2/install/nav2_bringup:/home/administrator/husky_ws2/install/navigation2:/home/administrator/husky_ws2/install/smac_planner:/home/administrator/husky_ws2/install/pointcloud_to_laserscan:/home/administrator/husky_ws2/install/nav2_dwb_controller:/home/administrator/husky_ws2/install/nav2_controller:/home/administrator/husky_ws2/install/dwb_plugins:/home/administrator/husky_ws2/install/dwb_critics:/home/administrator/husky_ws2/install/dwb_core:/home/administrator/husky_ws2/install/nav_2d_utils:/home/administrator/husky_ws2/install/dwb_msgs:/home/administrator/husky_ws2/install/nav_2d_msgs:/home/administrator/husky_ws2/install/nav2_waypoint_follower:/home/administrator/husky_ws2/install/nav2_regulated_pure_pursuit_controller:/home/administrator/husky_ws2/install/nav2_recoveries:/home/administrator/husky_ws2/install/nav2_planner:/home/administrator/husky_ws2/install/nav2_navfn_planner:/home/administrator/husky_ws2/install/nav2_core:/home/administrator/husky_ws2/install/costmap_queue:/home/administrator/husky_ws2/install/nav2_costmap_2d:/home/administrator/husky_ws2/install/nav2_voxel_grid:/home/administrator/husky_ws2/install/nav2_rviz_plugins:/home/administrator/husky_ws2/install/nav2_map_server:/home/administrator/husky_ws2/install/nav2_lifecycle_manager:/home/administrator/husky_ws2/install/nav2_bt_navigator:/home/administrator/husky_ws2/install/nav2_behavior_tree:/home/administrator/husky_ws2/install/nav2_amcl:/home/administrator/husky_ws2/install/nav2_util:/home/administrator/husky_ws2/install/nav2_msgs:/home/administrator/husky_ws2/install/nav2_common:/home/administrator/husky_ws2/install/microstrain_inertial_examples:/home/administrator/husky_ws2/install/microstrain_inertial_driver:/home/administrator/husky_ws2/install/microstrain_inertial_msgs:/home/administrator/husky_ws2/install/local_nav_pkg:/home/administrator/husky_ws2/install/image_common:/home/administrator/husky_ws2/install/image_transport:/home/administrator/husky_ws2/install/husky_base:/home/administrator/husky_ws2/install/husky_msgs:/home/administrator/husky_ws2/install/hector_gazebo:/home/administrator/husky_ws2/install/hector_gazebo_worlds:/home/administrator/husky_ws2/install/hector_gazebo_plugins:/home/administrator/husky_ws2/install/custom_nav_stack_pkg:/home/administrator/husky_ws2/install/camera_info_manager:/home/administrator/husky_ws2/install/camera_calibration_parsers:/home/administrator/richo_theta_ws/install/penguin_detection:/home/administrator/husky_ws2/install/nav2_gazebo_spawner:/home/administrator/husky_ws2/install/microstrain_inertial_rqt:/home/administrator/husky_ws2/install/gps_goal:/opt/ros/foxy:/opt/ros/noetic /usr/bin/cmake --build /home/administrator/husky_ws2/src/build/zed_interfaces -- -j8 -l8
+[49.356s] Invoking command in '/home/administrator/husky_ws2/src/build/zed_interfaces': CMAKE_PREFIX_PATH=/home/administrator/husky_ws2/install/zed_ros2:/home/administrator/husky_ws2/install/zed_display_rviz2:/home/administrator/husky_ws2/install/zed_wrapper:/home/administrator/husky_ws2/install/zed_tutorial_video:/home/administrator/husky_ws2/install/zed_tutorial_pos_tracking:/home/administrator/husky_ws2/install/zed_tutorial_depth:/home/administrator/husky_ws2/install/zed_rgb_convert:/home/administrator/husky_ws2/install/zed_components:/home/administrator/husky_ws2/install/rviz_plugin_zed_od:/home/administrator/husky_ws2/install/zed_interfaces:/home/administrator/husky_ws2/install/velodyne_simulator:/home/administrator/husky_ws2/install/velodyne_gazebo_plugins:/home/administrator/husky_ws2/install/husky_desktop:/home/administrator/husky_ws2/install/husky_viz:/home/administrator/husky_ws2/install/husky_simulator:/home/administrator/husky_ws2/install/husky_robot:/home/administrator/husky_ws2/install/husky_gazebo:/home/administrator/husky_ws2/install/husky_bringup:/home/administrator/husky_ws2/install/husky_control:/home/administrator/husky_ws2/install/husky_description:/home/administrator/husky_ws2/install/velodyne_description:/home/administrator/husky_ws2/install/um7:/home/administrator/husky_ws2/install/swri_route_util:/home/administrator/husky_ws2/install/swri_transform_util:/home/administrator/husky_ws2/install/swri_system_util:/home/administrator/husky_ws2/install/swri_serial_util:/home/administrator/husky_ws2/install/swri_image_util:/home/administrator/husky_ws2/install/swri_roscpp:/home/administrator/husky_ws2/install/swri_prefix_tools:/home/administrator/husky_ws2/install/swri_opencv_util:/home/administrator/husky_ws2/install/swri_math_util:/home/administrator/husky_ws2/install/swri_geometry_util:/home/administrator/husky_ws2/install/swri_dbw_interface:/home/administrator/husky_ws2/install/swri_console_util:/home/administrator/husky_ws2/install/nav2_system_tests:/home/administrator/husky_ws2/install/nav2_bringup:/home/administrator/husky_ws2/install/navigation2:/home/administrator/husky_ws2/install/smac_planner:/home/administrator/husky_ws2/install/pointcloud_to_laserscan:/home/administrator/husky_ws2/install/nav2_dwb_controller:/home/administrator/husky_ws2/install/nav2_controller:/home/administrator/husky_ws2/install/dwb_plugins:/home/administrator/husky_ws2/install/dwb_critics:/home/administrator/husky_ws2/install/dwb_core:/home/administrator/husky_ws2/install/nav_2d_utils:/home/administrator/husky_ws2/install/dwb_msgs:/home/administrator/husky_ws2/install/nav_2d_msgs:/home/administrator/husky_ws2/install/nav2_waypoint_follower:/home/administrator/husky_ws2/install/nav2_regulated_pure_pursuit_controller:/home/administrator/husky_ws2/install/nav2_recoveries:/home/administrator/husky_ws2/install/nav2_planner:/home/administrator/husky_ws2/install/nav2_navfn_planner:/home/administrator/husky_ws2/install/nav2_core:/home/administrator/husky_ws2/install/costmap_queue:/home/administrator/husky_ws2/install/nav2_costmap_2d:/home/administrator/husky_ws2/install/nav2_voxel_grid:/home/administrator/husky_ws2/install/nav2_rviz_plugins:/home/administrator/husky_ws2/install/nav2_map_server:/home/administrator/husky_ws2/install/nav2_lifecycle_manager:/home/administrator/husky_ws2/install/nav2_bt_navigator:/home/administrator/husky_ws2/install/nav2_behavior_tree:/home/administrator/husky_ws2/install/nav2_amcl:/home/administrator/husky_ws2/install/nav2_util:/home/administrator/husky_ws2/install/nav2_msgs:/home/administrator/husky_ws2/install/nav2_common:/home/administrator/husky_ws2/install/microstrain_inertial_examples:/home/administrator/husky_ws2/install/microstrain_inertial_driver:/home/administrator/husky_ws2/install/microstrain_inertial_msgs:/home/administrator/husky_ws2/install/local_nav_pkg:/home/administrator/husky_ws2/install/image_common:/home/administrator/husky_ws2/install/image_transport:/home/administrator/husky_ws2/install/husky_base:/home/administrator/husky_ws2/install/husky_msgs:/home/administrator/husky_ws2/install/hector_gazebo:/home/administrator/husky_ws2/install/hector_gazebo_worlds:/home/administrator/husky_ws2/install/hector_gazebo_plugins:/home/administrator/husky_ws2/install/custom_nav_stack_pkg:/home/administrator/husky_ws2/install/camera_info_manager:/home/administrator/husky_ws2/install/camera_calibration_parsers:/home/administrator/richo_theta_ws/install/penguin_detection:/home/administrator/husky_ws2/install/nav2_gazebo_spawner:/home/administrator/husky_ws2/install/microstrain_inertial_rqt:/home/administrator/husky_ws2/install/gps_goal:/opt/ros/foxy:/opt/ros/noetic /usr/bin/cmake --install /home/administrator/husky_ws2/src/build/zed_interfaces
+[59.911s] -- Install configuration: ""
+[59.911s] -- Execute custom install script
+[59.911s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/ament_index/resource_index/rosidl_interfaces/zed_interfaces
+[59.912s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/bounding_box2_df.h
+[59.912s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/bounding_box2_di.h
+[59.912s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/bounding_box3_d.h
+[59.912s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/depth_info_stamped.h
+[59.912s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__functions.h
+[59.912s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__struct.h
+[59.912s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__type_support.h
+[59.912s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__functions.h
+[59.912s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__struct.h
+[59.912s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__type_support.h
+[59.912s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__functions.h
+[59.913s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__struct.h
+[59.913s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__type_support.h
+[59.913s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__functions.h
+[59.913s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__struct.h
+[59.913s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__type_support.h
+[59.913s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__functions.h
+[59.913s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__struct.h
+[59.913s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__type_support.h
+[59.913s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__functions.h
+[59.914s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__struct.h
+[59.914s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__type_support.h
+[59.914s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__functions.h
+[59.914s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__struct.h
+[59.914s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__type_support.h
+[59.914s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__functions.h
+[59.914s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__struct.h
+[59.914s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__type_support.h
+[59.914s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__functions.h
+[59.914s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__struct.h
+[59.914s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__type_support.h
+[59.914s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__functions.h
+[59.914s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__struct.h
+[59.915s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__type_support.h
+[59.915s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__functions.h
+[59.915s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__struct.h
+[59.915s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__type_support.h
+[59.915s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__functions.h
+[59.915s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__struct.h
+[59.915s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__type_support.h
+[59.915s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/keypoint2_df.h
+[59.915s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/keypoint2_di.h
+[59.915s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/keypoint3_d.h
+[59.915s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/object.h
+[59.915s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/objects_stamped.h
+[59.915s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/plane_stamped.h
+[59.916s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/rosidl_generator_c__visibility_control.h
+[59.916s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/skeleton2_d.h
+[59.916s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/skeleton3_d.h
+[59.916s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__functions.h
+[59.916s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__struct.h
+[59.916s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__type_support.h
+[59.916s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__functions.h
+[59.916s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__struct.h
+[59.916s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__type_support.h
+[59.916s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/set_pose.h
+[59.916s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/start_svo_rec.h
+[59.916s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/environment/library_path.sh
+[59.916s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/environment/library_path.dsv
+[59.916s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_fastrtps_c.h
+[59.916s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_fastrtps_c.h
+[59.917s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_fastrtps_c.h
+[59.917s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_fastrtps_c.h
+[59.917s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_fastrtps_c.h
+[59.917s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_fastrtps_c.h
+[59.917s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_fastrtps_c.h
+[59.917s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__rosidl_typesupport_fastrtps_c.h
+[59.917s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_fastrtps_c.h
+[59.917s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_fastrtps_c.h
+[59.917s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_fastrtps_c.h
+[59.918s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_fastrtps_c.h
+[59.918s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[59.918s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_fastrtps_c.h
+[59.919s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_fastrtps_c.h
+[59.919s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_fastrtps_c.so
+[59.919s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_fastrtps_cpp.hpp
+[59.919s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_fastrtps_cpp.hpp
+[59.919s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_fastrtps_cpp.hpp
+[59.919s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[59.919s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_fastrtps_cpp.hpp
+[59.919s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_fastrtps_cpp.hpp
+[59.919s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_fastrtps_cpp.hpp
+[59.919s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__rosidl_typesupport_fastrtps_cpp.hpp
+[59.919s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[59.919s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[59.919s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_fastrtps_cpp.hpp
+[59.919s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_fastrtps_cpp.hpp
+[59.919s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[59.920s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_fastrtps_cpp.hpp
+[59.920s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_fastrtps_cpp.hpp
+[59.920s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[59.920s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_introspection_c.h
+[59.920s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_introspection_c.h
+[59.920s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_introspection_c.h
+[59.920s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_introspection_c.h
+[59.920s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_introspection_c.h
+[59.920s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_introspection_c.h
+[59.920s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_introspection_c.h
+[59.920s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__rosidl_typesupport_introspection_c.h
+[59.920s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_introspection_c.h
+[59.920s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_introspection_c.h
+[59.920s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_introspection_c.h
+[59.921s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_introspection_c.h
+[59.921s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[59.921s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_introspection_c.h
+[59.921s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_introspection_c.h
+[59.921s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/bounding_box2_df.hpp
+[59.921s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/bounding_box2_di.hpp
+[59.921s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/bounding_box3_d.hpp
+[59.921s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/depth_info_stamped.hpp
+[59.921s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__builder.hpp
+[59.921s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__struct.hpp
+[59.921s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__traits.hpp
+[59.921s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__builder.hpp
+[59.921s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__struct.hpp
+[59.921s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__traits.hpp
+[59.922s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__builder.hpp
+[59.922s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__struct.hpp
+[59.922s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__traits.hpp
+[59.922s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__builder.hpp
+[59.922s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__struct.hpp
+[59.922s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__traits.hpp
+[59.922s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__builder.hpp
+[59.922s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__struct.hpp
+[59.922s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__traits.hpp
+[59.922s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__builder.hpp
+[59.936s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__struct.hpp
+[59.977s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__traits.hpp
+[60.029s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__builder.hpp
+[60.055s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__struct.hpp
+[60.071s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__traits.hpp
+[60.088s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__builder.hpp
+[60.124s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__struct.hpp
+[60.150s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__traits.hpp
+[60.178s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__builder.hpp
+[60.195s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__struct.hpp
+[60.227s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__traits.hpp
+[60.238s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__builder.hpp
+[60.270s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__struct.hpp
+[60.301s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__traits.hpp
+[60.341s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__builder.hpp
+[60.364s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__struct.hpp
+[60.394s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__traits.hpp
+[60.412s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__builder.hpp
+[60.428s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__struct.hpp
+[60.454s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__traits.hpp
+[60.469s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/keypoint2_df.hpp
+[60.486s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/keypoint2_di.hpp
+[60.517s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/keypoint3_d.hpp
+[60.545s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/object.hpp
+[60.567s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/objects_stamped.hpp
+[60.603s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/plane_stamped.hpp
+[60.636s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/skeleton2_d.hpp
+[60.665s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/skeleton3_d.hpp
+[60.685s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__builder.hpp
+[60.703s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__struct.hpp
+[60.721s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__traits.hpp
+[60.751s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__builder.hpp
+[60.763s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__struct.hpp
+[60.790s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__traits.hpp
+[60.816s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/set_pose.hpp
+[60.842s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/start_svo_rec.hpp
+[60.905s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_df__rosidl_typesupport_introspection_cpp.hpp
+[60.938s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box2_di__rosidl_typesupport_introspection_cpp.hpp
+[60.953s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/bounding_box3_d__rosidl_typesupport_introspection_cpp.hpp
+[60.969s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/depth_info_stamped__rosidl_typesupport_introspection_cpp.hpp
+[60.982s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_df__rosidl_typesupport_introspection_cpp.hpp
+[61.001s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint2_di__rosidl_typesupport_introspection_cpp.hpp
+[61.033s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/keypoint3_d__rosidl_typesupport_introspection_cpp.hpp
+[61.049s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp
+[61.065s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/objects_stamped__rosidl_typesupport_introspection_cpp.hpp
+[61.076s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/plane_stamped__rosidl_typesupport_introspection_cpp.hpp
+[61.101s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton2_d__rosidl_typesupport_introspection_cpp.hpp
+[61.117s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/msg/detail/skeleton3_d__rosidl_typesupport_introspection_cpp.hpp
+[61.133s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/set_pose__rosidl_typesupport_introspection_cpp.hpp
+[61.163s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/include/zed_interfaces/srv/detail/start_svo_rec__rosidl_typesupport_introspection_cpp.hpp
+[61.187s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/environment/pythonpath.sh
+[61.209s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/environment/pythonpath.dsv
+[61.238s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/__init__.py
+[61.257s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/__init__.py
+[61.277s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_bounding_box2_df.py
+[61.296s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_bounding_box2_di.py
+[61.330s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_bounding_box3_d.py
+[61.352s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_depth_info_stamped.py
+[61.372s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_keypoint2_df.py
+[61.389s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_keypoint2_di.py
+[61.405s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_keypoint3_d.py
+[61.420s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_object.py
+[61.451s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_objects_stamped.py
+[61.465s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_plane_stamped.py
+[61.481s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_skeleton2_d.py
+[61.496s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/msg/_skeleton3_d.py
+[61.510s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/srv/__init__.py
+[61.526s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/srv/_set_pose.py
+[61.541s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/srv/_start_svo_rec.py
+[61.560s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[61.581s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[61.643s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/zed_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[61.665s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/libzed_interfaces__python.so
+[61.695s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/Object.idl
+[61.725s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/ObjectsStamped.idl
+[61.749s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Di.idl
+[61.768s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Df.idl
+[61.785s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/Keypoint3D.idl
+[61.809s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Di.idl
+[61.821s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Df.idl
+[61.835s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox3D.idl
+[61.847s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/Skeleton2D.idl
+[61.860s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/Skeleton3D.idl
+[61.882s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/DepthInfoStamped.idl
+[61.900s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/PlaneStamped.idl
+[61.912s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/srv/SetPose.idl
+[61.935s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec.idl
+[61.957s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/Object.msg
+[61.971s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/ObjectsStamped.msg
+[61.989s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Di.msg
+[62.004s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/Keypoint2Df.msg
+[62.016s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/Keypoint3D.msg
+[62.032s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Di.msg
+[62.055s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox2Df.msg
+[62.068s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/BoundingBox3D.msg
+[62.084s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/Skeleton2D.msg
+[62.108s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/Skeleton3D.msg
+[62.125s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/DepthInfoStamped.msg
+[62.145s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/msg/PlaneStamped.msg
+[62.160s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/srv/SetPose.srv
+[62.177s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/srv/SetPose_Request.msg
+[62.193s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/srv/SetPose_Response.msg
+[62.223s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec.srv
+[62.241s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec_Request.msg
+[62.260s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/srv/StartSvoRec_Response.msg
+[62.279s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/meshes/zed.stl
+[62.301s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/meshes/zed2.stl
+[62.315s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/meshes/zed2i.stl
+[62.347s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/meshes/zedm.stl
+[62.357s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/ament_index/resource_index/package_run_dependencies/zed_interfaces
+[62.370s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/ament_index/resource_index/parent_prefix_path/zed_interfaces
+[62.390s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/environment/ament_prefix_path.sh
+[62.421s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/environment/ament_prefix_path.dsv
+[62.434s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/environment/path.sh
+[62.451s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/environment/path.dsv
+[62.467s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/local_setup.bash
+[62.487s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/local_setup.sh
+[62.501s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/local_setup.zsh
+[62.519s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/local_setup.dsv
+[62.535s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/package.dsv
+[62.550s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/ament_index/resource_index/packages/zed_interfaces
+[62.565s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/rosidl_cmake-extras.cmake
+[62.599s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[62.614s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[62.631s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[62.649s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[62.667s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[62.684s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[62.701s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfacesConfig.cmake
+[62.717s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfacesConfig-version.cmake
+[62.732s] -- Symlinking: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/package.xml
+[62.747s] -- Installing: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_generator_c.so
+[62.747s] -- Set runtime path of "/home/administrator/husky_ws2/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_generator_c.so" to ""
+[62.747s] -- Installing: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_introspection_c.so
+[62.748s] -- Set runtime path of "/home/administrator/husky_ws2/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[62.748s] -- Installing: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_c.so
+[62.748s] -- Set runtime path of "/home/administrator/husky_ws2/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_c.so" to ""
+[62.748s] -- Installing: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_introspection_cpp.so
+[62.749s] -- Set runtime path of "/home/administrator/husky_ws2/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[62.749s] -- Installing: /home/administrator/husky_ws2/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_cpp.so
+[62.750s] -- Set runtime path of "/home/administrator/husky_ws2/src/install/zed_interfaces/lib/libzed_interfaces__rosidl_typesupport_cpp.so" to ""
+[62.799s] Compiling '/home/administrator/husky_ws2/src/install/zed_interfaces/lib/python3.8/site-packages/zed_interfaces/__init__.py'...
+[62.805s] -- Installing: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_generator_cExport.cmake
+[62.805s] -- Installing: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_generator_cExport-noconfig.cmake
+[62.805s] -- Installing: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[62.805s] -- Installing: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[62.806s] -- Installing: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cExport.cmake
+[62.806s] -- Installing: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[62.806s] -- Installing: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_generator_cppExport.cmake
+[62.806s] -- Installing: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[62.806s] -- Installing: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[62.806s] -- Installing: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cppExport.cmake
+[62.807s] -- Installing: /home/administrator/husky_ws2/src/install/zed_interfaces/share/zed_interfaces/cmake/zed_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[62.827s] Invoked command in '/home/administrator/husky_ws2/src/build/zed_interfaces' returned '0': CMAKE_PREFIX_PATH=/home/administrator/husky_ws2/install/zed_ros2:/home/administrator/husky_ws2/install/zed_display_rviz2:/home/administrator/husky_ws2/install/zed_wrapper:/home/administrator/husky_ws2/install/zed_tutorial_video:/home/administrator/husky_ws2/install/zed_tutorial_pos_tracking:/home/administrator/husky_ws2/install/zed_tutorial_depth:/home/administrator/husky_ws2/install/zed_rgb_convert:/home/administrator/husky_ws2/install/zed_components:/home/administrator/husky_ws2/install/rviz_plugin_zed_od:/home/administrator/husky_ws2/install/zed_interfaces:/home/administrator/husky_ws2/install/velodyne_simulator:/home/administrator/husky_ws2/install/velodyne_gazebo_plugins:/home/administrator/husky_ws2/install/husky_desktop:/home/administrator/husky_ws2/install/husky_viz:/home/administrator/husky_ws2/install/husky_simulator:/home/administrator/husky_ws2/install/husky_robot:/home/administrator/husky_ws2/install/husky_gazebo:/home/administrator/husky_ws2/install/husky_bringup:/home/administrator/husky_ws2/install/husky_control:/home/administrator/husky_ws2/install/husky_description:/home/administrator/husky_ws2/install/velodyne_description:/home/administrator/husky_ws2/install/um7:/home/administrator/husky_ws2/install/swri_route_util:/home/administrator/husky_ws2/install/swri_transform_util:/home/administrator/husky_ws2/install/swri_system_util:/home/administrator/husky_ws2/install/swri_serial_util:/home/administrator/husky_ws2/install/swri_image_util:/home/administrator/husky_ws2/install/swri_roscpp:/home/administrator/husky_ws2/install/swri_prefix_tools:/home/administrator/husky_ws2/install/swri_opencv_util:/home/administrator/husky_ws2/install/swri_math_util:/home/administrator/husky_ws2/install/swri_geometry_util:/home/administrator/husky_ws2/install/swri_dbw_interface:/home/administrator/husky_ws2/install/swri_console_util:/home/administrator/husky_ws2/install/nav2_system_tests:/home/administrator/husky_ws2/install/nav2_bringup:/home/administrator/husky_ws2/install/navigation2:/home/administrator/husky_ws2/install/smac_planner:/home/administrator/husky_ws2/install/pointcloud_to_laserscan:/home/administrator/husky_ws2/install/nav2_dwb_controller:/home/administrator/husky_ws2/install/nav2_controller:/home/administrator/husky_ws2/install/dwb_plugins:/home/administrator/husky_ws2/install/dwb_critics:/home/administrator/husky_ws2/install/dwb_core:/home/administrator/husky_ws2/install/nav_2d_utils:/home/administrator/husky_ws2/install/dwb_msgs:/home/administrator/husky_ws2/install/nav_2d_msgs:/home/administrator/husky_ws2/install/nav2_waypoint_follower:/home/administrator/husky_ws2/install/nav2_regulated_pure_pursuit_controller:/home/administrator/husky_ws2/install/nav2_recoveries:/home/administrator/husky_ws2/install/nav2_planner:/home/administrator/husky_ws2/install/nav2_navfn_planner:/home/administrator/husky_ws2/install/nav2_core:/home/administrator/husky_ws2/install/costmap_queue:/home/administrator/husky_ws2/install/nav2_costmap_2d:/home/administrator/husky_ws2/install/nav2_voxel_grid:/home/administrator/husky_ws2/install/nav2_rviz_plugins:/home/administrator/husky_ws2/install/nav2_map_server:/home/administrator/husky_ws2/install/nav2_lifecycle_manager:/home/administrator/husky_ws2/install/nav2_bt_navigator:/home/administrator/husky_ws2/install/nav2_behavior_tree:/home/administrator/husky_ws2/install/nav2_amcl:/home/administrator/husky_ws2/install/nav2_util:/home/administrator/husky_ws2/install/nav2_msgs:/home/administrator/husky_ws2/install/nav2_common:/home/administrator/husky_ws2/install/microstrain_inertial_examples:/home/administrator/husky_ws2/install/microstrain_inertial_driver:/home/administrator/husky_ws2/install/microstrain_inertial_msgs:/home/administrator/husky_ws2/install/local_nav_pkg:/home/administrator/husky_ws2/install/image_common:/home/administrator/husky_ws2/install/image_transport:/home/administrator/husky_ws2/install/husky_base:/home/administrator/husky_ws2/install/husky_msgs:/home/administrator/husky_ws2/install/hector_gazebo:/home/administrator/husky_ws2/install/hector_gazebo_worlds:/home/administrator/husky_ws2/install/hector_gazebo_plugins:/home/administrator/husky_ws2/install/custom_nav_stack_pkg:/home/administrator/husky_ws2/install/camera_info_manager:/home/administrator/husky_ws2/install/camera_calibration_parsers:/home/administrator/richo_theta_ws/install/penguin_detection:/home/administrator/husky_ws2/install/nav2_gazebo_spawner:/home/administrator/husky_ws2/install/microstrain_inertial_rqt:/home/administrator/husky_ws2/install/gps_goal:/opt/ros/foxy:/opt/ros/noetic /usr/bin/cmake --install /home/administrator/husky_ws2/src/build/zed_interfaces

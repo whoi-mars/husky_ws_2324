@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="world" default="worlds/empty.world"/>
+  <arg name="gui" default="true"/>  
+  <arg name="args" default=""/>
+    
+  <include file="$(find-pkg-share gazebo_ros)/launch/gazebo.launch.py">
+    <arg name="world"             value="$(var world)"/>
+    <arg name="use_sim_time"      value="true"/>
+    <arg name="gui"               value="$(var gui)" />
+    <arg name="extra_gazebo_args" value="$(var args)"/>
+  </include>
+  
+</launch>

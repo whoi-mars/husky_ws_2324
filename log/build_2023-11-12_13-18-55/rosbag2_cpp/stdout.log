@@ -1,0 +1,33 @@
+[  8%] Built target gmock
+[ 13%] Built target gmock_main
+[ 41%] Built target rosbag2_cpp
+[35m[1mScanning dependencies of target converter_test_plugins[0m
+[35m[1mScanning dependencies of target test_sequential_reader[0m
+[35m[1mScanning dependencies of target test_converter_factory[0m
+[35m[1mScanning dependencies of target test_typesupport_helpers[0m
+[35m[1mScanning dependencies of target test_sequential_writer[0m
+[35m[1mScanning dependencies of target test_storage_without_metadata_file[0m
+[35m[1mScanning dependencies of target test_info[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/converter_test_plugins.dir/test/rosbag2_cpp/serializer_test_plugin.cpp.o[0m
+[ 47%] [32m[1mLinking CXX executable test_ros2_message[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/test_converter_factory.dir/test/rosbag2_cpp/test_converter_factory.cpp.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/test_typesupport_helpers.dir/test/rosbag2_cpp/test_typesupport_helpers.cpp.o[0m
+[ 55%] [32mBuilding CXX object CMakeFiles/test_sequential_reader.dir/test/rosbag2_cpp/test_sequential_reader.cpp.o[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/test_sequential_writer.dir/test/rosbag2_cpp/test_sequential_writer.cpp.o[0m
+[ 61%] [32mBuilding CXX object CMakeFiles/test_info.dir/test/rosbag2_cpp/test_info.cpp.o[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/test_storage_without_metadata_file.dir/test/rosbag2_cpp/test_storage_without_metadata_file.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/converter_test_plugins.dir/test/rosbag2_cpp/converter_test_plugin.cpp.o[0m
+[ 69%] [32m[1mLinking CXX executable test_converter_factory[0m
+[ 72%] [32m[1mLinking CXX shared library libconverter_test_plugins.so[0m
+[ 72%] Built target converter_test_plugins
+[ 72%] Built target test_converter_factory
+[ 75%] [32m[1mLinking CXX executable test_typesupport_helpers[0m
+[ 75%] Built target test_typesupport_helpers
+[ 77%] [32m[1mLinking CXX executable test_info[0m
+[ 77%] Built target test_info
+[ 80%] [32m[1mLinking CXX executable test_storage_without_metadata_file[0m
+[ 80%] Built target test_storage_without_metadata_file
+[ 83%] [32m[1mLinking CXX executable test_sequential_reader[0m
+[ 86%] [32m[1mLinking CXX executable test_sequential_writer[0m
+[ 86%] Built target test_sequential_reader
+[ 86%] Built target test_sequential_writer

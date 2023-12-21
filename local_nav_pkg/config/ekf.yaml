@@ -1,0 +1,79 @@
+ekf_node:
+  ros__parameters:
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_link
+    world_frame: odom
+    two_d_mode: true
+    
+    frequency: 50.0
+    
+    odom0: /odom
+    
+    odom0_config: [true, true, false,
+              false, false, true,
+              true, true, false,
+              false, false, true,
+              false, false, false]
+    odom0_differential: false
+    odom0_relative: false
+    odom0_queue_size: 40  #Freq. of topic was ~ 4 Hz, so set it to 4x10=40 Hz
+    odom0_pose_rejection_threshold: 5.0
+    odom0_twist_rejection_threshold: 1.0
+    
+    imu0: /imu/data
+    imu0_config: [false, false, false,
+                  false, false, false,
+                  false, false, false,
+                  false, false, true,
+                  true, false, false]
+    imu0_differential: false
+    imu0_queue_size: 12 #Freq. of topic was ~ 100 Hz, so set it to 100/10=10 Hz (try 2-3 Hz above/ below)
+    imu0_remove_gravitational_acceleration: true
+    
+    #odom1: /odometry/gps
+    #odom1_config: [true,  true,  false,
+    #               false, false, false,
+    #               false, false, false,
+    #               false, false, false,
+    #               false, false, false]
+    #odom1_differential: false
+
+
+# Tips for filling matrix (https://navigation.ros.org/setup_guides/odom/setup_odom.html?highlight=navsat): In the imu0_config matrix, you’ll notice that only roll, pitch, and yaw are used. Typical mobile robot-grade IMUs will also provide angular velocities and linear accelerations. For robot_localization to work properly, you should not fuse in multiple fields that are derivative of each other. Since angular velocity is fused internally to the IMU to provide the roll, pitch and yaw estimates, we should not fuse in the angular velocities used to derive that information. We also do not fuse in angular velocity due to the noisy characteristics it has when not using exceptionally high quality (and expensive) IMUs.    
+#Reference: http://docs.ros.org/en/noetic/api/robot_localization/html/state_estimation_nodes.html
+#The order of the boolean values are X,Y,Z,roll,pitch,yaw,X˙,Y˙,Z˙,roll˙,pitch˙,yaw˙,X¨,Y¨,Z¨. 
+#Reference: https://roverrobotics.com/blogs/guides/fusing-imu-encoders-with-ros-robot-localization
+
+
+    process_noise_covariance: [0.01,   0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                               0.0,    0.01,   0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                               0.0,    0.0,    0.06,   0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                               0.0,    0.0,    0.0,    0.03,   0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                               0.0,    0.0,    0.0,    0.0,    0.03,   0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                               0.0,    0.0,    0.0,    0.0,    0.0,    0.1,   0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                               0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.025,   0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                               0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.025,   0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                               0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.04,   0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                               0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.01,   0.0,    0.0,    0.0,    0.0,    0.0,
+                               0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.01,   0.0,    0.0,    0.0,    0.0,
+                               0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.1,   0.0,    0.0,    0.0,
+                               0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.01,   0.0,    0.0,
+                               0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.01,   0.0,
+                               0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.015]
+    # initial_estimate_covariance: [1e-9, 0,    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,    0, 0,
+    #                               0, 1e-9, 0, 0, 0, 0, 0, 0, 0, 0,    0, 0,
+    #                               0, 0, 1e-9, 0, 0, 0, 0, 0, 0, 0,    0, 0,
+    #                               0, 0, 0, 1e-9, 0, 0, 0, 0, 0, 0,    0, 0,
+    #                               0, 0, 0, 0, 1e-9, 0, 0, 0, 0, 0,    0, 0,
+    #                               0, 0, 0, 0, 0, 1e-9, 0, 0, 0, 0,    0, 0,
+    #                               0, 0, 0, 0, 0, 0, 1 , 0, 0, 0,    0, 0,
+    #                               0, 0, 0, 0, 0, 0, 0, 1 , 0, 0,    0, 0,
+    #                               0, 0, 0, 0, 0, 0, 0, 0, 1e-9, 0,    0, 0,
+    #                               0, 0, 0, 0, 0, 0, 0, 0, 0, 1,    0, 0,
+    #                               0, 0, 0, 0, 0, 0, 0, 0, 0, 0,    1, 0,
+    #                               0, 0, 0, 0, 0, 0, 0, 0, 0, 0,    0, 1 ,
+    #                               0, 0, 0, 0, 0, 0, 0, 0, 0, 0,    0, 0,
+    #                               0, 0, 0, 0, 0, 0, 0, 0, 0, 0,    0, 0, 0,
+    #                               0, 0, 0, 0, 0, 0, 0, 0, 0, 0,    0, 0, 0, 0, 1e-9]       
+    

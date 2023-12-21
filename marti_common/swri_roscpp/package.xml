@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<package format="3">
+  <name>swri_roscpp</name>
+  <version>3.4.1</version>
+  <description>
+
+     swri_roscpp
+
+  </description>
+  <maintainer email="preed@swri.org">P. J. Reed</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
+
+  <build_depend>rosidl_cmake</build_depend>
+
+  <depend>boost</depend>
+  <depend>diagnostic_updater</depend>
+  <!--
+  TODO pjr Is rcl_interfaces the replacement for dynamic reconfig now?
+  <depend>dynamic_reconfigure</depend>
+  -->
+  <depend>marti_common_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+
+  <exec_depend>rosidl_default_runtime</exec_depend>
+
+  <test_depend>ament_cmake_gtest</test_depend>
+  <test_depend>gtest</test_depend>
+
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
+

@@ -1,0 +1,44 @@
+[0.129s] Invoking command in '/home/administrator/husky_ws2/src/build/camera_info_manager': AMENT_PREFIX_PATH=/home/administrator/husky_ws2/src/install/camera_calibration_parsers:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/administrator/husky_ws2/src/install/camera_calibration_parsers:/home/administrator/husky_ws2/install/zed_ros2:/home/administrator/husky_ws2/install/zed_display_rviz2:/home/administrator/husky_ws2/install/zed_wrapper:/home/administrator/husky_ws2/install/zed_tutorial_video:/home/administrator/husky_ws2/install/zed_tutorial_pos_tracking:/home/administrator/husky_ws2/install/zed_tutorial_depth:/home/administrator/husky_ws2/install/zed_rgb_convert:/home/administrator/husky_ws2/install/zed_components:/home/administrator/husky_ws2/install/rviz_plugin_zed_od:/home/administrator/husky_ws2/install/zed_interfaces:/home/administrator/husky_ws2/install/velodyne_simulator:/home/administrator/husky_ws2/install/velodyne_gazebo_plugins:/home/administrator/husky_ws2/install/husky_desktop:/home/administrator/husky_ws2/install/husky_viz:/home/administrator/husky_ws2/install/husky_simulator:/home/administrator/husky_ws2/install/husky_robot:/home/administrator/husky_ws2/install/husky_gazebo:/home/administrator/husky_ws2/install/husky_bringup:/home/administrator/husky_ws2/install/husky_control:/home/administrator/husky_ws2/install/husky_description:/home/administrator/husky_ws2/install/velodyne_description:/home/administrator/husky_ws2/install/um7:/home/administrator/husky_ws2/install/swri_route_util:/home/administrator/husky_ws2/install/swri_transform_util:/home/administrator/husky_ws2/install/swri_system_util:/home/administrator/husky_ws2/install/swri_serial_util:/home/administrator/husky_ws2/install/swri_image_util:/home/administrator/husky_ws2/install/swri_roscpp:/home/administrator/husky_ws2/install/swri_prefix_tools:/home/administrator/husky_ws2/install/swri_opencv_util:/home/administrator/husky_ws2/install/swri_math_util:/home/administrator/husky_ws2/install/swri_geometry_util:/home/administrator/husky_ws2/install/swri_dbw_interface:/home/administrator/husky_ws2/install/swri_console_util:/home/administrator/husky_ws2/install/nav2_system_tests:/home/administrator/husky_ws2/install/nav2_bringup:/home/administrator/husky_ws2/install/navigation2:/home/administrator/husky_ws2/install/smac_planner:/home/administrator/husky_ws2/install/pointcloud_to_laserscan:/home/administrator/husky_ws2/install/nav2_dwb_controller:/home/administrator/husky_ws2/install/nav2_controller:/home/administrator/husky_ws2/install/dwb_plugins:/home/administrator/husky_ws2/install/dwb_critics:/home/administrator/husky_ws2/install/dwb_core:/home/administrator/husky_ws2/install/nav_2d_utils:/home/administrator/husky_ws2/install/dwb_msgs:/home/administrator/husky_ws2/install/nav_2d_msgs:/home/administrator/husky_ws2/install/nav2_waypoint_follower:/home/administrator/husky_ws2/install/nav2_regulated_pure_pursuit_controller:/home/administrator/husky_ws2/install/nav2_recoveries:/home/administrator/husky_ws2/install/nav2_planner:/home/administrator/husky_ws2/install/nav2_navfn_planner:/home/administrator/husky_ws2/install/nav2_core:/home/administrator/husky_ws2/install/costmap_queue:/home/administrator/husky_ws2/install/nav2_costmap_2d:/home/administrator/husky_ws2/install/nav2_voxel_grid:/home/administrator/husky_ws2/install/nav2_rviz_plugins:/home/administrator/husky_ws2/install/nav2_map_server:/home/administrator/husky_ws2/install/nav2_lifecycle_manager:/home/administrator/husky_ws2/install/nav2_bt_navigator:/home/administrator/husky_ws2/install/nav2_behavior_tree:/home/administrator/husky_ws2/install/nav2_amcl:/home/administrator/husky_ws2/install/nav2_util:/home/administrator/husky_ws2/install/nav2_msgs:/home/administrator/husky_ws2/install/nav2_common:/home/administrator/husky_ws2/install/microstrain_inertial_examples:/home/administrator/husky_ws2/install/microstrain_inertial_driver:/home/administrator/husky_ws2/install/microstrain_inertial_msgs:/home/administrator/husky_ws2/install/local_nav_pkg:/home/administrator/husky_ws2/install/image_common:/home/administrator/husky_ws2/install/image_transport:/home/administrator/husky_ws2/install/husky_base:/home/administrator/husky_ws2/install/husky_msgs:/home/administrator/husky_ws2/install/hector_gazebo:/home/administrator/husky_ws2/install/hector_gazebo_worlds:/home/administrator/husky_ws2/install/hector_gazebo_plugins:/home/administrator/husky_ws2/install/custom_nav_stack_pkg:/home/administrator/husky_ws2/install/camera_info_manager:/home/administrator/husky_ws2/install/camera_calibration_parsers:/home/administrator/richo_theta_ws/install/penguin_detection:/home/administrator/husky_ws2/install/nav2_gazebo_spawner:/home/administrator/husky_ws2/install/microstrain_inertial_rqt:/home/administrator/husky_ws2/install/gps_goal:/opt/ros/foxy:/opt/ros/noetic LD_LIBRARY_PATH=/home/administrator/husky_ws2/src/install/camera_calibration_parsers/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/administrator/husky_ws2/src/image_common/camera_info_manager -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/administrator/husky_ws2/src/install/camera_info_manager
+[0.606s] -- The C compiler identification is GNU 9.4.0
+[0.686s] -- The CXX compiler identification is GNU 9.4.0
+[0.688s] -- Check for working C compiler: /usr/bin/cc
+[1.067s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.067s] -- Detecting C compiler ABI info
+[1.422s] -- Detecting C compiler ABI info - done
+[1.438s] -- Detecting C compile features
+[1.439s] -- Detecting C compile features - done
+[1.456s] -- Check for working CXX compiler: /usr/bin/c++
+[1.847s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.848s] -- Detecting CXX compiler ABI info
+[2.132s] -- Detecting CXX compiler ABI info - done
+[2.156s] -- Detecting CXX compile features
+[2.157s] -- Detecting CXX compile features - done
+[2.164s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[2.329s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[2.330s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.734s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.847s] -- Found ament_index_cpp: 1.1.0 (/opt/ros/foxy/share/ament_index_cpp/cmake)
+[2.851s] -- Found camera_calibration_parsers: 2.4.0 (/home/administrator/husky_ws2/src/install/camera_calibration_parsers/share/camera_calibration_parsers/cmake)
+[2.957s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.973s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[3.360s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[3.418s] -- Found FastRTPS: /opt/ros/foxy/include  
+[3.566s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.654s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[3.661s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.661s] -- Looking for pthread.h
+[3.953s] -- Looking for pthread.h - found
+[3.953s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.147s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[4.147s] -- Looking for pthread_create in pthreads
+[4.409s] -- Looking for pthread_create in pthreads - not found
+[4.409s] -- Looking for pthread_create in pthread
+[4.610s] -- Looking for pthread_create in pthread - found
+[4.611s] -- Found Threads: TRUE  
+[5.029s] -- Setting yaml-cpp_DIR to: '/opt/ros/foxy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/lib/cmake/yaml-cpp'
+[5.083s] -- Found ament_cmake_cpplint: 0.9.6 (/opt/ros/foxy/share/ament_cmake_cpplint/cmake)
+[5.093s] -- Found ament_cmake_lint_cmake: 0.9.6 (/opt/ros/foxy/share/ament_cmake_lint_cmake/cmake)
+[5.097s] -- Found ament_cmake_uncrustify: 0.9.6 (/opt/ros/foxy/share/ament_cmake_uncrustify/cmake)
+[5.230s] -- Configuring done
+[5.259s] -- Generating done
+[5.261s] -- Build files have been written to: /home/administrator/husky_ws2/src/build/camera_info_manager

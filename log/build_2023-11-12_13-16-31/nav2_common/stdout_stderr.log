@@ -1,0 +1,41 @@
+-- Found ament_cmake_core: 0.9.9 (/opt/ros/foxy/share/ament_cmake_core/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_cmake_python: 0.9.9 (/opt/ros/foxy/share/ament_cmake_python/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/administrator/husky_ws2/src/build/nav2_common
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/share/nav2_common/environment/pythonpath.sh
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/share/nav2_common/environment/pythonpath.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/lib/python3.8/site-packages/nav2_common/__init__.py
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/__init__.py
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/has_node_params.py
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/replace_string.py
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/rewritten_yaml.py
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/share/ament_index/resource_index/package_run_dependencies/nav2_common
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/share/ament_index/resource_index/parent_prefix_path/nav2_common
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/share/nav2_common/environment/ament_prefix_path.sh
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/share/nav2_common/environment/ament_prefix_path.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/share/nav2_common/environment/path.sh
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/share/nav2_common/environment/path.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/share/nav2_common/local_setup.bash
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/share/nav2_common/local_setup.sh
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/share/nav2_common/local_setup.zsh
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/share/nav2_common/local_setup.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/share/nav2_common/package.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/share/ament_index/resource_index/packages/nav2_common
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/share/nav2_common/cmake/nav2_common-extras.cmake
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/share/nav2_common/cmake/nav2_commonConfig.cmake
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/share/nav2_common/cmake/nav2_commonConfig-version.cmake
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/share/nav2_common/package.xml
+-- Symlinking: /home/administrator/husky_ws2/src/install/nav2_common/share/nav2_common/cmake/nav2_package.cmake
+Listing '/home/administrator/husky_ws2/src/install/nav2_common/lib/python3.8/site-packages/nav2_common'...
+Compiling '/home/administrator/husky_ws2/src/install/nav2_common/lib/python3.8/site-packages/nav2_common/__init__.py'...
+Listing '/home/administrator/husky_ws2/src/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch'...
+Compiling '/home/administrator/husky_ws2/src/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/__init__.py'...
+Compiling '/home/administrator/husky_ws2/src/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/has_node_params.py'...
+Compiling '/home/administrator/husky_ws2/src/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/replace_string.py'...
+Compiling '/home/administrator/husky_ws2/src/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/rewritten_yaml.py'...

@@ -1,0 +1,95 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/administrator/husky_ws2/src/build/shared_queues_vendor
+[35m[1mScanning dependencies of target ext-concurrentqueue[0m
+[35m[1mScanning dependencies of target ext-singleproducerconsumer[0m
+[  6%] [34m[1mCreating directories for 'ext-singleproducerconsumer'[0m
+[ 12%] [34m[1mCreating directories for 'ext-concurrentqueue'[0m
+[ 18%] [34m[1mPerforming download step (download, verify and extract) for 'ext-concurrentqueue'[0m
+[ 25%] [34m[1mPerforming download step (download, verify and extract) for 'ext-singleproducerconsumer'[0m
+-- Downloading...
+   dst='/home/administrator/husky_ws2/src/build/shared_queues_vendor/download/8f65a8734d77c3cc00d74c0532efca872931d3ce.zip'
+   timeout='60 seconds'
+-- Using src='https://github.com/cameron314/concurrentqueue/archive/8f65a8734d77c3cc00d74c0532efca872931d3ce.zip'
+-- Downloading...
+   dst='/home/administrator/husky_ws2/src/build/shared_queues_vendor/download/ef7dfbf553288064347d51b8ac335f1ca489032a.zip'
+   timeout='60 seconds'
+-- Using src='https://github.com/cameron314/readerwriterqueue/archive/ef7dfbf553288064347d51b8ac335f1ca489032a.zip'
+-- verifying file...
+       file='/home/administrator/husky_ws2/src/build/shared_queues_vendor/download/ef7dfbf553288064347d51b8ac335f1ca489032a.zip'
+-- Downloading... done
+-- extracting...
+     src='/home/administrator/husky_ws2/src/build/shared_queues_vendor/download/ef7dfbf553288064347d51b8ac335f1ca489032a.zip'
+     dst='/home/administrator/husky_ws2/src/build/shared_queues_vendor/singleproducerconsumer/src/ext-singleproducerconsumer'
+-- extracting... [tar xfz]
+-- extracting... [analysis]
+-- extracting... [rename]
+-- extracting... [clean up]
+-- extracting... done
+[ 31%] [34m[1mNo patch step for 'ext-singleproducerconsumer'[0m
+[ 37%] [34m[1mNo update step for 'ext-singleproducerconsumer'[0m
+[ 43%] [34m[1mNo configure step for 'ext-singleproducerconsumer'[0m
+[ 50%] [34m[1mNo build step for 'ext-singleproducerconsumer'[0m
+[ 56%] [34m[1mNo install step for 'ext-singleproducerconsumer'[0m
+[ 62%] [34m[1mCompleted 'ext-singleproducerconsumer'[0m
+[ 62%] Built target ext-singleproducerconsumer
+-- verifying file...
+       file='/home/administrator/husky_ws2/src/build/shared_queues_vendor/download/8f65a8734d77c3cc00d74c0532efca872931d3ce.zip'
+-- Downloading... done
+-- extracting...
+     src='/home/administrator/husky_ws2/src/build/shared_queues_vendor/download/8f65a8734d77c3cc00d74c0532efca872931d3ce.zip'
+     dst='/home/administrator/husky_ws2/src/build/shared_queues_vendor/concurrentqueue/src/ext-concurrentqueue'
+-- extracting... [tar xfz]
+-- extracting... [analysis]
+-- extracting... [rename]
+-- extracting... [clean up]
+-- extracting... done
+[ 68%] [34m[1mNo patch step for 'ext-concurrentqueue'[0m
+[ 75%] [34m[1mNo update step for 'ext-concurrentqueue'[0m
+[ 81%] [34m[1mNo configure step for 'ext-concurrentqueue'[0m
+[ 87%] [34m[1mNo build step for 'ext-concurrentqueue'[0m
+[ 93%] [34m[1mNo install step for 'ext-concurrentqueue'[0m
+[100%] [34m[1mCompleted 'ext-concurrentqueue'[0m
+[100%] Built target ext-concurrentqueue
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/include/moodycamel/atomicops.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/include/moodycamel/readerwriterqueue.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/include/moodycamel/concurrentqueue.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/include/moodycamel/blockingconcurrentqueue.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/share/ament_index/resource_index/package_run_dependencies/shared_queues_vendor
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/share/ament_index/resource_index/parent_prefix_path/shared_queues_vendor
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/share/shared_queues_vendor/environment/ament_prefix_path.sh
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/share/shared_queues_vendor/environment/ament_prefix_path.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/share/shared_queues_vendor/environment/path.sh
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/share/shared_queues_vendor/environment/path.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/share/shared_queues_vendor/local_setup.bash
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/share/shared_queues_vendor/local_setup.sh
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/share/shared_queues_vendor/local_setup.zsh
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/share/shared_queues_vendor/local_setup.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/share/shared_queues_vendor/package.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/share/ament_index/resource_index/packages/shared_queues_vendor
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/share/shared_queues_vendor/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/share/shared_queues_vendor/cmake/ament_cmake_export_targets-extras.cmake
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/share/shared_queues_vendor/cmake/shared_queues_vendorConfig.cmake
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/share/shared_queues_vendor/cmake/shared_queues_vendorConfig-version.cmake
+-- Symlinking: /home/administrator/husky_ws2/src/install/shared_queues_vendor/share/shared_queues_vendor/package.xml
+-- Installing: /home/administrator/husky_ws2/src/install/shared_queues_vendor/share/shared_queues_vendor/cmake/export_shared_queues_vendorExport.cmake

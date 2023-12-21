@@ -1,0 +1,55 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/administrator/husky_ws2/src/build/husky_control
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/config/control.yaml
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/config/empty.yaml
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/config/gazebo_interface.yaml
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/config/imu_filter.yaml
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/config/localization.yaml
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/config/public_interface.yaml
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/config/teleop_flysky_red_dongle.yaml
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/config/teleop_interactive_markers.yaml
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/config/teleop_logitech.yaml
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/config/teleop_ps4.yaml
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/config/twist_mux.yaml
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/launch/control.launch
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/launch/control.launch.py
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/launch/teleop.launch
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/launch/teleop_base.launch.py
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/launch/teleop_joy.launch_ORIGINAL.py
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/launch/teleop_joy.launch_flysky_red_dongle.py
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/ament_index/resource_index/package_run_dependencies/husky_control
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/ament_index/resource_index/parent_prefix_path/husky_control
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/environment/ament_prefix_path.sh
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/environment/ament_prefix_path.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/environment/path.sh
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/environment/path.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/local_setup.bash
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/local_setup.sh
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/local_setup.zsh
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/local_setup.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/package.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/ament_index/resource_index/packages/husky_control
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/cmake/husky_controlConfig.cmake
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/cmake/husky_controlConfig-version.cmake
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_control/share/husky_control/package.xml

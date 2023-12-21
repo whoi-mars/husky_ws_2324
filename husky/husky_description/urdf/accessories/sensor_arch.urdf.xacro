@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="510_mm_sensor_arch">
+
+  <xacro:macro name="sensor_arch" params="prefix parent size:=510 *origin">
+
+      <!-- Robot Base -->
+      <xacro:macro name="box_inertia" params="m w h d">
+        <inertial>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+          <mass value="${m}"/>
+          <inertia ixx="${(m/12) * (h*h + d*d)}" ixy="0.0" ixz="0.0" iyy="${(m/12) * (w*w + d*d)}" iyz="0.0" izz="${(m/12) * (w*w + h*h)}"/>
+        </inertial>
+      </xacro:macro>
+  
+  
+  <link name="${prefix}sensor_arch_mount_link">
+     <origin xyz="0 0 0" rpy="0 0 0"/>
+     <visual>
+	    <geometry>
+	     <mesh filename="file://$(find husky_description)/meshes/accessories/${510}_mm_sensor_arch.dae" />
+      </geometry>
+     </visual>
+    <collision>
+	    <origin xyz="0 0 0" rpy="0 0 0"/>
+	    <geometry>
+	     <mesh filename="file://$(find husky_description)/meshes/accessories/${510}_mm_sensor_arch.dae" />
+      </geometry>
+    </collision>
+
+    <xacro:box_inertia m=".01" w=".01" d=".01" h=".01"/>
+
+  </link>
+    
+  <joint name="${prefix}sensor_arch_mount" type="fixed">
+  	    <xacro:insert_block name="origin" />
+            <parent link="${parent}" />
+            <child link="${prefix}sensor_arch_mount_link" />            
+  </joint>
+  
+</xacro:macro>
+
+</robot>

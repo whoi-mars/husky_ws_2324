@@ -1,0 +1,213 @@
+[0.051s] Invoking command in '/home/administrator/husky_ws2/src/build/hector_gazebo_plugins': CMAKE_PREFIX_PATH=/home/administrator/husky_ws2/install/zed_ros2:/home/administrator/husky_ws2/install/zed_display_rviz2:/home/administrator/husky_ws2/install/zed_wrapper:/home/administrator/husky_ws2/install/zed_tutorial_video:/home/administrator/husky_ws2/install/zed_tutorial_pos_tracking:/home/administrator/husky_ws2/install/zed_tutorial_depth:/home/administrator/husky_ws2/install/zed_rgb_convert:/home/administrator/husky_ws2/install/zed_components:/home/administrator/husky_ws2/install/rviz_plugin_zed_od:/home/administrator/husky_ws2/install/zed_interfaces:/home/administrator/husky_ws2/install/velodyne_simulator:/home/administrator/husky_ws2/install/velodyne_gazebo_plugins:/home/administrator/husky_ws2/install/husky_desktop:/home/administrator/husky_ws2/install/husky_viz:/home/administrator/husky_ws2/install/husky_simulator:/home/administrator/husky_ws2/install/husky_robot:/home/administrator/husky_ws2/install/husky_gazebo:/home/administrator/husky_ws2/install/husky_bringup:/home/administrator/husky_ws2/install/husky_control:/home/administrator/husky_ws2/install/husky_description:/home/administrator/husky_ws2/install/velodyne_description:/home/administrator/husky_ws2/install/um7:/home/administrator/husky_ws2/install/swri_route_util:/home/administrator/husky_ws2/install/swri_transform_util:/home/administrator/husky_ws2/install/swri_system_util:/home/administrator/husky_ws2/install/swri_serial_util:/home/administrator/husky_ws2/install/swri_image_util:/home/administrator/husky_ws2/install/swri_roscpp:/home/administrator/husky_ws2/install/swri_prefix_tools:/home/administrator/husky_ws2/install/swri_opencv_util:/home/administrator/husky_ws2/install/swri_math_util:/home/administrator/husky_ws2/install/swri_geometry_util:/home/administrator/husky_ws2/install/swri_dbw_interface:/home/administrator/husky_ws2/install/swri_console_util:/home/administrator/husky_ws2/install/nav2_system_tests:/home/administrator/husky_ws2/install/nav2_bringup:/home/administrator/husky_ws2/install/navigation2:/home/administrator/husky_ws2/install/smac_planner:/home/administrator/husky_ws2/install/pointcloud_to_laserscan:/home/administrator/husky_ws2/install/nav2_dwb_controller:/home/administrator/husky_ws2/install/nav2_controller:/home/administrator/husky_ws2/install/dwb_plugins:/home/administrator/husky_ws2/install/dwb_critics:/home/administrator/husky_ws2/install/dwb_core:/home/administrator/husky_ws2/install/nav_2d_utils:/home/administrator/husky_ws2/install/dwb_msgs:/home/administrator/husky_ws2/install/nav_2d_msgs:/home/administrator/husky_ws2/install/nav2_waypoint_follower:/home/administrator/husky_ws2/install/nav2_regulated_pure_pursuit_controller:/home/administrator/husky_ws2/install/nav2_recoveries:/home/administrator/husky_ws2/install/nav2_planner:/home/administrator/husky_ws2/install/nav2_navfn_planner:/home/administrator/husky_ws2/install/nav2_core:/home/administrator/husky_ws2/install/costmap_queue:/home/administrator/husky_ws2/install/nav2_costmap_2d:/home/administrator/husky_ws2/install/nav2_voxel_grid:/home/administrator/husky_ws2/install/nav2_rviz_plugins:/home/administrator/husky_ws2/install/nav2_map_server:/home/administrator/husky_ws2/install/nav2_lifecycle_manager:/home/administrator/husky_ws2/install/nav2_bt_navigator:/home/administrator/husky_ws2/install/nav2_behavior_tree:/home/administrator/husky_ws2/install/nav2_amcl:/home/administrator/husky_ws2/install/nav2_util:/home/administrator/husky_ws2/install/nav2_msgs:/home/administrator/husky_ws2/install/nav2_common:/home/administrator/husky_ws2/install/microstrain_inertial_examples:/home/administrator/husky_ws2/install/microstrain_inertial_driver:/home/administrator/husky_ws2/install/microstrain_inertial_msgs:/home/administrator/husky_ws2/install/local_nav_pkg:/home/administrator/husky_ws2/install/image_common:/home/administrator/husky_ws2/install/image_transport:/home/administrator/husky_ws2/install/husky_base:/home/administrator/husky_ws2/install/husky_msgs:/home/administrator/husky_ws2/install/hector_gazebo:/home/administrator/husky_ws2/install/hector_gazebo_worlds:/home/administrator/husky_ws2/install/hector_gazebo_plugins:/home/administrator/husky_ws2/install/custom_nav_stack_pkg:/home/administrator/husky_ws2/install/camera_info_manager:/home/administrator/husky_ws2/install/camera_calibration_parsers:/home/administrator/richo_theta_ws/install/penguin_detection:/home/administrator/husky_ws2/install/nav2_gazebo_spawner:/home/administrator/husky_ws2/install/microstrain_inertial_rqt:/home/administrator/husky_ws2/install/gps_goal:/opt/ros/foxy:/opt/ros/noetic /usr/bin/cmake /home/administrator/husky_ws2/src/hector_gazebo/hector_gazebo_plugins -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/administrator/husky_ws2/src/install/hector_gazebo_plugins
+[0.148s] -- The C compiler identification is GNU 9.4.0
+[0.231s] -- The CXX compiler identification is GNU 9.4.0
+[0.239s] -- Check for working C compiler: /usr/bin/cc
+[0.336s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.337s] -- Detecting C compiler ABI info
+[0.439s] -- Detecting C compiler ABI info - done
+[0.445s] -- Detecting C compile features
+[0.445s] -- Detecting C compile features - done
+[0.447s] -- Check for working CXX compiler: /usr/bin/c++
+[0.557s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.558s] -- Detecting CXX compiler ABI info
+[0.683s] -- Detecting CXX compiler ABI info - done
+[0.697s] -- Detecting CXX compile features
+[0.697s] -- Detecting CXX compile features - done
+[0.706s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.749s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.749s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.005s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.102s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.190s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.205s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.406s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.455s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.581s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.675s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.682s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.683s] -- Looking for pthread.h
+[1.792s] -- Looking for pthread.h - found
+[1.793s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.933s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.933s] -- Looking for pthread_create in pthreads
+[2.036s] -- Looking for pthread_create in pthreads - not found
+[2.039s] -- Looking for pthread_create in pthread
+[2.143s] -- Looking for pthread_create in pthread - found
+[2.146s] -- Found Threads: TRUE  
+[2.343s] -- Found std_srvs: 2.0.5 (/opt/ros/foxy/share/std_srvs/cmake)
+[2.361s] -- Found geographic_msgs: 1.0.4 (/opt/ros/foxy/share/geographic_msgs/cmake)
+[2.504s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[2.577s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[2.660s] -- Found tf2: 0.13.13 (/opt/ros/foxy/share/tf2/cmake)
+[2.680s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[2.739s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+[2.741s] -- Checking for module 'bullet>=2.82'
+[2.810s] --   Found bullet, version 2.88
+[3.345s] -- Found ccd: /usr/include (found suitable version "2.0", minimum required is "2.0") 
+[3.924s] -- Found fcl: /usr/include (found suitable version "0.5.0", minimum required is "0.3.2") 
+[4.360s] -- Found assimp: /usr/include (found version "5.0.0") 
+[4.446s] -- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+[4.589s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found suitable version "1.71.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time 
+[4.638s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.6.1") 
+[4.652s] -- Looking for ignition-math6 -- found version 6.13.0
+[4.665s] -- Searching for dependencies of ignition-math6
+[4.667s] -- Looking for OGRE...
+[4.668s] -- OGRE_PREFIX_WATCH changed.
+[4.678s] -- Checking for module 'OGRE'
+[4.917s] --   Found OGRE, version 1.9.0
+[5.395s] -- Found Ogre Ghadamon (1.9.0)
+[5.477s] -- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+[5.502s] -- Looking for OGRE_Paging...
+[5.555s] -- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+[5.555s] -- Looking for OGRE_Terrain...
+[5.644s] -- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+[5.644s] -- Looking for OGRE_Property...
+[5.693s] -- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+[5.693s] -- Looking for OGRE_RTShaderSystem...
+[5.738s] -- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+[5.739s] -- Looking for OGRE_Volume...
+[5.798s] -- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+[5.798s] -- Looking for OGRE_Overlay...
+[5.856s] -- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+[7.137s] -- Looking for ignition-math6 -- found version 6.13.0
+[7.188s] -- Looking for ignition-transport8 -- found version 8.2.1
+[7.188s] -- Searching for dependencies of ignition-transport8
+[7.288s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found suitable version "3.6.1", minimum required is "3") 
+[7.335s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[7.368s] -- Checking for module 'libzmq >= 4'
+[7.533s] --   Found libzmq , version 4.3.2
+[8.088s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[8.124s] -- Checking for module 'uuid'
+[8.290s] --   Found uuid, version 2.34.0
+[8.668s] -- Found UUID: TRUE  
+[8.684s] -- Looking for ignition-msgs5 -- found version 5.9.0
+[8.686s] -- Searching for dependencies of ignition-msgs5
+[8.761s] -- Looking for ignition-math6 -- found version 6.13.0
+[8.784s] -- Checking for module 'tinyxml2'
+[8.944s] --   Found tinyxml2, version 6.2.0
+[9.424s] -- Looking for ignition-msgs5 -- found version 5.9.0
+[9.448s] -- Looking for ignition-common3 -- found version 3.14.0
+[9.449s] -- Searching for dependencies of ignition-common3
+[9.451s] -- Looking for dlfcn.h - found
+[9.454s] -- Looking for libdl - found
+[9.456s] -- Found DL: TRUE  
+[9.528s] -- Searching for <ignition-common3> component [graphics]
+[9.558s] -- Looking for ignition-common3-graphics -- found version 3.14.0
+[9.558s] -- Searching for dependencies of ignition-common3-graphics
+[9.559s] -- Looking for ignition-math6 -- found version 6.13.0
+[9.605s] -- Looking for ignition-fuel_tools4 -- found version 4.4.0
+[9.605s] -- Searching for dependencies of ignition-fuel_tools4
+[10.284s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.68.0")  
+[10.337s] -- Checking for module 'jsoncpp'
+[10.523s] --   Found jsoncpp, version 1.7.4
+[10.995s] -- Found JSONCPP: TRUE  
+[11.016s] -- Checking for module 'libzip'
+[11.148s] --   Found libzip, version 1.5.1
+[11.545s] -- Found ZIP: TRUE  
+[11.546s] -- Looking for ignition-common3 -- found version 3.14.0
+[11.546s] -- Looking for ignition-math6 -- found version 6.13.0
+[11.547s] -- Looking for ignition-msgs5 -- found version 5.9.0
+[11.636s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[12.175s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[12.988s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[13.237s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[13.343s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[13.358s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[13.443s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[13.448s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[13.448s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[13.449s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[13.492s] -- Found PythonExtra: .so  
+[13.848s] -- Found rmw_fastrtps_cpp: 1.3.0 (/opt/ros/foxy/share/rmw_fastrtps_cpp/cmake)
+[14.203s] -- Configuring done
+[14.409s] -- Generating done
+[14.414s] -- Build files have been written to: /home/administrator/husky_ws2/src/build/hector_gazebo_plugins
+[14.442s] Invoked command in '/home/administrator/husky_ws2/src/build/hector_gazebo_plugins' returned '0': CMAKE_PREFIX_PATH=/home/administrator/husky_ws2/install/zed_ros2:/home/administrator/husky_ws2/install/zed_display_rviz2:/home/administrator/husky_ws2/install/zed_wrapper:/home/administrator/husky_ws2/install/zed_tutorial_video:/home/administrator/husky_ws2/install/zed_tutorial_pos_tracking:/home/administrator/husky_ws2/install/zed_tutorial_depth:/home/administrator/husky_ws2/install/zed_rgb_convert:/home/administrator/husky_ws2/install/zed_components:/home/administrator/husky_ws2/install/rviz_plugin_zed_od:/home/administrator/husky_ws2/install/zed_interfaces:/home/administrator/husky_ws2/install/velodyne_simulator:/home/administrator/husky_ws2/install/velodyne_gazebo_plugins:/home/administrator/husky_ws2/install/husky_desktop:/home/administrator/husky_ws2/install/husky_viz:/home/administrator/husky_ws2/install/husky_simulator:/home/administrator/husky_ws2/install/husky_robot:/home/administrator/husky_ws2/install/husky_gazebo:/home/administrator/husky_ws2/install/husky_bringup:/home/administrator/husky_ws2/install/husky_control:/home/administrator/husky_ws2/install/husky_description:/home/administrator/husky_ws2/install/velodyne_description:/home/administrator/husky_ws2/install/um7:/home/administrator/husky_ws2/install/swri_route_util:/home/administrator/husky_ws2/install/swri_transform_util:/home/administrator/husky_ws2/install/swri_system_util:/home/administrator/husky_ws2/install/swri_serial_util:/home/administrator/husky_ws2/install/swri_image_util:/home/administrator/husky_ws2/install/swri_roscpp:/home/administrator/husky_ws2/install/swri_prefix_tools:/home/administrator/husky_ws2/install/swri_opencv_util:/home/administrator/husky_ws2/install/swri_math_util:/home/administrator/husky_ws2/install/swri_geometry_util:/home/administrator/husky_ws2/install/swri_dbw_interface:/home/administrator/husky_ws2/install/swri_console_util:/home/administrator/husky_ws2/install/nav2_system_tests:/home/administrator/husky_ws2/install/nav2_bringup:/home/administrator/husky_ws2/install/navigation2:/home/administrator/husky_ws2/install/smac_planner:/home/administrator/husky_ws2/install/pointcloud_to_laserscan:/home/administrator/husky_ws2/install/nav2_dwb_controller:/home/administrator/husky_ws2/install/nav2_controller:/home/administrator/husky_ws2/install/dwb_plugins:/home/administrator/husky_ws2/install/dwb_critics:/home/administrator/husky_ws2/install/dwb_core:/home/administrator/husky_ws2/install/nav_2d_utils:/home/administrator/husky_ws2/install/dwb_msgs:/home/administrator/husky_ws2/install/nav_2d_msgs:/home/administrator/husky_ws2/install/nav2_waypoint_follower:/home/administrator/husky_ws2/install/nav2_regulated_pure_pursuit_controller:/home/administrator/husky_ws2/install/nav2_recoveries:/home/administrator/husky_ws2/install/nav2_planner:/home/administrator/husky_ws2/install/nav2_navfn_planner:/home/administrator/husky_ws2/install/nav2_core:/home/administrator/husky_ws2/install/costmap_queue:/home/administrator/husky_ws2/install/nav2_costmap_2d:/home/administrator/husky_ws2/install/nav2_voxel_grid:/home/administrator/husky_ws2/install/nav2_rviz_plugins:/home/administrator/husky_ws2/install/nav2_map_server:/home/administrator/husky_ws2/install/nav2_lifecycle_manager:/home/administrator/husky_ws2/install/nav2_bt_navigator:/home/administrator/husky_ws2/install/nav2_behavior_tree:/home/administrator/husky_ws2/install/nav2_amcl:/home/administrator/husky_ws2/install/nav2_util:/home/administrator/husky_ws2/install/nav2_msgs:/home/administrator/husky_ws2/install/nav2_common:/home/administrator/husky_ws2/install/microstrain_inertial_examples:/home/administrator/husky_ws2/install/microstrain_inertial_driver:/home/administrator/husky_ws2/install/microstrain_inertial_msgs:/home/administrator/husky_ws2/install/local_nav_pkg:/home/administrator/husky_ws2/install/image_common:/home/administrator/husky_ws2/install/image_transport:/home/administrator/husky_ws2/install/husky_base:/home/administrator/husky_ws2/install/husky_msgs:/home/administrator/husky_ws2/install/hector_gazebo:/home/administrator/husky_ws2/install/hector_gazebo_worlds:/home/administrator/husky_ws2/install/hector_gazebo_plugins:/home/administrator/husky_ws2/install/custom_nav_stack_pkg:/home/administrator/husky_ws2/install/camera_info_manager:/home/administrator/husky_ws2/install/camera_calibration_parsers:/home/administrator/richo_theta_ws/install/penguin_detection:/home/administrator/husky_ws2/install/nav2_gazebo_spawner:/home/administrator/husky_ws2/install/microstrain_inertial_rqt:/home/administrator/husky_ws2/install/gps_goal:/opt/ros/foxy:/opt/ros/noetic /usr/bin/cmake /home/administrator/husky_ws2/src/hector_gazebo/hector_gazebo_plugins -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/administrator/husky_ws2/src/install/hector_gazebo_plugins
+[14.443s] Invoking command in '/home/administrator/husky_ws2/src/build/hector_gazebo_plugins': CMAKE_PREFIX_PATH=/home/administrator/husky_ws2/install/zed_ros2:/home/administrator/husky_ws2/install/zed_display_rviz2:/home/administrator/husky_ws2/install/zed_wrapper:/home/administrator/husky_ws2/install/zed_tutorial_video:/home/administrator/husky_ws2/install/zed_tutorial_pos_tracking:/home/administrator/husky_ws2/install/zed_tutorial_depth:/home/administrator/husky_ws2/install/zed_rgb_convert:/home/administrator/husky_ws2/install/zed_components:/home/administrator/husky_ws2/install/rviz_plugin_zed_od:/home/administrator/husky_ws2/install/zed_interfaces:/home/administrator/husky_ws2/install/velodyne_simulator:/home/administrator/husky_ws2/install/velodyne_gazebo_plugins:/home/administrator/husky_ws2/install/husky_desktop:/home/administrator/husky_ws2/install/husky_viz:/home/administrator/husky_ws2/install/husky_simulator:/home/administrator/husky_ws2/install/husky_robot:/home/administrator/husky_ws2/install/husky_gazebo:/home/administrator/husky_ws2/install/husky_bringup:/home/administrator/husky_ws2/install/husky_control:/home/administrator/husky_ws2/install/husky_description:/home/administrator/husky_ws2/install/velodyne_description:/home/administrator/husky_ws2/install/um7:/home/administrator/husky_ws2/install/swri_route_util:/home/administrator/husky_ws2/install/swri_transform_util:/home/administrator/husky_ws2/install/swri_system_util:/home/administrator/husky_ws2/install/swri_serial_util:/home/administrator/husky_ws2/install/swri_image_util:/home/administrator/husky_ws2/install/swri_roscpp:/home/administrator/husky_ws2/install/swri_prefix_tools:/home/administrator/husky_ws2/install/swri_opencv_util:/home/administrator/husky_ws2/install/swri_math_util:/home/administrator/husky_ws2/install/swri_geometry_util:/home/administrator/husky_ws2/install/swri_dbw_interface:/home/administrator/husky_ws2/install/swri_console_util:/home/administrator/husky_ws2/install/nav2_system_tests:/home/administrator/husky_ws2/install/nav2_bringup:/home/administrator/husky_ws2/install/navigation2:/home/administrator/husky_ws2/install/smac_planner:/home/administrator/husky_ws2/install/pointcloud_to_laserscan:/home/administrator/husky_ws2/install/nav2_dwb_controller:/home/administrator/husky_ws2/install/nav2_controller:/home/administrator/husky_ws2/install/dwb_plugins:/home/administrator/husky_ws2/install/dwb_critics:/home/administrator/husky_ws2/install/dwb_core:/home/administrator/husky_ws2/install/nav_2d_utils:/home/administrator/husky_ws2/install/dwb_msgs:/home/administrator/husky_ws2/install/nav_2d_msgs:/home/administrator/husky_ws2/install/nav2_waypoint_follower:/home/administrator/husky_ws2/install/nav2_regulated_pure_pursuit_controller:/home/administrator/husky_ws2/install/nav2_recoveries:/home/administrator/husky_ws2/install/nav2_planner:/home/administrator/husky_ws2/install/nav2_navfn_planner:/home/administrator/husky_ws2/install/nav2_core:/home/administrator/husky_ws2/install/costmap_queue:/home/administrator/husky_ws2/install/nav2_costmap_2d:/home/administrator/husky_ws2/install/nav2_voxel_grid:/home/administrator/husky_ws2/install/nav2_rviz_plugins:/home/administrator/husky_ws2/install/nav2_map_server:/home/administrator/husky_ws2/install/nav2_lifecycle_manager:/home/administrator/husky_ws2/install/nav2_bt_navigator:/home/administrator/husky_ws2/install/nav2_behavior_tree:/home/administrator/husky_ws2/install/nav2_amcl:/home/administrator/husky_ws2/install/nav2_util:/home/administrator/husky_ws2/install/nav2_msgs:/home/administrator/husky_ws2/install/nav2_common:/home/administrator/husky_ws2/install/microstrain_inertial_examples:/home/administrator/husky_ws2/install/microstrain_inertial_driver:/home/administrator/husky_ws2/install/microstrain_inertial_msgs:/home/administrator/husky_ws2/install/local_nav_pkg:/home/administrator/husky_ws2/install/image_common:/home/administrator/husky_ws2/install/image_transport:/home/administrator/husky_ws2/install/husky_base:/home/administrator/husky_ws2/install/husky_msgs:/home/administrator/husky_ws2/install/hector_gazebo:/home/administrator/husky_ws2/install/hector_gazebo_worlds:/home/administrator/husky_ws2/install/hector_gazebo_plugins:/home/administrator/husky_ws2/install/custom_nav_stack_pkg:/home/administrator/husky_ws2/install/camera_info_manager:/home/administrator/husky_ws2/install/camera_calibration_parsers:/home/administrator/richo_theta_ws/install/penguin_detection:/home/administrator/husky_ws2/install/nav2_gazebo_spawner:/home/administrator/husky_ws2/install/microstrain_inertial_rqt:/home/administrator/husky_ws2/install/gps_goal:/opt/ros/foxy:/opt/ros/noetic /usr/bin/cmake --build /home/administrator/husky_ws2/src/build/hector_gazebo_plugins -- -j8 -l8
+[14.748s] [35m[1mScanning dependencies of target hector_gazebo_ros_magnetic[0m
+[14.748s] [35m[1mScanning dependencies of target hector_gazebo_plugins__cpp[0m
+[14.754s] [35m[1mScanning dependencies of target hector_gazebo_reset_plugin[0m
+[14.759s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[14.774s] [35m[1mScanning dependencies of target hector_gazebo_ros_sonar[0m
+[14.884s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[15.084s] [  6%] [32mBuilding CXX object CMakeFiles/hector_gazebo_reset_plugin.dir/src/reset_plugin.cpp.o[0m
+[15.143s] [  8%] [32mBuilding CXX object CMakeFiles/hector_gazebo_ros_magnetic.dir/src/gazebo_ros_magnetic.cpp.o[0m
+[15.208s] [ 10%] [32mBuilding CXX object CMakeFiles/hector_gazebo_ros_sonar.dir/src/gazebo_ros_sonar.cpp.o[0m
+[15.584s] [35m[1mScanning dependencies of target hector_gazebo_plugins__rosidl_generator_c[0m
+[15.712s] [ 10%] Built target hector_gazebo_plugins__cpp
+[15.724s] [ 12%] [32mBuilding C object CMakeFiles/hector_gazebo_plugins__rosidl_generator_c.dir/rosidl_generator_c/hector_gazebo_plugins/srv/detail/set_reference_geo_pose__functions.c.o[0m
+[15.731s] [ 14%] [32mBuilding C object CMakeFiles/hector_gazebo_plugins__rosidl_generator_c.dir/rosidl_generator_c/hector_gazebo_plugins/srv/detail/set_bias__functions.c.o[0m
+[15.794s] [ 16%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[15.820s] [ 18%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[15.835s] [ 20%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[15.990s] [ 22%] [32m[1mLinking C shared library libhector_gazebo_plugins__rosidl_generator_c.so[0m
+[16.223s] [ 22%] Built target hector_gazebo_plugins__rosidl_generator_c
+[16.338s] [ 24%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[16.389s] [ 26%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[16.554s] [35m[1mScanning dependencies of target hector_gazebo_plugins__rosidl_typesupport_fastrtps_cpp[0m
+[16.670s] [ 28%] [32mBuilding CXX object CMakeFiles/hector_gazebo_plugins__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hector_gazebo_plugins/srv/detail/dds_fastrtps/set_bias__type_support.cpp.o[0m
+[16.829s] [35m[1mScanning dependencies of target hector_gazebo_plugins__rosidl_typesupport_cpp[0m
+[16.928s] [ 30%] [32mBuilding CXX object CMakeFiles/hector_gazebo_plugins__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hector_gazebo_plugins/srv/set_bias__type_support.cpp.o[0m
+[17.085s] [35m[1mScanning dependencies of target hector_gazebo_plugins__rosidl_typesupport_introspection_cpp[0m
+[17.168s] [ 32%] [32mBuilding CXX object CMakeFiles/hector_gazebo_plugins__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hector_gazebo_plugins/srv/detail/set_bias__type_support.cpp.o[0m
+[17.183s] [35m[1mScanning dependencies of target hector_gazebo_plugins__rosidl_typesupport_c[0m
+[17.277s] [ 34%] [32mBuilding CXX object CMakeFiles/hector_gazebo_plugins__rosidl_typesupport_c.dir/rosidl_typesupport_c/hector_gazebo_plugins/srv/set_bias__type_support.cpp.o[0m
+[17.506s] [ 36%] [32mBuilding CXX object CMakeFiles/hector_gazebo_plugins__rosidl_typesupport_c.dir/rosidl_typesupport_c/hector_gazebo_plugins/srv/set_reference_geo_pose__type_support.cpp.o[0m
+[17.580s] [35m[1mScanning dependencies of target hector_gazebo_plugins__rosidl_typesupport_introspection_c[0m
+[17.598s] [ 38%] [32mBuilding CXX object CMakeFiles/hector_gazebo_plugins__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hector_gazebo_plugins/srv/set_reference_geo_pose__type_support.cpp.o[0m
+[17.599s] [ 40%] [32mBuilding CXX object CMakeFiles/hector_gazebo_plugins__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hector_gazebo_plugins/srv/detail/dds_fastrtps/set_reference_geo_pose__type_support.cpp.o[0m
+[17.652s] [ 42%] [32mBuilding CXX object CMakeFiles/hector_gazebo_plugins__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hector_gazebo_plugins/srv/detail/set_reference_geo_pose__type_support.cpp.o[0m
+[17.738s] [ 44%] [32mBuilding C object CMakeFiles/hector_gazebo_plugins__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hector_gazebo_plugins/srv/detail/set_bias__type_support.c.o[0m
+[17.763s] [ 46%] [32m[1mLinking CXX shared library libhector_gazebo_plugins__rosidl_typesupport_c.so[0m
+[17.953s] [ 48%] [32mBuilding C object CMakeFiles/hector_gazebo_plugins__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hector_gazebo_plugins/srv/detail/set_reference_geo_pose__type_support.c.o[0m
+[18.167s] [ 48%] Built target hector_gazebo_plugins__rosidl_typesupport_c
+[18.185s] [ 51%] [32m[1mLinking C shared library libhector_gazebo_plugins__rosidl_typesupport_introspection_c.so[0m
+[18.277s] [ 53%] [32m[1mLinking CXX shared library libhector_gazebo_plugins__rosidl_typesupport_cpp.so[0m
+[18.322s] [ 55%] [32m[1mLinking CXX shared library libhector_gazebo_plugins__rosidl_typesupport_fastrtps_cpp.so[0m
+[18.354s] [ 57%] [32m[1mLinking CXX shared library libhector_gazebo_plugins__rosidl_typesupport_introspection_cpp.so[0m
+[18.473s] [ 57%] Built target hector_gazebo_plugins__rosidl_typesupport_introspection_c
+[18.577s] [ 57%] Built target hector_gazebo_plugins__rosidl_typesupport_fastrtps_cpp
+[18.608s] [ 57%] Built target hector_gazebo_plugins__rosidl_typesupport_cpp
+[18.664s] [ 57%] Built target hector_gazebo_plugins__rosidl_typesupport_introspection_cpp
+[18.671s] [ 59%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[19.198s] [35m[1mScanning dependencies of target hector_gazebo_plugins__rosidl_typesupport_fastrtps_c[0m
+[19.259s] [ 61%] [32mBuilding CXX object CMakeFiles/hector_gazebo_plugins__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hector_gazebo_plugins/srv/detail/set_reference_geo_pose__type_support_c.cpp.o[0m
+[19.260s] [ 63%] [32mBuilding CXX object CMakeFiles/hector_gazebo_plugins__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hector_gazebo_plugins/srv/detail/set_bias__type_support_c.cpp.o[0m
+[20.006s] [ 65%] [32m[1mLinking CXX shared library libhector_gazebo_plugins__rosidl_typesupport_fastrtps_c.so[0m
+[20.190s] [ 65%] Built target hector_gazebo_plugins__rosidl_typesupport_fastrtps_c
+[20.267s] [35m[1mScanning dependencies of target hector_gazebo_plugins[0m
+[20.341s] [ 65%] Built target hector_gazebo_plugins
+[20.418s] [35m[1mScanning dependencies of target hector_gazebo_ros_imu[0m
+[20.423s] [35m[1mScanning dependencies of target hector_gazebo_ros_gps[0m
+[20.430s] [35m[1mScanning dependencies of target hector_gazebo_plugins__py[0m
+[20.509s] [ 67%] [34m[1mGenerating Python code for ROS interfaces[0m
+[20.719s] [ 69%] [32mBuilding CXX object CMakeFiles/hector_gazebo_ros_imu.dir/src/gazebo_ros_imu.cpp.o[0m
+[20.794s] [ 71%] [32mBuilding CXX object CMakeFiles/hector_gazebo_ros_gps.dir/src/gazebo_ros_gps.cpp.o[0m
+[21.886s] [ 71%] Built target hector_gazebo_plugins__py
+[21.970s] [35m[1mScanning dependencies of target hector_gazebo_plugins__python[0m
+[22.125s] [ 73%] [32mBuilding C object CMakeFiles/hector_gazebo_plugins__python.dir/rosidl_generator_py/hector_gazebo_plugins/srv/_set_reference_geo_pose_s.c.o[0m
+[22.142s] [ 75%] [32mBuilding C object CMakeFiles/hector_gazebo_plugins__python.dir/rosidl_generator_py/hector_gazebo_plugins/srv/_set_bias_s.c.o[0m
+[22.594s] [ 77%] [32m[1mLinking C shared library rosidl_generator_py/hector_gazebo_plugins/libhector_gazebo_plugins__python.so[0m
+[22.844s] [ 77%] Built target hector_gazebo_plugins__python
+[22.919s] [35m[1mScanning dependencies of target hector_gazebo_plugins__rosidl_typesupport_c__pyext[0m
+[22.979s] [35m[1mScanning dependencies of target hector_gazebo_plugins__rosidl_typesupport_fastrtps_c__pyext[0m
+[23.033s] [ 79%] [32mBuilding C object CMakeFiles/hector_gazebo_plugins__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/hector_gazebo_plugins/_hector_gazebo_plugins_s.ep.rosidl_typesupport_c.c.o[0m
+[23.097s] [ 81%] [32mBuilding C object CMakeFiles/hector_gazebo_plugins__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/hector_gazebo_plugins/_hector_gazebo_plugins_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[23.325s] [ 83%] [32m[1mLinking C shared library rosidl_generator_py/hector_gazebo_plugins/hector_gazebo_plugins_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[23.327s] [ 85%] [32m[1mLinking CXX shared library rosidl_generator_py/hector_gazebo_plugins/hector_gazebo_plugins_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[23.585s] [ 85%] Built target hector_gazebo_plugins__rosidl_typesupport_c__pyext
+[23.624s] [35m[1mScanning dependencies of target hector_gazebo_plugins__rosidl_typesupport_introspection_c__pyext[0m
+[23.671s] [ 85%] Built target hector_gazebo_plugins__rosidl_typesupport_fastrtps_c__pyext
+[23.692s] [ 87%] [32mBuilding C object CMakeFiles/hector_gazebo_plugins__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/hector_gazebo_plugins/_hector_gazebo_plugins_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[23.867s] [ 89%] [32m[1mLinking C shared library rosidl_generator_py/hector_gazebo_plugins/hector_gazebo_plugins_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[24.119s] [ 89%] Built target hector_gazebo_plugins__rosidl_typesupport_introspection_c__pyext
+[25.902s] [ 91%] [32m[1mLinking CXX shared library libhector_gazebo_reset_plugin.so[0m
+[26.526s] [ 91%] Built target hector_gazebo_reset_plugin
+[29.948s] [ 93%] [32m[1mLinking CXX shared library libhector_gazebo_ros_sonar.so[0m
+[30.423s] [ 95%] [32m[1mLinking CXX shared library libhector_gazebo_ros_magnetic.so[0m
+[30.602s] [ 95%] Built target hector_gazebo_ros_sonar
+[30.963s] [ 95%] Built target hector_gazebo_ros_magnetic
+[34.752s] [ 97%] [32m[1mLinking CXX shared library libhector_gazebo_ros_imu.so[0m
+[35.296s] [ 97%] Built target hector_gazebo_ros_imu
+[35.795s] [100%] [32m[1mLinking CXX shared library libhector_gazebo_ros_gps.so[0m
+[36.280s] [100%] Built target hector_gazebo_ros_gps

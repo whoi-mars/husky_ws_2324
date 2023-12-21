@@ -1,0 +1,8 @@
+CMake Error at /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:62 (message):
+  common is required but boost was not found
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:367 (pcl_report_not_found)
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:551 (find_external_library)
+  CMakeLists.txt:46 (find_package)
+
+

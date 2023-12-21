@@ -1,0 +1,153 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found diagnostic_updater: 2.0.8 (/opt/ros/foxy/share/diagnostic_updater/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found FastRTPS: /opt/ros/foxy/include  
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found marti_common_msgs: 1.3.0 (/opt/ros/foxy/share/marti_common_msgs/cmake)
+-- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+-- Found std_srvs: 2.0.5 (/opt/ros/foxy/share/std_srvs/cmake)
+-- Found ament_cmake_gtest: 0.9.9 (/opt/ros/foxy/share/ament_cmake_gtest/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: system 
+-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+-- Found PythonExtra: .so  
+-- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Check if compiler accepts -pthread
+-- Check if compiler accepts -pthread - yes
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/administrator/husky_ws2/src/build/swri_roscpp
+[35m[1mScanning dependencies of target gtest[0m
+[35m[1mScanning dependencies of target swri_roscpp__cpp[0m
+[  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[35m[1mScanning dependencies of target subscriber_test[0m
+[  3%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[35m[1mScanning dependencies of target storing_subscriber_test[0m
+[35m[1mScanning dependencies of target gtest_main[0m
+[  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[35m[1mScanning dependencies of target timer_test[0m
+[  7%] [32mBuilding CXX object CMakeFiles/subscriber_test.dir/src/nodes/subscriber_test.cpp.o[0m
+[35m[1mScanning dependencies of target service_server_test[0m
+[  9%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[ 11%] [32mBuilding CXX object CMakeFiles/storing_subscriber_test.dir/src/nodes/storing_subscriber_test.cpp.o[0m
+[ 13%] [32mBuilding CXX object CMakeFiles/timer_test.dir/src/nodes/timer_test.cpp.o[0m
+[ 15%] [32mBuilding CXX object CMakeFiles/service_server_test.dir/src/nodes/service_server_test.cpp.o[0m
+[ 15%] Built target swri_roscpp__cpp
+[ 16%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[35m[1mScanning dependencies of target swri_roscpp__rosidl_generator_c[0m
+[35m[1mScanning dependencies of target swri_roscpp__rosidl_typesupport_cpp[0m
+[ 18%] [32mBuilding C object CMakeFiles/swri_roscpp__rosidl_generator_c.dir/rosidl_generator_c/swri_roscpp/msg/detail/test_topic_service_request__functions.c.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/swri_roscpp__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/swri_roscpp/msg/test_topic_service_request__type_support.cpp.o[0m
+[ 22%] [32mBuilding C object CMakeFiles/swri_roscpp__rosidl_generator_c.dir/rosidl_generator_c/swri_roscpp/msg/detail/test_topic_service_response__functions.c.o[0m
+[ 24%] [32m[1mLinking C shared library libswri_roscpp__rosidl_generator_c.so[0m
+[ 26%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[ 26%] Built target swri_roscpp__rosidl_generator_c
+[ 26%] Built target gtest_main
+[ 28%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[ 30%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/swri_roscpp__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/swri_roscpp/msg/test_topic_service_response__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target swri_roscpp__rosidl_typesupport_fastrtps_cpp[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/swri_roscpp__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/swri_roscpp/msg/detail/dds_fastrtps/test_topic_service_request__type_support.cpp.o[0m
+[ 35%] [32m[1mLinking CXX shared library libswri_roscpp__rosidl_typesupport_cpp.so[0m
+[35m[1mScanning dependencies of target swri_roscpp__rosidl_typesupport_introspection_cpp[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/swri_roscpp__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/swri_roscpp/msg/detail/test_topic_service_request__type_support.cpp.o[0m
+[ 37%] Built target swri_roscpp__rosidl_typesupport_cpp
+[ 39%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/swri_roscpp__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/swri_roscpp/msg/detail/test_topic_service_response__type_support.cpp.o[0m
+[ 43%] [32mBuilding CXX object CMakeFiles/swri_roscpp__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/swri_roscpp/msg/detail/dds_fastrtps/test_topic_service_response__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target swri_roscpp__rosidl_typesupport_introspection_c[0m
+[ 45%] [32mBuilding C object CMakeFiles/swri_roscpp__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/swri_roscpp/msg/detail/test_topic_service_request__type_support.c.o[0m
+[ 47%] [32mBuilding C object CMakeFiles/swri_roscpp__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/swri_roscpp/msg/detail/test_topic_service_response__type_support.c.o[0m
+[ 49%] [32m[1mLinking CXX shared library libswri_roscpp__rosidl_typesupport_introspection_cpp.so[0m
+[ 50%] [32m[1mLinking C shared library libswri_roscpp__rosidl_typesupport_introspection_c.so[0m
+[ 52%] [32m[1mLinking CXX static library libgtest.a[0m
+[ 52%] Built target swri_roscpp__rosidl_typesupport_introspection_cpp
+[ 52%] Built target swri_roscpp__rosidl_typesupport_introspection_c
+[ 54%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[ 54%] Built target gtest
+[ 56%] [32m[1mLinking CXX shared library libswri_roscpp__rosidl_typesupport_fastrtps_cpp.so[0m
+[35m[1mScanning dependencies of target swri_roscpp__rosidl_typesupport_c[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/swri_roscpp__rosidl_typesupport_c.dir/rosidl_typesupport_c/swri_roscpp/msg/test_topic_service_request__type_support.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/swri_roscpp__rosidl_typesupport_c.dir/rosidl_typesupport_c/swri_roscpp/msg/test_topic_service_response__type_support.cpp.o[0m
+[ 62%] [32m[1mLinking CXX shared library libswri_roscpp__rosidl_typesupport_c.so[0m
+[ 62%] Built target swri_roscpp__rosidl_typesupport_fastrtps_cpp
+[ 62%] Built target swri_roscpp__rosidl_typesupport_c
+[ 64%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[35m[1mScanning dependencies of target swri_roscpp__rosidl_typesupport_fastrtps_c[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/swri_roscpp__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/swri_roscpp/msg/detail/test_topic_service_request__type_support_c.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/swri_roscpp__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/swri_roscpp/msg/detail/test_topic_service_response__type_support_c.cpp.o[0m
+[ 69%] [32m[1mLinking CXX shared library libswri_roscpp__rosidl_typesupport_fastrtps_c.so[0m
+[ 71%] [32m[1mLinking CXX executable timer_test[0m
+[ 71%] Built target swri_roscpp__rosidl_typesupport_fastrtps_c
+[35m[1mScanning dependencies of target swri_roscpp[0m
+[ 71%] Built target swri_roscpp
+[35m[1mScanning dependencies of target swri_roscpp__py[0m
+[ 73%] [32m[1mLinking CXX executable service_server_test[0m
+[35m[1mScanning dependencies of target topic_service_test_server[0m
+[ 75%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/topic_service_test_server.dir/test/topic_service_test.cpp.o[0m
+[ 77%] Built target timer_test
+[ 77%] Built target service_server_test
+[ 77%] Built target swri_roscpp__py
+[35m[1mScanning dependencies of target swri_roscpp__python[0m
+[ 79%] [32mBuilding C object CMakeFiles/swri_roscpp__python.dir/rosidl_generator_py/swri_roscpp/msg/_test_topic_service_request_s.c.o[0m
+[ 81%] [32mBuilding C object CMakeFiles/swri_roscpp__python.dir/rosidl_generator_py/swri_roscpp/msg/_test_topic_service_response_s.c.o[0m
+[ 83%] [32m[1mLinking CXX executable storing_subscriber_test[0m
+[ 84%] [32m[1mLinking C shared library rosidl_generator_py/swri_roscpp/libswri_roscpp__python.so[0m
+[ 84%] Built target swri_roscpp__python
+[35m[1mScanning dependencies of target swri_roscpp__rosidl_typesupport_c__pyext[0m
+[35m[1mScanning dependencies of target swri_roscpp__rosidl_typesupport_fastrtps_c__pyext[0m
+[ 84%] Built target storing_subscriber_test
+[35m[1mScanning dependencies of target swri_roscpp__rosidl_typesupport_introspection_c__pyext[0m
+[ 86%] [32mBuilding C object CMakeFiles/swri_roscpp__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/swri_roscpp/_swri_roscpp_s.ep.rosidl_typesupport_c.c.o[0m
+[ 88%] [32mBuilding C object CMakeFiles/swri_roscpp__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/swri_roscpp/_swri_roscpp_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/swri_roscpp__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/swri_roscpp/_swri_roscpp_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[ 92%] [32m[1mLinking C shared library rosidl_generator_py/swri_roscpp/swri_roscpp_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[ 94%] [32m[1mLinking C shared library rosidl_generator_py/swri_roscpp/swri_roscpp_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[ 96%] [32m[1mLinking CXX executable subscriber_test[0m
+[ 96%] Built target swri_roscpp__rosidl_typesupport_c__pyext
+[ 98%] [32m[1mLinking CXX shared library rosidl_generator_py/swri_roscpp/swri_roscpp_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[ 98%] Built target swri_roscpp__rosidl_typesupport_introspection_c__pyext
+[ 98%] Built target swri_roscpp__rosidl_typesupport_fastrtps_c__pyext
+[ 98%] Built target subscriber_test
+[100%] [32m[1mLinking CXX executable topic_service_test_server[0m
+[100%] Built target topic_service_test_server

@@ -1,0 +1,99 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found controller_interface: 0.10.1 (/opt/ros/foxy/share/controller_interface/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found FastRTPS: /opt/ros/foxy/include  
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found controller_manager: 0.10.1 (/opt/ros/foxy/share/controller_manager/cmake)
+-- Found husky_msgs: 1.0.8 (/home/administrator/husky_ws2/src/install/husky_msgs/share/husky_msgs/cmake)
+-- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+-- Found std_srvs: 2.0.5 (/opt/ros/foxy/share/std_srvs/cmake)
+-- Found tf2: 0.13.13 (/opt/ros/foxy/share/tf2/cmake)
+-- Found tf2_ros: 0.13.13 (/opt/ros/foxy/share/tf2_ros/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/administrator/husky_ws2/src/build/husky_base
+[35m[1mScanning dependencies of target husky_hardware[0m
+[  8%] [32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/husky_hardware.cpp.o[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy/crc.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy/Logger.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy_wrapper.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy/Message.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy/Message_data.cpp.o[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy/Message_request.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy/Message_cmd.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy/Transport.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy/Number.cpp.o[0m
+[ 91%] [32mBuilding CXX object CMakeFiles/husky_hardware.dir/src/horizon_legacy/linux_serial.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library libhusky_hardware.so[0m
+[100%] Built target husky_hardware
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base//husky_hardware.xml
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/lib/libhusky_hardware.so
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/include/husky_base/horizon_legacy/Exception.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/include/husky_base/horizon_legacy/Logger.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/include/husky_base/horizon_legacy/Message.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/include/husky_base/horizon_legacy/Message_cmd.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/include/husky_base/horizon_legacy/Message_data.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/include/husky_base/horizon_legacy/Message_request.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/include/husky_base/horizon_legacy/Number.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/include/husky_base/horizon_legacy/Transport.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/include/husky_base/horizon_legacy/clearpath.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/include/husky_base/horizon_legacy/crc.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/include/husky_base/horizon_legacy/serial.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/include/husky_base/horizon_legacy_wrapper.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/include/husky_base/husky_diagnostics.h
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/include/husky_base/husky_hardware.hpp
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base/launch/base.launch
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base/launch/base.launch.py
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base/environment/library_path.sh
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base/environment/library_path.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/ament_index/resource_index/package_run_dependencies/husky_base
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/ament_index/resource_index/parent_prefix_path/husky_base
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base/environment/ament_prefix_path.sh
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base/environment/ament_prefix_path.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base/environment/path.sh
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base/environment/path.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base/local_setup.bash
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base/local_setup.sh
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base/local_setup.zsh
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base/local_setup.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base/package.dsv
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/ament_index/resource_index/packages/husky_base
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/husky_base
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base/cmake/husky_baseConfig.cmake
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base/cmake/husky_baseConfig-version.cmake
+-- Symlinking: /home/administrator/husky_ws2/src/install/husky_base/share/husky_base/package.xml

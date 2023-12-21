@@ -1,0 +1,779 @@
+<?xml version="1.0"?>
+<robot name="husky" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- lms1xx_xyz broken - but I don't think we're using this.
+  <xacro:arg name="laser_enabled" default="$(optenv HUSKY_LMS1XX_ENABLED 0)" />
+  <xacro:arg name="laser_xyz" default="$(optenv HUSKY_LMS1XX_XYZ 0.2206 0.0 0.00635)" />
+  <xacro:arg name="laser_rpy" default="$(optenv HUSKY_LMS1XX_RPY 0.0 0.0 0.0)" />
+  
+  <xacro:arg name="laser_secondary_enabled" default="$(optenv HUSKY_LMS1XX_SECONDARY_ENABLED 0)" />
+  <xacro:arg name="laser_secondary_xyz" default="$(optenv HUSKY_LMS1XX_SECONDARY_XYZ -0.2206 0.0 0.00635)" />
+  <xacro:arg name="laser_secondary_rpy" default="$(optenv HUSKY_LMS1XX_SECONDARY_RPY 0.0 0.0 3.14159)" />
+-->
+
+
+  <xacro:arg name="laser_ust10_front_enabled" default="$(optenv HUSKY_UST10_ENABLED 0)" />
+  <xacro:arg name="laser_ust10_front_prefix"  default="$(optenv HUSKY_UST10_PREFIX front)" />
+  <xacro:arg name="laser_ust10_front_parent"  default="$(optenv HUSKY_UST10_PARENT top_plate_link)" />
+  <xacro:arg name="laser_ust10_front_topic"   default="$(optenv HUSKY_UST10_TOPIC front/scan)" />
+  <xacro:arg name="laser_ust10_front_xyz"     default="$(optenv HUSKY_UST10_XYZ 0.2206 0.0 0.00635)" />
+  <xacro:arg name="laser_ust10_front_rpy"     default="$(optenv HUSKY_UST10_RPY 0 0 0)" />
+  
+  <xacro:arg name="laser_ust10_rear_enabled"  default="$(optenv HUSKY_UST10_SECONDARY_ENABLED 0)" />
+  <xacro:arg name="laser_ust10_rear_prefix"   default="$(optenv HUSKY_UST10_SECONDARY_PREFIX rear)" />
+  <xacro:arg name="laser_ust10_rear_parent"   default="$(optenv HUSKY_UST10_SECONDARY_PARENT top_plate_link)" />
+  <xacro:arg name="laser_ust10_rear_topic"    default="$(optenv HUSKY_UST10_SECONDARY_TOPIC rear/scan)" />
+  <xacro:arg name="laser_ust10_rear_xyz"      default="$(optenv HUSKY_UST10_SECONDARY_XYZ -0.2206 0.0 0.00635)" />
+  <xacro:arg name="laser_ust10_rear_rpy"      default="$(optenv HUSKY_UST10_SECONDARY_RPY 0 0 3.14159)" />
+
+  <xacro:arg name="laser_3d_enabled" default="$(optenv HUSKY_LASER_3D_ENABLED 1)" />
+  <xacro:arg name="laser_3d_xyz" default="$(optenv HUSKY_LASER_3D_XYZ 0 0 0)" />
+  <xacro:arg name="laser_3d_rpy" default="$(optenv HUSKY_LASER_3D_RPY 0 0 0)" />
+
+  <xacro:arg name="realsense_enabled" default="$(optenv HUSKY_REALSENSE_ENABLED 0)" />
+  <xacro:arg name="realsense_xyz" default="$(optenv HUSKY_REALSENSE_XYZ 0 0 0)" />
+  <xacro:arg name="realsense_rpy" default="$(optenv HUSKY_REALSENSE_RPY 0 0 0)" />
+  <xacro:arg name="realsense_mount" default="$(optenv HUSKY_REALSENSE_MOUNT_FRAME sensor_arch_mount_link)" />
+
+  <!-- Custom addition to xacro file to include ZED2 camera ; by Dev Vaibhav-->
+  <xacro:arg name="zed2_enabled" default="$(optenv HUSKY_ZED2_ENABLED 1)" />
+  <xacro:arg name="zed2_xyz" default="$(optenv HUSKY_ZED2_XYZ 0 0.14 0)" />
+  <xacro:arg name="zed2_rpy" default="$(optenv HUSKY_ZED2_RPY 0 0 0)" />
+  <xacro:arg name="zed2_mount" default="$(optenv HUSKY_ZED2_MOUNT_FRAME sensor_arch_mount_link)" />
+
+
+  <xacro:property name="husky_front_bumper_extend" value="$(optenv HUSKY_FRONT_BUMPER_EXTEND 0)" />
+  <xacro:property name="husky_rear_bumper_extend" value="$(optenv HUSKY_REAR_BUMPER_EXTEND 0)" />
+
+  <xacro:arg name="robot_namespace" default="/" />
+  <xacro:arg name="is_sim" default="false" />
+  <xacro:arg name="urdf_extras" default="empty.urdf" />
+  
+  <!-- Height of the sensor arch in mm.  Must be either 510 or 300 -->
+  <xacro:arg name="sensor_arch_height"  default="$(optenv HUSKY_SENSOR_ARCH_HEIGHT 510)" />
+  <xacro:arg name="sensor_arch"         default="$(optenv HUSKY_SENSOR_ARCH true)" />
+
+  <xacro:arg name="robot_namespace" default="$(optenv ROBOT_NAMESPACE /)" />
+  <xacro:arg name="urdf_extras" default="$(optenv HUSKY_URDF_EXTRAS empty.urdf)" />
+  <xacro:arg name="cpr_urdf_extras" default="$(optenv CPR_URDF_EXTRAS empty.urdf)" />
+    
+
+  <!-- Included URDF/XACRO Files -->
+  <xacro:include filename="$(find husky_description)/urdf/decorations.urdf.xacro" />
+  <xacro:include filename="$(find husky_description)/urdf/wheel.urdf.xacro" />
+  <xacro:include filename="$(find husky_description)/urdf/accessories/intel_realsense.urdf.xacro" />
+  <xacro:include filename="$(find husky_description)/urdf/accessories/hokuyo_ust10.urdf.xacro" />
+  <!--<xacro:include filename="$(find husky_description)/urdf/accessories/sick_lms1xx_mount.urdf.xacro" /> -->
+  <xacro:include filename="$(find husky_description)/urdf/accessories/vlp16_mount.urdf.xacro"/>
+  <xacro:include filename="$(find husky_description)/urdf/accessories/sensor_arch.urdf.xacro"/>
+  <xacro:include filename="$(find husky_description)/urdf/accessories/zed2.xacro"/>
+  
+  <xacro:property name="M_PI" value="3.14159"/>
+
+  <xacro:macro name="husky" params="prefix">
+
+    <!-- Base Size -->
+    <xacro:property name="base_x_size" value="0.98740000" />
+    <xacro:property name="base_y_size" value="0.57090000" />
+    <xacro:property name="base_z_size" value="0.24750000" />
+
+    <!-- Wheel Mounting Positions -->
+    <xacro:property name="wheelbase" value="0.5120" />
+    <xacro:property name="track" value="0.5708" />
+    <xacro:property name="wheel_vertical_offset" value="0.03282" />
+
+    <!-- Wheel Properties -->
+    <xacro:property name="wheel_length" value="0.1143" />
+    <xacro:property name="wheel_radius" value="0.1651" />
+
+    <!-- Base link is the center of the robot's bottom plate -->
+    <link name="${prefix}base_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file://$(find husky_description)/meshes/base_link.dae" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="${( husky_front_bumper_extend - husky_rear_bumper_extend ) / 2.0} 0 ${base_z_size/4}" rpy="0 0 0" />
+        <geometry>
+          <box size="${ base_x_size + husky_front_bumper_extend + husky_rear_bumper_extend } ${base_y_size} ${base_z_size/2}"/>
+        </geometry>
+      </collision>
+      <collision>
+        <origin xyz="0 0 ${base_z_size*3/4-0.01}" rpy="0 0 0" />
+        <geometry>
+          <box size="${base_x_size*4/5} ${base_y_size} ${base_z_size/2-0.02}"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- Base footprint is on the ground under the robot -->
+    <link name="${prefix}base_footprint"/>
+
+    <joint name="${prefix}base_footprint_joint" type="fixed">
+      <origin xyz="0 0 ${wheel_vertical_offset - wheel_radius}" rpy="0 0 0" />
+      <parent link="${prefix}base_link" />
+      <child link="${prefix}base_footprint" />
+    </joint>
+
+    <!-- Inertial link stores the robot's inertial information -->
+    <link name="${prefix}inertial_link">
+      <inertial>
+        <mass value="46.034" />
+        <origin xyz="-0.00065 -0.085 0.062" />
+        <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296" />
+      </inertial>
+    </link>
+
+    <joint name="${prefix}inertial_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <parent link="${prefix}base_link" />
+      <child link="${prefix}inertial_link" />
+    </joint>
+
+    <!-- IMU Link-->
+    <!-- Can be modified with environment variables in /etc/ros/setup.bash -->
+    <link name="${prefix}imu_link"/>
+    <joint name="${prefix}imu_joint" type="fixed">
+      <origin xyz="$(optenv CPR_IMU_XYZ 0 0 0)" rpy="$(optenv CPR_IMU_RPY 0 0 0)" />
+      <parent link="${prefix}base_link" />
+      <child link="${prefix}imu_link" />
+    </joint>
+
+    <!-- GPS Link-->
+    <!-- Can be modified with environment variables in /etc/ros/setup.bash -->
+    <link name="${prefix}gps_link"/>
+    <joint name="${prefix}gps_joint" type="fixed">
+      <origin xyz="$(optenv CPR_GPS_XYZ 0 0 0)" rpy="$(optenv CPR_GPS_RPY 0 0 0)" />
+      <parent link="${prefix}base_link" />
+      <child link="${prefix}gps_link" />
+    </joint>
+
+    <!-- Husky wheel macros -->
+    <xacro:husky_wheel wheel_prefix="${prefix}front_left">
+      <origin xyz="${wheelbase/2} ${track/2} ${wheel_vertical_offset}" rpy="0 0 0" />
+    </xacro:husky_wheel>
+    <xacro:husky_wheel wheel_prefix="${prefix}front_right">
+      <origin xyz="${wheelbase/2} ${-track/2} ${wheel_vertical_offset}" rpy="0 0 0" />
+    </xacro:husky_wheel>
+    <xacro:husky_wheel wheel_prefix="${prefix}rear_left">
+      <origin xyz="${-wheelbase/2} ${track/2} ${wheel_vertical_offset}" rpy="0 0 0" />
+    </xacro:husky_wheel>
+    <xacro:husky_wheel wheel_prefix="${prefix}rear_right">
+      <origin xyz="${-wheelbase/2} ${-track/2} ${wheel_vertical_offset}" rpy="0 0 0" />
+    </xacro:husky_wheel>
+
+    <xacro:husky_decorate />
+    
+    <!--
+    Add the primary and secondary lasers, but sick_lms1xx is broken in ros2
+  -->
+
+    <!-- <xacro:if value="$(arg laser_enabled)">
+      <xacro:sick_lms1xx_mount prefix="base"/>
+      <xacro:sick_lms1xx frame="base_laser" topic="scan" robot_namespace="$(arg robot_namespace)"/>
+      <joint name="laser_mount_joint" type="fixed">
+        <origin xyz="$(arg laser_xyz)" rpy="$(arg laser_rpy)" />
+        <parent link="top_plate_link" />
+        <child link="base_laser_mount" />
+      </joint>
+    </xacro:if> -->
+    
+    <!-- 
+    Add front and back hokuyo UST10 Lidars
+  -->
+  <xacro:if value="$(arg laser_ust10_front_enabled)">
+    <xacro:hokuyo_ust10_mount topic="$(arg laser_ust10_front_topic)" prefix="$(arg laser_ust10_front_prefix)" parent_link="$(arg laser_ust10_front_parent)">
+        <origin xyz="$(arg laser_ust10_front_xyz)" rpy="$(arg laser_ust10_front_rpy)" />
+      </xacro:hokuyo_ust10_mount>
+  </xacro:if>
+  <xacro:if value="$(arg laser_ust10_rear_enabled)">
+    <xacro:hokuyo_ust10_mount topic="$(arg laser_ust10_rear_topic)" prefix="$(arg laser_ust10_rear_prefix)" parent_link="$(arg laser_ust10_rear_parent)">
+        <origin xyz="$(arg laser_ust10_rear_xyz)" rpy="$(arg laser_ust10_rear_rpy)" />
+      </xacro:hokuyo_ust10_mount>
+  </xacro:if>
+
+    <!--
+    Add the main sensor arch if the user has specifically enabled it, or if a sensor
+    requires it for mounting
+  -->
+  
+  <xacro:property name="sensorbar_user_enabled"     value="$(arg sensor_arch)" />
+  <xacro:property name="sensorbar_needed_realsense" value="$(arg realsense_enabled)" />
+  <xacro:property name="sensorbar_needed_lidar"     value="$(arg laser_3d_enabled)" />
+  <xacro:property name="sensorbar_needed_zed2" value="$(arg zed2_enabled)" />
+
+  <xacro:if value="$(arg sensor_arch)">
+    <xacro:sensor_arch prefix="" parent="top_plate_link" size="$(arg sensor_arch_height)">
+        <origin xyz="$(optenv HUSKY_SENSOR_ARCH_OFFSET 0 0 0.5)" rpy="$(optenv HUSKY_SENSOR_ARCH_RPY 0 0 0)"/>
+    </xacro:sensor_arch>
+  </xacro:if>
+
+  <!-- add the intel realsense to the topbar if needed -->
+    <xacro:if value="$(arg realsense_enabled)">
+      <link name="realsense_mountpoint"/>
+      <joint name="realsense_mountpoint_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 -3.14159" />
+        <parent link="$(arg realsense_mount)"/>
+        <child link="realsense_mountpoint" />
+      </joint>
+      <xacro:intel_realsense_mount prefix="camera" topic="realsense" parent_link="realsense_mountpoint"/>
+    </xacro:if>
+    
+  <!-- Custom addition to xacro file to include ZED2 camera ; by Dev Vaibhav-->
+  <!-- add the zed2 to the sensor arch if needed -->
+  <xacro:if value="$(arg zed2_enabled)">
+    <link name="zed2_mountpoint"/>
+    <joint name="zed2_mountpoint_joint" type="fixed">
+      <origin xyz="$(arg zed2_xyz)" rpy="$(arg zed2_rpy)" />
+      <parent link="$(arg zed2_mount)"/>
+      <child link="zed2_mountpoint" />
+    </joint>
+
+      <!-- Camera Center -->
+      <link name="zed2_camera_center">
+        <inertial>
+          <mass value="0.16140"/>
+          <origin xyz="0 0 0"/>
+          <inertia
+            ixx="0.0003947" ixy="0.0" ixz="3.3365e-8"
+            iyy="2.417e-5" iyz="0.0"
+            izz="0.0003973"/>
+        </inertial>
+        <visual>
+          <geometry>
+            <mesh filename="file://$(find husky_description)/meshes/accessories/ZED2.dae"/>
+          </geometry>
+        </visual>
+        <collision>
+          <geometry>
+            <mesh filename="file://$(find husky_description)/meshes/accessories/ZED2.dae"/>
+          </geometry>
+        </collision>
+      </link>
+
+
+      <!-- Custom addition to xacro file to include ZED2 camera ; by Dev Vaibhav-->
+      <joint name="zed2_camera_center_joint" type="fixed">
+        <parent link="zed2_mountpoint"/>
+        <child link="zed2_camera_center"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+      </joint>
+
+      <!-- Left Camera -->
+      <joint name="zed2_left_camera_joint" type="fixed">
+        <parent link="zed2_camera_center"/>
+        <child link="zed2_left_camera_frame"/>
+        <origin xyz="0 0.06 0" rpy="0 0 0" />
+      </joint>
+
+      <link name="zed2_left_camera_frame" />
+
+      <joint name="zed2_left_camera_optical_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="-${pi/2} 0.0 -${pi/2}"/>
+        <parent link="zed2_left_camera_frame"/>
+        <child link="zed2_left_camera_optical_frame"/>
+      </joint>
+
+      <link name="zed2_left_camera_optical_frame"/>
+
+      <!-- Right Camera -->
+      <joint name="zed2_right_camera_joint" type="fixed">
+        <parent link="zed2_camera_center"/>
+        <child link="zed2_right_camera_frame"/>
+        <origin xyz="0 -0.06 0" rpy="0 0 0" />
+      </joint>
+
+      <link name="zed2_right_camera_frame" />
+
+      <joint name="zed2_right_camera_optical_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="-${pi/2} 0.0 -${pi/2}"/>
+        <parent link="zed2_right_camera_frame"/>
+        <child link="zed2_right_camera_optical_frame"/>
+      </joint>
+
+      <link name="zed2_right_camera_optical_frame"/>
+
+      <!-- Sensors -->
+      <joint name="zed2_mag_joint" type="fixed">
+        <parent link="zed2_camera_center"/>
+        <child link="zed2_mag_link"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+      </joint>
+
+      <link name="zed2_mag_link" />
+
+      <joint name="zed2_baro_joint" type="fixed">
+        <parent link="zed2_camera_center"/>
+        <child link="zed2_baro_link"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+      </joint>
+
+      <link name="zed2_baro_link" />
+
+      <joint name="zed2_temp_left_joint" type="fixed">
+        <parent link="zed2_left_camera_frame"/>
+        <child link="zed2_temp_left_link"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+      </joint>
+
+      <link name="zed2_temp_left_link" />
+
+      <joint name="zed2_temp_right_joint" type="fixed">
+          <parent link="zed2_right_camera_frame"/>
+          <child link="zed2_temp_right_link"/>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+      </joint>
+
+      <link name="zed2_temp_right_link" />
+
+
+      <!-- Left/Depth camera -->
+      <gazebo reference="zed2_left_camera_frame">
+        <!-- Raw images (with lens distortion) -->
+        <sensor type="camera" name="zed2_left_raw_camera">
+          <always_on>true</always_on>
+          <update_rate>15.0</update_rate>
+          <visualize>false</visualize> 
+          <camera name="zed2_left_raw">
+            <horizontal_fov>1.7633</horizontal_fov>
+            <image>
+              <width>1280</width>
+              <height>720</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.02</near>
+              <far>300</far>
+            </clip>
+            <noise>
+              <type>gaussian</type>
+              <mean>0.0</mean>
+              <stddev>0.007</stddev>
+            </noise>
+            <distortion>
+              <!-- Values copied from an actual ZED2 camera -->
+              <k1>-0.043693598</k1>
+              <k2>0.0146164996</k2>
+              <p1>-0.006573319</p1>
+              <p2>-0.000216900</p2>
+              <k3>0.000084328</k3>
+              <center>0.5 0.5</center>
+            </distortion>
+          </camera>
+          <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+            <robotNamespace>/</robotNamespace>
+            <cameraName>zed2/left_raw</cameraName>
+            <imageTopicName>image_raw_color</imageTopicName>
+            <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+            <frameName>zed2_left_camera_optical_frame</frameName>
+            <distortionK1>-0.043693598</distortionK1>
+            <distortionK2>0.0146164996</distortionK2>
+            <distortionT1>-0.006573319</distortionT1>
+            <distortionT2>-0.000216900</distortionT2>
+            <distortionK3>0.000084328</distortionK3>
+            <CxPrime>648.5</CxPrime>
+            <Cx>648.5</Cx>
+            <Cy>366.8340148925781</Cy>
+            <hackBaseline>0.0</hackBaseline>
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_link</robot_base_frame>
+          </plugin>
+        </sensor>
+
+        <sensor type="depth" name="zed2_left_camera">
+          <!-- Rectified images, Depth images, Point Clouds -->
+          <always_on>true</always_on>
+          <update_rate>15.0</update_rate>
+          <visualize>false</visualize> 
+          <camera name="zed2_left">
+            <horizontal_fov>1.7633</horizontal_fov>
+            <image>
+              <width>1280</width>
+              <height>720</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.02</near>
+              <far>300</far>
+            </clip>
+            <noise>
+              <type>gaussian</type>
+              <mean>0.0</mean>
+              <stddev>0.007</stddev>
+            </noise>
+          </camera>
+          <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+            <ros>
+              <namespace>/</namespace>
+              <remapping>image_raw:=left/image_rect_color</remapping>
+              <remapping>camera_info:=left/camera_info</remapping>
+              <remapping>custom_camera/image_depth:=depth/depth_registered</remapping>
+              <remapping>custom_cam/camera_info_depth:=depth/camera_info</remapping>
+              <remapping>custom_cam/points:=point_cloud/cloud_registered</remapping>
+            </ros>
+            <camera_name>zed2</camera_name>
+            <min_depth>0.3</min_depth>
+            <max_depth>20.0</max_depth>
+            <frame_name>zed2_left_camera_optical_frame</frame_name>
+            <hack_baseline>0.0</hack_baseline>
+
+            <!-- https://github.com/ros-simulation/gazebo_ros_pkgs/wiki/ROS-2-Migration:-Camera#gazebo_ros_openni_kinect -->
+            <!-- DONE <robotNamespace>/</robotNamespace>
+            DONE <cameraName>zed2</cameraName>
+            DONE <imageTopicName>left/image_rect_color</imageTopicName>
+            DONE <cameraInfoTopicName>left/camera_info</cameraInfoTopicName>
+            DONE <depthImageTopicName>depth/depth_registered</depthImageTopicName>
+            DONE <depthImageInfoTopicName>depth/camera_info</depthImageInfoTopicName>
+            DONE <pointCloudTopicName>point_cloud/cloud_registered</pointCloudTopicName>
+            DONE <pointCloudCutoff>0.3</pointCloudCutoff>
+            DONE <pointCloudCutoffMax>20.0</pointCloudCutoffMax>
+            DONE <frameName>zed2_left_camera_optical_frame</frameName>
+            COULD NOT FIND <baseline>0.12</baseline>
+            COULD NOT FIND <CxPrime>658.8206787109375</CxPrime>
+            COULD NOT FIND <Cx>658.8206787109375</Cx>
+            COULD NOT FIND <Cy>372.25787353515625</Cy>
+            DONE <hackBaseline>0.0</hackBaseline> -->
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_link</robot_base_frame>
+          </plugin>
+        </sensor>
+      </gazebo>
+
+      <!-- Right camera -->
+      <gazebo reference="zed2_right_camera_frame">
+        <!-- Raw images (with lens distortion) -->
+        <sensor type="camera" name="zed2_right_raw_camera">
+          <always_on>true</always_on>
+          <update_rate>15.0</update_rate>
+          <visualize>false</visualize> 
+          <camera name="zed2_right_raw">
+            <horizontal_fov>1.7633</horizontal_fov>
+            <image>
+              <width>1280</width>
+              <height>720</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.02</near>
+              <far>300</far>
+            </clip>
+            <noise>
+              <type>gaussian</type>
+              <mean>0.0</mean>
+              <stddev>0.007</stddev>
+            </noise>
+            <distortion>
+              <k1>-0.040993299</k1>
+              <k2>0.009593590</k2>
+              <p1>-0.004429849</p1>
+              <p2>0.000192024</p2>
+              <k3>-0.000320880</k3>
+              <center>0.5 0.5</center>
+            </distortion>
+          </camera>
+          <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+            <robotNamespace>/</robotNamespace>
+            <cameraName>zed2/right_raw</cameraName>
+            <imageTopicName>image_raw_color</imageTopicName>
+            <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+            <frameName>zed2_right_camera_optical_frame</frameName>
+            <distortionK1>-0.040993299</distortionK1>
+            <distortionK2>0.009593590</distortionK2>
+            <distortionT1>-0.004429849</distortionT1>
+            <distortionT2>0.000192024</distortionT2>
+            <distortionK3>-0.000320880</distortionK3>
+            <CxPrime>659.3049926757812</CxPrime>
+            <Cx>659.3049926757812</Cx>
+            <Cy>371.39849853515625</Cy>
+            <hackBaseline>0.12</hackBaseline>
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_link</robot_base_frame>
+          </plugin>
+        </sensor>
+
+        <sensor type="camera" name="zed2_right_camera">
+          <!-- Rectified images -->
+          <always_on>true</always_on>
+          <update_rate>15.0</update_rate>
+          <visualize>false</visualize> 
+          <camera name="zed2_right">
+            <horizontal_fov>1.7633</horizontal_fov>
+            <image>
+              <width>1280</width>
+              <height>720</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.02</near>
+              <far>300</far>
+            </clip>
+            <noise>
+              <type>gaussian</type>
+              <mean>0.0</mean>
+              <stddev>0.007</stddev>
+            </noise>
+          </camera>
+          <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+            <robotNamespace>/</robotNamespace>
+            <cameraName>zed2/right</cameraName>
+            <imageTopicName>image_rect_color</imageTopicName>
+            <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+            <frameName>zed2_right_camera_optical_frame</frameName>
+            <CxPrime>658.8206787109375</CxPrime>
+            <Cx>658.8206787109375</Cx>
+            <Cy>372.25787353515625</Cy>
+            <hackBaseline>0.12</hackBaseline>
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_link</robot_base_frame>
+          </plugin>
+        </sensor>
+      </gazebo>
+
+      <!-- IMU -->
+      <gazebo reference="zed2_left_camera_frame">
+        <sensor type="imu" name="zed2_imu_sensor">
+          <update_rate>100</update_rate>
+          <always_on>true</always_on>
+          <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+            <ros>
+              <namespace>/</namespace>
+              <remapping>~/out:=zed2/imu/data</remapping>
+            </ros>
+            <!-- <frame_name>zed2_left_camera_frame</frame_name> -->
+            <!-- <frame_name>zed2_imu_link</frame_name> -->
+            <initial_orientation_as_reference>false</initial_orientation_as_reference>
+            
+            <!-- https://github.com/ros-simulation/gazebo_ros_pkgs/wiki/ROS-2-Migration:-IMU-Sensors#gazebo_ros_imu_sensor
+            DONE <robotNamespace>/</robotNamespace>
+            DONE <topicName>zed2/imu/data</topicName>
+            DONE <frameName>zed2_imu_link</frameName>
+            DONE <updateRateHZ>100.0</updateRateHZ>
+            REMOVED <gaussianNoise>0.01</gaussianNoise>
+            DONE <initialOrientationAsReference>false</initialOrientationAsReference>
+            IMU frame offset copied from an actual ZED2 camera
+            REMOVED <xyzOffset>-0.002 -0.023 -0.002</xyzOffset>
+            REMOVED <rpyOffset>0.0014025 -0.0000012 -0.0016915</rpyOffset> -->
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_link</robot_base_frame>
+          </plugin>
+        </sensor>
+      </gazebo>
+  </xacro:if>
+
+  
+  <!--
+    Add the 3d laser to the sensor arch if needed
+  -->
+  <xacro:if value="$(arg laser_3d_enabled)">
+    <!-- <xacro:vlp16_mount prefix="" parent_link="sensor_arch_mount_link" topic="$(optenv HUSKY_LASER_3D_TOPIC points)">
+      <origin xyz="$(arg laser_3d_xyz)" rpy="$(arg laser_3d_rpy)" />
+    </xacro:vlp16_mount> -->
+    
+    <joint name="velodyne_base_mount_joint" type="fixed">
+      <!-- <xacro:insert_block name="origin" />  -->  Still need to figure what is this?
+      <parent link="sensor_arch_mount_link"/>
+      <child link="velodyne_base_link"/>
+    </joint>
+
+    <link name="velodyne_base_link">
+      <inertial>
+        <mass value="0.83"/>
+        <origin xyz="0 0 0.03585"/>
+        <inertia ixx="${(0.83 * (3.0*0.0516*0.0516 + 0.0717*0.0717)) / 12.0}" ixy="0" ixz="0"
+          iyy="${(0.83 * (3.0*0.0516*0.0516 + 0.0717*0.0717)) / 12.0}" iyz="0"
+          izz="${0.5 * 0.83 * (0.0516*0.0516)}"/>
+      </inertial>
+        <visual>
+        <geometry>
+          <mesh filename="file://$(find husky_description)/meshes/accessories/VLP16_base_1.dae" />
+        </geometry>
+      </visual>
+      <visual>
+        <geometry>
+          <mesh filename="file://$(find husky_description)/meshes/accessories/VLP16_base_2.dae" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin rpy="0 0 0" xyz="0 0 0.03585"/>
+        <geometry>
+          <cylinder radius="0.0516" length="0.0717"/>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <joint name="velodyne_base_scan_joint" type="fixed" >
+      <origin xyz="0 0 0.0377" rpy="0 0 0" />
+      <parent link="velodyne_base_link" />
+      <child link="velodyne"/>
+    </joint>
+
+    <link name="velodyne">
+      <inertial>
+        <mass value="0.01"/>
+        <origin xyz="0 0 0"/>
+        <inertia ixx="1e-7" ixy="0" ixz="0" iyy="1e-7" iyz="0" izz="1e-7"/>
+      </inertial>
+      <visual>
+        <origin xyz="0 0 -0.0377" />
+        <geometry>
+          <mesh filename="file://$(find husky_description)/meshes/accessories/VLP16_scan.dae" />
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- Gazebo requires the velodyne_gazebo_plugins package -->
+    <gazebo reference="velodyne">
+      <xacro:if value="false">
+        <sensor type="gpu_ray" name="velodyne-VLP16">
+          <pose>0 0 0 0 0 0</pose>
+          <visualize>false</visualize>
+          <update_rate>10</update_rate>
+          <ray>
+            <scan>
+              <horizontal>
+                <samples>1875</samples>
+                <resolution>1</resolution>
+                <min_angle>-${M_PI}</min_angle>
+                <max_angle>${M_PI}</max_angle>
+              </horizontal>
+              <vertical>
+                <samples>16</samples>
+                <resolution>1</resolution>
+                <min_angle>-${15.0*M_PI/180.0}</min_angle>
+                <max_angle> ${15.0*M_PI/180.0}</max_angle>
+              </vertical>
+            </scan>
+            <range>
+              <min>0.3</min>
+              <max>131.0</max>
+              <resolution>0.001</resolution>
+            </range>
+            <noise>
+              <type>gaussian</type>
+              <mean>0.0</mean>
+              <stddev>0.0</stddev>
+            </noise>
+          </ray>
+          <plugin name="gazebo_ros_laser_controller" filename="libgazebo_ros_velodyne_laser.so">
+            <ros>
+              <namespace>/velodyne</namespace>
+              <remapping>~/out:=/velodyne_points</remapping>
+            </ros>
+            <tf_prefix>""</tf_prefix>
+            <frame_name>velodyne</frame_name>
+            <organize_cloud>false</organize_cloud>
+            <min_range>0.9</min_range>
+            <max_range>130.0</max_range>
+            <gaussian_noise>0.008</gaussian_noise>
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_link</robot_base_frame>
+          </plugin>
+        </sensor>
+      </xacro:if>
+      <xacro:unless value="false">
+        <sensor type="ray" name="velodyne-VLP16">
+          <pose>0 0 0 0 0 0</pose>
+          <visualize>false</visualize>
+          <update_rate>10</update_rate>
+          <ray>
+            <scan>
+              <horizontal>
+                <samples>1875</samples>
+                <resolution>1</resolution>
+                <min_angle>-${M_PI}</min_angle>
+                <max_angle>${M_PI}</max_angle>
+              </horizontal>
+              <vertical>
+                <samples>16</samples>
+                <resolution>1</resolution>
+                <min_angle>-${15.0*M_PI/180.0}</min_angle>
+                <max_angle> ${15.0*M_PI/180.0}</max_angle>
+              </vertical>
+            </scan>
+            <range>
+              <min>0.3</min>
+              <max>131.0</max>
+              <resolution>0.001</resolution>
+            </range>
+            <noise>
+              <type>gaussian</type>
+              <mean>0.0</mean>
+              <stddev>0.0</stddev>
+            </noise>
+          </ray>
+          <plugin name="gazebo_ros_laser_controller" filename="libgazebo_ros_velodyne_laser.so">
+            <ros>
+              <namespace>/velodyne</namespace>
+              <remapping>~/out:=/velodyne_points</remapping>
+            </ros>
+            <!-- <tf_prefix>""</tf_prefix>   This might be the reason we can't see robot in rviz2  -->
+            <frame_name>velodyne</frame_name>
+            <organize_cloud>false</organize_cloud>
+            <min_range>0.9</min_range>
+            <max_range>130.0</max_range>
+            <gaussian_noise>0.008</gaussian_noise>
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_link</robot_base_frame>
+          </plugin>
+        </sensor>
+      </xacro:unless>
+    </gazebo>
+  </xacro:if>
+  
+    <ros2_control name="${prefix}husky_hardware" type="system">
+      <hardware>
+        <xacro:if value="$(arg is_sim)">
+          <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+        </xacro:if>
+        <xacro:unless value="$(arg is_sim)">
+          <plugin>husky_base/HuskyHardware</plugin>
+          <plugin>fake_components/GenericSystem</plugin>
+          <param name="hw_start_duration_sec">2.0</param>
+          <param name="hw_stop_duration_sec">3.0</param>
+          <param name="wheel_diameter">0.3302</param>
+          <param name="max_accel">5.0</param>
+          <param name="max_speed">1.0</param>
+          <param name="polling_timeout">10.0</param>
+          <param name="serial_port">/dev/husky_port</param>
+        </xacro:unless>
+      </hardware>
+      <joint name="${prefix}front_left_wheel_joint">
+        <command_interface name="velocity">
+          <param name="min">-1</param>
+          <param name="max">1</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      <joint name="${prefix}rear_left_wheel_joint">
+        <command_interface name="velocity">
+          <param name="min">-1</param>
+          <param name="max">1</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      <joint name="${prefix}front_right_wheel_joint">
+        <command_interface name="velocity">
+          <param name="min">-1</param>
+          <param name="max">1</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      <joint name="${prefix}rear_right_wheel_joint">
+        <command_interface name="velocity">
+          <param name="min">-1</param>
+          <param name="max">1</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+    </ros2_control>
+
+  </xacro:macro>
+
+</robot>

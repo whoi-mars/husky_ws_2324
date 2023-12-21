@@ -1,0 +1,158 @@
+[0.212s] Invoking command in '/home/administrator/husky_ws2/src/build/zstd_vendor': CMAKE_PREFIX_PATH=/home/administrator/husky_ws2/install/zed_ros2:/home/administrator/husky_ws2/install/zed_display_rviz2:/home/administrator/husky_ws2/install/zed_wrapper:/home/administrator/husky_ws2/install/zed_tutorial_video:/home/administrator/husky_ws2/install/zed_tutorial_pos_tracking:/home/administrator/husky_ws2/install/zed_tutorial_depth:/home/administrator/husky_ws2/install/zed_rgb_convert:/home/administrator/husky_ws2/install/zed_components:/home/administrator/husky_ws2/install/rviz_plugin_zed_od:/home/administrator/husky_ws2/install/zed_interfaces:/home/administrator/husky_ws2/install/velodyne_simulator:/home/administrator/husky_ws2/install/velodyne_gazebo_plugins:/home/administrator/husky_ws2/install/husky_desktop:/home/administrator/husky_ws2/install/husky_viz:/home/administrator/husky_ws2/install/husky_simulator:/home/administrator/husky_ws2/install/husky_robot:/home/administrator/husky_ws2/install/husky_gazebo:/home/administrator/husky_ws2/install/husky_bringup:/home/administrator/husky_ws2/install/husky_control:/home/administrator/husky_ws2/install/husky_description:/home/administrator/husky_ws2/install/velodyne_description:/home/administrator/husky_ws2/install/um7:/home/administrator/husky_ws2/install/swri_route_util:/home/administrator/husky_ws2/install/swri_transform_util:/home/administrator/husky_ws2/install/swri_system_util:/home/administrator/husky_ws2/install/swri_serial_util:/home/administrator/husky_ws2/install/swri_image_util:/home/administrator/husky_ws2/install/swri_roscpp:/home/administrator/husky_ws2/install/swri_prefix_tools:/home/administrator/husky_ws2/install/swri_opencv_util:/home/administrator/husky_ws2/install/swri_math_util:/home/administrator/husky_ws2/install/swri_geometry_util:/home/administrator/husky_ws2/install/swri_dbw_interface:/home/administrator/husky_ws2/install/swri_console_util:/home/administrator/husky_ws2/install/nav2_system_tests:/home/administrator/husky_ws2/install/nav2_bringup:/home/administrator/husky_ws2/install/navigation2:/home/administrator/husky_ws2/install/smac_planner:/home/administrator/husky_ws2/install/pointcloud_to_laserscan:/home/administrator/husky_ws2/install/nav2_dwb_controller:/home/administrator/husky_ws2/install/nav2_controller:/home/administrator/husky_ws2/install/dwb_plugins:/home/administrator/husky_ws2/install/dwb_critics:/home/administrator/husky_ws2/install/dwb_core:/home/administrator/husky_ws2/install/nav_2d_utils:/home/administrator/husky_ws2/install/dwb_msgs:/home/administrator/husky_ws2/install/nav_2d_msgs:/home/administrator/husky_ws2/install/nav2_waypoint_follower:/home/administrator/husky_ws2/install/nav2_regulated_pure_pursuit_controller:/home/administrator/husky_ws2/install/nav2_recoveries:/home/administrator/husky_ws2/install/nav2_planner:/home/administrator/husky_ws2/install/nav2_navfn_planner:/home/administrator/husky_ws2/install/nav2_core:/home/administrator/husky_ws2/install/costmap_queue:/home/administrator/husky_ws2/install/nav2_costmap_2d:/home/administrator/husky_ws2/install/nav2_voxel_grid:/home/administrator/husky_ws2/install/nav2_rviz_plugins:/home/administrator/husky_ws2/install/nav2_map_server:/home/administrator/husky_ws2/install/nav2_lifecycle_manager:/home/administrator/husky_ws2/install/nav2_bt_navigator:/home/administrator/husky_ws2/install/nav2_behavior_tree:/home/administrator/husky_ws2/install/nav2_amcl:/home/administrator/husky_ws2/install/nav2_util:/home/administrator/husky_ws2/install/nav2_msgs:/home/administrator/husky_ws2/install/nav2_common:/home/administrator/husky_ws2/install/microstrain_inertial_examples:/home/administrator/husky_ws2/install/microstrain_inertial_driver:/home/administrator/husky_ws2/install/microstrain_inertial_msgs:/home/administrator/husky_ws2/install/local_nav_pkg:/home/administrator/husky_ws2/install/image_common:/home/administrator/husky_ws2/install/image_transport:/home/administrator/husky_ws2/install/husky_base:/home/administrator/husky_ws2/install/husky_msgs:/home/administrator/husky_ws2/install/hector_gazebo:/home/administrator/husky_ws2/install/hector_gazebo_worlds:/home/administrator/husky_ws2/install/hector_gazebo_plugins:/home/administrator/husky_ws2/install/custom_nav_stack_pkg:/home/administrator/husky_ws2/install/camera_info_manager:/home/administrator/husky_ws2/install/camera_calibration_parsers:/home/administrator/richo_theta_ws/install/penguin_detection:/home/administrator/husky_ws2/install/nav2_gazebo_spawner:/home/administrator/husky_ws2/install/microstrain_inertial_rqt:/home/administrator/husky_ws2/install/gps_goal:/opt/ros/foxy:/opt/ros/noetic /usr/bin/cmake /home/administrator/husky_ws2/src/rosbag2/zstd_vendor -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/administrator/husky_ws2/src/install/zstd_vendor
+[2.364s] -- The C compiler identification is GNU 9.4.0
+[2.364s] -- The CXX compiler identification is GNU 9.4.0
+[2.364s] -- Check for working C compiler: /usr/bin/cc
+[2.364s] -- Check for working C compiler: /usr/bin/cc -- works
+[2.364s] -- Detecting C compiler ABI info
+[2.364s] -- Detecting C compiler ABI info - done
+[2.364s] -- Detecting C compile features
+[2.364s] -- Detecting C compile features - done
+[2.364s] -- Check for working CXX compiler: /usr/bin/c++
+[2.364s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[2.365s] -- Detecting CXX compiler ABI info
+[2.365s] -- Detecting CXX compiler ABI info - done
+[2.365s] -- Detecting CXX compile features
+[2.365s] -- Detecting CXX compile features - done
+[2.365s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[2.365s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[2.365s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.365s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.704s] -- Configuring done
+[2.709s] -- Generating done
+[2.709s] -- Build files have been written to: /home/administrator/husky_ws2/src/build/zstd_vendor
+[2.767s] Invoked command in '/home/administrator/husky_ws2/src/build/zstd_vendor' returned '0': CMAKE_PREFIX_PATH=/home/administrator/husky_ws2/install/zed_ros2:/home/administrator/husky_ws2/install/zed_display_rviz2:/home/administrator/husky_ws2/install/zed_wrapper:/home/administrator/husky_ws2/install/zed_tutorial_video:/home/administrator/husky_ws2/install/zed_tutorial_pos_tracking:/home/administrator/husky_ws2/install/zed_tutorial_depth:/home/administrator/husky_ws2/install/zed_rgb_convert:/home/administrator/husky_ws2/install/zed_components:/home/administrator/husky_ws2/install/rviz_plugin_zed_od:/home/administrator/husky_ws2/install/zed_interfaces:/home/administrator/husky_ws2/install/velodyne_simulator:/home/administrator/husky_ws2/install/velodyne_gazebo_plugins:/home/administrator/husky_ws2/install/husky_desktop:/home/administrator/husky_ws2/install/husky_viz:/home/administrator/husky_ws2/install/husky_simulator:/home/administrator/husky_ws2/install/husky_robot:/home/administrator/husky_ws2/install/husky_gazebo:/home/administrator/husky_ws2/install/husky_bringup:/home/administrator/husky_ws2/install/husky_control:/home/administrator/husky_ws2/install/husky_description:/home/administrator/husky_ws2/install/velodyne_description:/home/administrator/husky_ws2/install/um7:/home/administrator/husky_ws2/install/swri_route_util:/home/administrator/husky_ws2/install/swri_transform_util:/home/administrator/husky_ws2/install/swri_system_util:/home/administrator/husky_ws2/install/swri_serial_util:/home/administrator/husky_ws2/install/swri_image_util:/home/administrator/husky_ws2/install/swri_roscpp:/home/administrator/husky_ws2/install/swri_prefix_tools:/home/administrator/husky_ws2/install/swri_opencv_util:/home/administrator/husky_ws2/install/swri_math_util:/home/administrator/husky_ws2/install/swri_geometry_util:/home/administrator/husky_ws2/install/swri_dbw_interface:/home/administrator/husky_ws2/install/swri_console_util:/home/administrator/husky_ws2/install/nav2_system_tests:/home/administrator/husky_ws2/install/nav2_bringup:/home/administrator/husky_ws2/install/navigation2:/home/administrator/husky_ws2/install/smac_planner:/home/administrator/husky_ws2/install/pointcloud_to_laserscan:/home/administrator/husky_ws2/install/nav2_dwb_controller:/home/administrator/husky_ws2/install/nav2_controller:/home/administrator/husky_ws2/install/dwb_plugins:/home/administrator/husky_ws2/install/dwb_critics:/home/administrator/husky_ws2/install/dwb_core:/home/administrator/husky_ws2/install/nav_2d_utils:/home/administrator/husky_ws2/install/dwb_msgs:/home/administrator/husky_ws2/install/nav_2d_msgs:/home/administrator/husky_ws2/install/nav2_waypoint_follower:/home/administrator/husky_ws2/install/nav2_regulated_pure_pursuit_controller:/home/administrator/husky_ws2/install/nav2_recoveries:/home/administrator/husky_ws2/install/nav2_planner:/home/administrator/husky_ws2/install/nav2_navfn_planner:/home/administrator/husky_ws2/install/nav2_core:/home/administrator/husky_ws2/install/costmap_queue:/home/administrator/husky_ws2/install/nav2_costmap_2d:/home/administrator/husky_ws2/install/nav2_voxel_grid:/home/administrator/husky_ws2/install/nav2_rviz_plugins:/home/administrator/husky_ws2/install/nav2_map_server:/home/administrator/husky_ws2/install/nav2_lifecycle_manager:/home/administrator/husky_ws2/install/nav2_bt_navigator:/home/administrator/husky_ws2/install/nav2_behavior_tree:/home/administrator/husky_ws2/install/nav2_amcl:/home/administrator/husky_ws2/install/nav2_util:/home/administrator/husky_ws2/install/nav2_msgs:/home/administrator/husky_ws2/install/nav2_common:/home/administrator/husky_ws2/install/microstrain_inertial_examples:/home/administrator/husky_ws2/install/microstrain_inertial_driver:/home/administrator/husky_ws2/install/microstrain_inertial_msgs:/home/administrator/husky_ws2/install/local_nav_pkg:/home/administrator/husky_ws2/install/image_common:/home/administrator/husky_ws2/install/image_transport:/home/administrator/husky_ws2/install/husky_base:/home/administrator/husky_ws2/install/husky_msgs:/home/administrator/husky_ws2/install/hector_gazebo:/home/administrator/husky_ws2/install/hector_gazebo_worlds:/home/administrator/husky_ws2/install/hector_gazebo_plugins:/home/administrator/husky_ws2/install/custom_nav_stack_pkg:/home/administrator/husky_ws2/install/camera_info_manager:/home/administrator/husky_ws2/install/camera_calibration_parsers:/home/administrator/richo_theta_ws/install/penguin_detection:/home/administrator/husky_ws2/install/nav2_gazebo_spawner:/home/administrator/husky_ws2/install/microstrain_inertial_rqt:/home/administrator/husky_ws2/install/gps_goal:/opt/ros/foxy:/opt/ros/noetic /usr/bin/cmake /home/administrator/husky_ws2/src/rosbag2/zstd_vendor -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/administrator/husky_ws2/src/install/zstd_vendor
+[2.768s] Invoking command in '/home/administrator/husky_ws2/src/build/zstd_vendor': CMAKE_PREFIX_PATH=/home/administrator/husky_ws2/install/zed_ros2:/home/administrator/husky_ws2/install/zed_display_rviz2:/home/administrator/husky_ws2/install/zed_wrapper:/home/administrator/husky_ws2/install/zed_tutorial_video:/home/administrator/husky_ws2/install/zed_tutorial_pos_tracking:/home/administrator/husky_ws2/install/zed_tutorial_depth:/home/administrator/husky_ws2/install/zed_rgb_convert:/home/administrator/husky_ws2/install/zed_components:/home/administrator/husky_ws2/install/rviz_plugin_zed_od:/home/administrator/husky_ws2/install/zed_interfaces:/home/administrator/husky_ws2/install/velodyne_simulator:/home/administrator/husky_ws2/install/velodyne_gazebo_plugins:/home/administrator/husky_ws2/install/husky_desktop:/home/administrator/husky_ws2/install/husky_viz:/home/administrator/husky_ws2/install/husky_simulator:/home/administrator/husky_ws2/install/husky_robot:/home/administrator/husky_ws2/install/husky_gazebo:/home/administrator/husky_ws2/install/husky_bringup:/home/administrator/husky_ws2/install/husky_control:/home/administrator/husky_ws2/install/husky_description:/home/administrator/husky_ws2/install/velodyne_description:/home/administrator/husky_ws2/install/um7:/home/administrator/husky_ws2/install/swri_route_util:/home/administrator/husky_ws2/install/swri_transform_util:/home/administrator/husky_ws2/install/swri_system_util:/home/administrator/husky_ws2/install/swri_serial_util:/home/administrator/husky_ws2/install/swri_image_util:/home/administrator/husky_ws2/install/swri_roscpp:/home/administrator/husky_ws2/install/swri_prefix_tools:/home/administrator/husky_ws2/install/swri_opencv_util:/home/administrator/husky_ws2/install/swri_math_util:/home/administrator/husky_ws2/install/swri_geometry_util:/home/administrator/husky_ws2/install/swri_dbw_interface:/home/administrator/husky_ws2/install/swri_console_util:/home/administrator/husky_ws2/install/nav2_system_tests:/home/administrator/husky_ws2/install/nav2_bringup:/home/administrator/husky_ws2/install/navigation2:/home/administrator/husky_ws2/install/smac_planner:/home/administrator/husky_ws2/install/pointcloud_to_laserscan:/home/administrator/husky_ws2/install/nav2_dwb_controller:/home/administrator/husky_ws2/install/nav2_controller:/home/administrator/husky_ws2/install/dwb_plugins:/home/administrator/husky_ws2/install/dwb_critics:/home/administrator/husky_ws2/install/dwb_core:/home/administrator/husky_ws2/install/nav_2d_utils:/home/administrator/husky_ws2/install/dwb_msgs:/home/administrator/husky_ws2/install/nav_2d_msgs:/home/administrator/husky_ws2/install/nav2_waypoint_follower:/home/administrator/husky_ws2/install/nav2_regulated_pure_pursuit_controller:/home/administrator/husky_ws2/install/nav2_recoveries:/home/administrator/husky_ws2/install/nav2_planner:/home/administrator/husky_ws2/install/nav2_navfn_planner:/home/administrator/husky_ws2/install/nav2_core:/home/administrator/husky_ws2/install/costmap_queue:/home/administrator/husky_ws2/install/nav2_costmap_2d:/home/administrator/husky_ws2/install/nav2_voxel_grid:/home/administrator/husky_ws2/install/nav2_rviz_plugins:/home/administrator/husky_ws2/install/nav2_map_server:/home/administrator/husky_ws2/install/nav2_lifecycle_manager:/home/administrator/husky_ws2/install/nav2_bt_navigator:/home/administrator/husky_ws2/install/nav2_behavior_tree:/home/administrator/husky_ws2/install/nav2_amcl:/home/administrator/husky_ws2/install/nav2_util:/home/administrator/husky_ws2/install/nav2_msgs:/home/administrator/husky_ws2/install/nav2_common:/home/administrator/husky_ws2/install/microstrain_inertial_examples:/home/administrator/husky_ws2/install/microstrain_inertial_driver:/home/administrator/husky_ws2/install/microstrain_inertial_msgs:/home/administrator/husky_ws2/install/local_nav_pkg:/home/administrator/husky_ws2/install/image_common:/home/administrator/husky_ws2/install/image_transport:/home/administrator/husky_ws2/install/husky_base:/home/administrator/husky_ws2/install/husky_msgs:/home/administrator/husky_ws2/install/hector_gazebo:/home/administrator/husky_ws2/install/hector_gazebo_worlds:/home/administrator/husky_ws2/install/hector_gazebo_plugins:/home/administrator/husky_ws2/install/custom_nav_stack_pkg:/home/administrator/husky_ws2/install/camera_info_manager:/home/administrator/husky_ws2/install/camera_calibration_parsers:/home/administrator/richo_theta_ws/install/penguin_detection:/home/administrator/husky_ws2/install/nav2_gazebo_spawner:/home/administrator/husky_ws2/install/microstrain_inertial_rqt:/home/administrator/husky_ws2/install/gps_goal:/opt/ros/foxy:/opt/ros/noetic /usr/bin/cmake --build /home/administrator/husky_ws2/src/build/zstd_vendor -- -j8 -l8
+[4.498s] [35m[1mScanning dependencies of target zstd-1.4.4[0m
+[4.498s] [ 12%] [34m[1mCreating directories for 'zstd-1.4.4'[0m
+[4.499s] [ 25%] [34m[1mPerforming download step (download, verify and extract) for 'zstd-1.4.4'[0m
+[4.499s] -- Downloading...
+[4.499s]    dst='/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/v1.4.4.zip'
+[4.499s]    timeout='60 seconds'
+[4.499s] -- Using src='https://github.com/facebook/zstd/archive/v1.4.4.zip'
+[21.807s] -- verifying file...
+[21.807s]        file='/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/v1.4.4.zip'
+[21.810s] -- Downloading... done
+[21.884s] -- extracting...
+[21.884s]      src='/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/v1.4.4.zip'
+[21.884s]      dst='/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4'
+[21.884s] -- extracting... [tar xfz]
+[21.971s] -- extracting... [analysis]
+[21.971s] -- extracting... [rename]
+[21.971s] -- extracting... [clean up]
+[21.971s] -- extracting... done
+[22.049s] [ 37%] [34m[1mPerforming patch step for 'zstd-1.4.4'[0m
+[22.091s] patching file build/cmake/CMakeLists.txt
+[22.116s] patching file build/cmake/lib/CMakeLists.txt
+[22.214s] [ 50%] [34m[1mNo update step for 'zstd-1.4.4'[0m
+[22.304s] [ 62%] [34m[1mPerforming configure step for 'zstd-1.4.4'[0m
+[22.565s] -- The C compiler identification is GNU 9.4.0
+[22.739s] -- The CXX compiler identification is GNU 9.4.0
+[22.749s] -- Check for working C compiler: /usr/bin/cc
+[23.031s] -- Check for working C compiler: /usr/bin/cc -- works
+[23.033s] -- Detecting C compiler ABI info
+[23.284s] -- Detecting C compiler ABI info - done
+[23.300s] -- Detecting C compile features
+[23.301s] -- Detecting C compile features - done
+[23.317s] -- Check for working CXX compiler: /usr/bin/c++
+[23.619s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[23.620s] -- Detecting CXX compiler ABI info
+[23.892s] -- Detecting CXX compiler ABI info - done
+[23.910s] -- Detecting CXX compile features
+[23.912s] -- Detecting CXX compile features - done
+[23.914s] -- ZSTD VERSION: 1.4.4
+[23.914s] -- Setting build type to 'Release' as none was specified.
+[23.919s] -- Performing Test CXX_FLAG_STD_CPLUSPLUS11
+[24.149s] -- Performing Test CXX_FLAG_STD_CPLUSPLUS11 - Success
+[24.150s] -- Performing Test C_FLAG_STD_C99
+[24.299s] -- Performing Test C_FLAG_STD_C99 - Success
+[24.299s] -- Performing Test C_FLAG_WALL
+[24.435s] -- Performing Test C_FLAG_WALL - Success
+[24.436s] -- Performing Test CXX_FLAG_WALL
+[24.625s] -- Performing Test CXX_FLAG_WALL - Success
+[24.627s] -- Performing Test C_FLAG_WEXTRA
+[24.782s] -- Performing Test C_FLAG_WEXTRA - Success
+[24.783s] -- Performing Test CXX_FLAG_WEXTRA
+[24.977s] -- Performing Test CXX_FLAG_WEXTRA - Success
+[24.980s] -- Performing Test C_FLAG_WUNDEF
+[25.122s] -- Performing Test C_FLAG_WUNDEF - Success
+[25.124s] -- Performing Test CXX_FLAG_WUNDEF
+[25.327s] -- Performing Test CXX_FLAG_WUNDEF - Success
+[25.327s] -- Performing Test C_FLAG_WSHADOW
+[25.497s] -- Performing Test C_FLAG_WSHADOW - Success
+[25.498s] -- Performing Test CXX_FLAG_WSHADOW
+[25.660s] -- Performing Test CXX_FLAG_WSHADOW - Success
+[25.661s] -- Performing Test C_FLAG_WCAST_ALIGN
+[25.811s] -- Performing Test C_FLAG_WCAST_ALIGN - Success
+[25.811s] -- Performing Test CXX_FLAG_WCAST_ALIGN
+[26.006s] -- Performing Test CXX_FLAG_WCAST_ALIGN - Success
+[26.006s] -- Performing Test C_FLAG_WCAST_QUAL
+[26.147s] -- Performing Test C_FLAG_WCAST_QUAL - Success
+[26.147s] -- Performing Test CXX_FLAG_WCAST_QUAL
+[26.336s] -- Performing Test CXX_FLAG_WCAST_QUAL - Success
+[26.337s] -- Performing Test C_FLAG_WSTRICT_PROTOTYPES
+[26.529s] -- Performing Test C_FLAG_WSTRICT_PROTOTYPES - Success
+[26.529s] -- CMAKE_INSTALL_PREFIX: /home/administrator/husky_ws2/src/build/zstd_vendor/zstd_vendor_install
+[26.529s] -- CMAKE_INSTALL_LIBDIR: lib
+[26.529s] -- ZSTD_LEGACY_SUPPORT not defined!
+[26.529s] -- ZSTD_MULTITHREAD_SUPPORT is enabled
+[26.529s] -- Looking for pthread.h
+[26.703s] -- Looking for pthread.h - found
+[26.703s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[26.860s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[26.860s] -- Check if compiler accepts -pthread
+[27.023s] -- Check if compiler accepts -pthread - yes
+[27.026s] -- Found Threads: TRUE  
+[27.030s] -- Configuring done
+[27.044s] -- Generating done
+[27.045s] -- Build files have been written to: /home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4-build
+[27.088s] [ 75%] [34m[1mPerforming build step for 'zstd-1.4.4'[0m
+[27.164s] [35m[1mScanning dependencies of target libzstd.pc[0m
+[27.195s] [  3%] [34m[1mCreating pkg-config file[0m
+[27.244s] [  3%] Built target libzstd.pc
+[27.266s] [35m[1mScanning dependencies of target libzstd_shared[0m
+[27.310s] [  6%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/common/debug.c.o[0m
+[27.372s] [  9%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/common/zstd_common.c.o[0m
+[27.457s] [ 12%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/compress/fse_compress.c.o[0m
+[27.824s] [ 15%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/compress/hist.c.o[0m
+[27.975s] [ 18%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/compress/huf_compress.c.o[0m
+[28.502s] [ 21%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/compress/zstd_compress.c.o[0m
+[29.649s] [ 24%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/compress/zstd_compress_literals.c.o[0m
+[29.758s] [ 27%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/compress/zstd_compress_sequences.c.o[0m
+[30.045s] [ 30%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/compress/zstd_double_fast.c.o[0m
+[31.829s] [ 33%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/compress/zstd_fast.c.o[0m
+[33.135s] [ 36%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/compress/zstd_lazy.c.o[0m
+[35.945s] [ 39%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/compress/zstd_ldm.c.o[0m
+[36.246s] [ 42%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/compress/zstd_opt.c.o[0m
+[43.488s] [ 45%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/compress/zstdmt_compress.c.o[0m
+[43.891s] [ 48%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/decompress/huf_decompress.c.o[0m
+[45.056s] [ 51%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/decompress/zstd_ddict.c.o[0m
+[45.127s] [ 54%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/decompress/zstd_decompress.c.o[0m
+[45.384s] [ 57%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/decompress/zstd_decompress_block.c.o[0m
+[45.894s] [ 60%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/dictBuilder/cover.c.o[0m
+[46.117s] [ 63%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/dictBuilder/divsufsort.c.o[0m
+[46.893s] [ 66%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/dictBuilder/fastcover.c.o[0m
+[47.103s] [ 69%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/dictBuilder/zdict.c.o[0m
+[47.381s] [ 72%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/deprecated/zbuff_common.c.o[0m
+[47.412s] [ 75%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/deprecated/zbuff_compress.c.o[0m
+[47.451s] [ 78%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/deprecated/zbuff_decompress.c.o[0m
+[47.485s] [ 81%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/common/xxhash.c.o[0m
+[47.597s] [ 84%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/common/threading.c.o[0m
+[47.625s] [ 87%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/common/pool.c.o[0m
+[47.702s] [ 90%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/common/fse_decompress.c.o[0m
+[47.829s] [ 93%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/common/error_private.c.o[0m
+[47.856s] [ 96%] [32mBuilding C object lib/CMakeFiles/libzstd_shared.dir/home/administrator/husky_ws2/src/build/zstd_vendor/zstd-1.4.4-prefix/src/zstd-1.4.4/lib/common/entropy_common.c.o[0m
+[47.933s] [100%] [32m[1mLinking C shared library libzstd.so[0m
+[48.011s] [100%] Built target libzstd_shared
+[48.040s] [ 87%] [34m[1mPerforming install step for 'zstd-1.4.4'[0m
+[48.090s] [  3%] [34m[1mCreating pkg-config file[0m
+[48.120s] [  3%] Built target libzstd.pc
+[48.156s] [100%] Built target libzstd_shared
+[48.178s] [36mInstall the project...[0m
+[48.187s] -- Install configuration: "Release"
+[48.187s] -- Installing: /home/administrator/husky_ws2/src/build/zstd_vendor/zstd_vendor_install/lib/pkgconfig/libzstd.pc
+[48.187s] -- Installing: /home/administrator/husky_ws2/src/build/zstd_vendor/zstd_vendor_install/include/zstd.h
+[48.188s] -- Installing: /home/administrator/husky_ws2/src/build/zstd_vendor/zstd_vendor_install/lib/libzstd.so.1.4.4
+[48.188s] -- Installing: /home/administrator/husky_ws2/src/build/zstd_vendor/zstd_vendor_install/lib/libzstd.so.1
+[48.188s] -- Installing: /home/administrator/husky_ws2/src/build/zstd_vendor/zstd_vendor_install/lib/libzstd.so
+[48.208s] [100%] [34m[1mCompleted 'zstd-1.4.4'[0m
+[48.249s] [100%] Built target zstd-1.4.4

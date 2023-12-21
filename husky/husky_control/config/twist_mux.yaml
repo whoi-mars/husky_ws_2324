@@ -1,0 +1,24 @@
+twist_mux:
+  ros__parameters:
+    topics:
+      joy:
+        topic   : joy_teleop/cmd_vel
+        timeout : 0.5
+        priority: 50
+      interactive_marker:
+        topic   : twist_marker_server/cmd_vel
+        timeout : 0.5
+        priority: 8
+      external:
+        topic   : cmd_vel
+        timeout : 1.0
+        priority: 20
+      collision:
+        topic   : collision_override_vel
+        timeout : 5.0
+        priority: 30
+    locks:
+      e_stop:
+        topic   : e_stop
+        timeout : 0.0
+        priority: 255
