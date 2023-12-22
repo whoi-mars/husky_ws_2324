@@ -45,7 +45,13 @@ class PenguinViz(Node):
             marker.scale.y = penguin.scale.y
             marker.scale.z = penguin.scale.z
 
-            marker.color.b = 1.0
+            if penguin.visited == 'unvisited':
+                marker.color.b = 1.0
+            elif penguin.visited == 'completed':
+                marker.color.g = 1.0
+            else:
+                marker.color.r = 1.0
+
             marker.color.a = .5 - .5*penguin.age/40
             markers.markers.append(marker)
                        

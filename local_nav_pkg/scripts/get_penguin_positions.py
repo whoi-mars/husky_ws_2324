@@ -103,7 +103,8 @@ class ObstaclePublisherNode(Node):
     def publish_penguins(self):     
         final_penguin_list = PenguinList()
         accumulated_penguin_list = []
-        test = self.existing_penguin_list.copy()
+        accumulated_labels = []
+        unfound_penguins = self.existing_penguin_list.copy()
         #print('existing len: ', len(self.existing_penguin_list))
         for i in range(len(self.lidar_points)):
             already_exists = False
@@ -126,13 +127,21 @@ class ObstaclePublisherNode(Node):
                     old_penguin.scale.y = self.lidar_points[i][4]
                     old_penguin.scale.z = self.lidar_points[i][5]
                     old_penguin.label = self.existing_penguin_list[j].label
-                
-                if duplicate_found:
-                    if old_penguin not in accumulated_penguin_list:
-                        accumulated_penguin_list.append(old_penguin)
-                        if self.existing_penguin_list[j] in test:
-                            test.remove(self.existing_penguin_list[j])
-                        already_exists = True
+                    old_penguin.visited = self.existing_penguin_list[j].visited
+                    match = self.existing_penguin_list[j]
+                    
+            if duplicate_found:
+                # print(accumulated_penguin_list)
+                # print(old_penguin)
+                if old_penguin.label not in accumulated_labels:
+                    # print(old_penguin.label)
+                    accumulated_penguin_list.append(old_penguin)
+                    accumulated_labels.append(old_penguin.label)
+                    if match in unfound_penguins:
+                        unfound_penguins.remove(match)
+                    already_exists = True
+                # else:
+                #     print('GOT EM')
             if not already_exists:
                 #print('Penguin Does Not Exist')
                 new_penguin = Penguin()
@@ -144,21 +153,23 @@ class ObstaclePublisherNode(Node):
                 new_penguin.scale.y = self.lidar_points[i][4]
                 new_penguin.scale.z = self.lidar_points[i][5]
                 new_penguin.label = str(self.penguin_label_count)
+                new_penguin.visited = "unvisited"
                 self.penguin_label_count += 1
                 if new_penguin not in accumulated_penguin_list:
                     accumulated_penguin_list.append(new_penguin)
         #print('length of old list', len(test))
-        for peng in test:
+        for peng in unfound_penguins:
             peng.age += 1    
-            if peng.age < 40:
+            if peng.age < 100:
                 accumulated_penguin_list.append(peng)
 
         sorted_penguin_list = sorted(accumulated_penguin_list, key=lambda penguin: penguin.label)
         self.scale = [0.0, 0.0, 0.5, 0.5, 0.5, 1.0]
         distance = 100
+        
         if self.approach_status == "pending":
             for i in range(len(sorted_penguin_list)):
-                if sorted_penguin_list[i].label not in self.visited_penguins:
+                if sorted_penguin_list[i].label not in self.visited_penguins and sorted_penguin_list[i].visited != 'completed':
                     i_distance = (sorted_penguin_list[i].point.x)**2 + (sorted_penguin_list[i].point.y)**2
                     if sorted_penguin_list[i].point.x > 2: # only take goals in front of robot
                         if i_distance > 1.0: # do not take goals withing 2m of robot - mostly for mobility and so it wont target me during testing
@@ -173,7 +184,8 @@ class ObstaclePublisherNode(Node):
                                             self.y_goal = sorted_penguin_list[i].point.y #- sorted_penguin_list[i].scale.y/2
                                             self.scale = [sorted_penguin_list[i].point.x, sorted_penguin_list[i].point.y, sorted_penguin_list[i].point.z, sorted_penguin_list[i].scale.x,sorted_penguin_list[i].scale.y,sorted_penguin_list[i].scale.z]
                                             distance = i_distance
-                                            self.approach_status = "engaging"                                        
+                                            self.approach_status = "engaging"
+                                                                               
                                 else:
                                     self.current_penguin_label = sorted_penguin_list[i].label
                                     self.x_goal = sorted_penguin_list[i].point.x - sorted_penguin_list[i].scale.x/2
@@ -181,6 +193,9 @@ class ObstaclePublisherNode(Node):
                                     self.scale = [sorted_penguin_list[i].point.x, sorted_penguin_list[i].point.y, sorted_penguin_list[i].point.z, sorted_penguin_list[i].scale.x,sorted_penguin_list[i].scale.y,sorted_penguin_list[i].scale.z]
                                     distance = i_distance
                                     self.approach_status = "engaging"
+            for penguin in sorted_penguin_list:
+                if penguin.label == self.current_penguin_label:
+                    penguin.visited = "current"
         else:
             goal_updated = False
             for i in range(len(sorted_penguin_list)):
@@ -193,8 +208,16 @@ class ObstaclePublisherNode(Node):
                     # print("goal updated")
             if not goal_updated:
                 self.reset_counter += 1
+        
+        if self.approach_status == "disengaging":
+            for penguin in sorted_penguin_list:
+                if penguin.label == self.current_penguin_label:
+                    penguin.visited = "completed"
 
         if self.reset_counter > 40:
+            for penguin in sorted_penguin_list:
+                if penguin.label == self.current_penguin_label:
+                    penguin.visited = "unvisited"
             self.reset_counter = 0
             self.x_goal = 0.0
             self.y_goal = 0.0

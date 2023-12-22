@@ -40,11 +40,11 @@ HIGH_SPEED = 0.1
 TURN_SPEED = 0.025
 
 # test speeds
-SLOWEST_SPEED = 0.04
-MEDIUM_SPEED = 0.2
-HIGH_SPEED = .4
+# SLOWEST_SPEED = 0.04
+# MEDIUM_SPEED = 0.2
+# HIGH_SPEED = .4
 
-TURN_SPEED = .2
+# TURN_SPEED = .2
 
 class HuskyVelocityPublisherNode(Node):
 
@@ -138,12 +138,12 @@ class HuskyVelocityPublisherNode(Node):
                         speed.angular.z = -TURN_SPEED    
                     elif angle_to_goal > 0.2 and angle_to_goal < math.pi:
                         print('Adjusting Angle - positive')
-                        speed.linear.x = SLOWEST_SPEED
+                        speed.linear.x = MEDIUM_SPEED
                         speed.angular.z = TURN_SPEED
                     #elif angle_to_goal - odometry_pose_theta < -0.1 and angle_to_goal - odometry_pose_theta > -math.pi:
                     elif angle_to_goal  < -0.2 and angle_to_goal > -math.pi:
                         print('Adjusting Angle - negative')
-                        speed.linear.x = SLOWEST_SPEED
+                        speed.linear.x = MEDIUM_SPEED
                         speed.angular.z = -TURN_SPEED
                     elif dist > 6.0:
                         print('Fast Approach')
