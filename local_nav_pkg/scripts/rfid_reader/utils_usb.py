@@ -15,37 +15,38 @@ dict_cmd_ans_len = {
 }
 
 
-def usb_reader_open(port):
+def usb_reader_open(ports):
     """
     important: remove tags nearby or the opening FAILS
     """
+    for i in range(len(ports)):
+        port = ports[i]
+        assert type(port) is str
+        assert port.startswith('/dev/ttyUSB')
 
-    assert type(port) is str
-    assert port.startswith('/dev/ttyUSB')
+        sp = serial.Serial()
+        # if sp.is_open:
+        #     sp.close()
+        # may need it or not
+        # sp.xonxoff = 1
+        sp.baudrate = 9600
+        sp.port = port
+        # stop when this character timeout expires
+        sp.timeout = USB_READ_TIMEOUT
 
-    sp = serial.Serial()
-    # if sp.is_open:
-    #     sp.close()
-    # may need it or not
-    # sp.xonxoff = 1
-    sp.baudrate = 9600
-    sp.port = port
-    # stop when this character timeout expires
-    sp.timeout = USB_READ_TIMEOUT
+        try:
+            sp.open()
+            # get b'\x02\r\n' handshake
+            ans = sp.readline()
+            if ans == OPEN_COMPLETE:
+                print('RFID reader detected on port {}'.format(port))
+                return sp
+            return None
 
-    try:
-        sp.open()
-        # get b'\x02\r\n' handshake
-        ans = sp.readline()
-        if ans == OPEN_COMPLETE:
-            print('RFID reader detected')
-            return sp
-        return None
-
-    except serial.SerialException as ex:
-        print('usb_err: {}'.format(ex))
-        print('rfid_reader killed')
-        os._exit(1)
+        except serial.SerialException as ex:
+            print('usb_err: {}'.format(ex), 'on port {}'.format(port))
+    print('rfid_reader killed')
+    os._exit(1)
 
 
 def usb_reader_close(sp):

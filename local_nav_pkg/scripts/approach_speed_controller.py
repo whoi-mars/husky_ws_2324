@@ -20,12 +20,11 @@ from getmac import get_mac_address
 from rfid_reader.utils_usb import usb_reader_open, usb_reader_close, usb_cmd
 
 
-RFID_READER_USB_PORT = '/dev/ttyUSB0'
-
+RFID_READER_USB_PORTS = ['/dev/ttyUSB0','/dev/ttyUSB1','/dev/ttyUSB2','/dev/ttyUSB3']
 
 mac = get_mac_address().replace(':', "-")
 now = datetime.datetime.now().strftime('%Y%m%d')
-path = 'husky_ws2/src/local_nav_pkg/scripts/rfid_reader/logs/{}_rfid_daemon_{}.log'.format(now, mac)
+path = '/home/administrator/husky_ws2/src/local_nav_pkg/scripts/rfid_reader/logs/{}_rfid_daemon_{}.log'.format(now, mac)
 lg = logging.getLogger(path)
 lg.setLevel(logging.DEBUG)
 han = TimedRotatingFileHandler(filename=path, when='midnight', interval=1)
@@ -171,25 +170,25 @@ class HuskyVelocityPublisherNode(Node):
                 get_lock(__file__)
 
                 # open port
-                #sp = usb_reader_open(RFID_READER_USB_PORT)
+                sp = usb_reader_open(RFID_READER_USB_PORTS)
 
                 if self.get_clock().now().nanoseconds < self.arrival_time + wait_time:
                     speed.linear.x = 0.0
                     speed.angular.z = 0.0
                     self.approach_status = "scanning"
                     print("scanning", self.arrival_time + wait_time - self.get_clock().now().nanoseconds)
-                    #a = usb_cmd(sp, 'x')
-                    # if len(a) > 20:
-                    #     #lg.info(a.decode().strip('\r\n'))
-                    #     print('TAG DETECTED!!', a)
-                    # self.approach_status = "disengaging"
-                    #     #usb_reader_close(sp)
-                    # else:
-                    #     print('.')
+                    a = usb_cmd(sp, 'x')
+                    if len(a) > 20:
+                        lg.info(a.decode().strip('\r\n'))
+                        print('TAG DETECTED!!', a)
+                        self.approach_status = "disengaging"
+                        usb_reader_close(sp)
+                    else:
+                        print('.')
                     
                 else:
                     self.approach_status = "disengaging"
-                    # usb_reader_close(sp)
+                    usb_reader_close(sp)
             if self.approach_status == "disengaging":
                 if dist > 3.0:
                     print('Backed Away')
