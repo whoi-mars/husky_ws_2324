@@ -14,6 +14,7 @@ from builtin_interfaces.msg import Duration
 import numpy as np
 from sklearn.cluster import DBSCAN 
 
+colors = [(230, 25, 75), (60, 180, 75), (255, 225, 25), (0, 130, 200), (245, 130, 48), (145, 30, 180), (70, 240, 240), (240, 50, 230), (210, 245, 60), (250, 190, 212), (0, 128, 128), (220, 190, 255), (170, 110, 40), (255, 250, 200), (128, 0, 0), (170, 255, 195), (128, 128, 0), (255, 215, 180), (0, 0, 128), (128, 128, 128), (255, 255, 255), (0, 0, 0)]
 class PenguinViz(Node):
 
     def __init__(self):
@@ -26,11 +27,11 @@ class PenguinViz(Node):
     def list_callback(self, msg):
         penguins = msg.penguins
         markers = MarkerArray()
-        id = 0
+        # id = 0
         for penguin in penguins:
             marker = Marker()
-            marker.id = id
-            id += 1
+            marker.id = int(penguin.label)
+            # id += 1
             marker.ns = 'penguin'
             marker.type = 1
             marker.header.frame_id = 'velodyne'
@@ -46,13 +47,19 @@ class PenguinViz(Node):
             marker.scale.z = penguin.scale.z
 
             if penguin.visited == 'unvisited':
-                marker.color.b = 1.0
+                
+                color = colors[marker.id%20]
+                marker.color.r = float(color[0])/255
+                marker.color.b = float(color[1])/255
+                marker.color.g = float(color[2])/255
+                marker.color.a = 0.5 - 0.5*penguin.age/40
             elif penguin.visited == 'completed':
                 marker.color.g = 1.0
+                marker.color.a = 1.0
             else:
                 marker.color.r = 1.0
+                marker.color.a = 1.0
 
-            marker.color.a = .5 - .5*penguin.age/40
             markers.markers.append(marker)
                        
         self.marker_publisher_.publish(markers)

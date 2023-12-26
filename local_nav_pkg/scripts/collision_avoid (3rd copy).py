@@ -45,7 +45,6 @@ class CollisionAvoidanceVelocityPublisherNode(Node):
             point.append(msg.markers[i].scale.x)
             point.append(msg.markers[i].scale.y)
             point.append(msg.markers[i].scale.z)
-            point.append("unvisited")
             self.list_of_points.append(point)
 
     def penguin_list_callback(self, msg):
@@ -58,22 +57,20 @@ class CollisionAvoidanceVelocityPublisherNode(Node):
             point.append(msg.penguins[i].scale.x)
             point.append(msg.penguins[i].scale.y)
             point.append(msg.penguins[i].scale.z)
-            point.append(msg.penguins[i].visited)
             self.penguin_points.append(point)
 
     def publish_collision_avoidance(self):
         collision_avoid_vel = Twist()
         new_speed_linear_x = self.speed_linear_x
         new_speed_angular_z = self.speed_angular_z
-        # new_list = self.list_of_points + self.penguin_points
-        new_list = self.penguin_points
+        new_list = self.list_of_points + self.penguin_points
 
         for point in new_list:
             if point[0] > 0:
                 closest_point = point[0]-point[3]/2
                 if self.speed_linear_x > 0:
-                    if closest_point < 1.25 and abs(point[1]) < .75 and point[6] != "current": #if there is a point right in front of the robot - stop.
-                        print('forwards collision imminent - stopping', point[6])
+                    if closest_point < .75 and abs(point[1]) < .75: #if there is a point right in front of the robot - stop.
+                        print('forwards collision imminent - stopping')
                         new_speed_linear_x = 0.0
                         new_speed_angular_z = 0.0
                        
