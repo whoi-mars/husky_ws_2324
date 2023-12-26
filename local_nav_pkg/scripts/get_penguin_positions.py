@@ -183,14 +183,14 @@ class ObstaclePublisherNode(Node):
 
         sorted_penguin_list = sorted(accumulated_penguin_list, key=lambda penguin: penguin.label)
         self.scale = [0.0, 0.0, 0.5, 0.5, 0.5, 1.0]
-        self.x_goal = 0.0
-        self.y_goal = 0.0
+        
         distance = 100
         
         if self.approach_status == "pending":
-            
+            self.x_goal = 0.0
+            self.y_goal = 0.0
             for i in range(len(sorted_penguin_list)):
-                if sorted_penguin_list[i].label not in self.visited_penguins:# and sorted_penguin_list[i].visited != 'completed':
+                if sorted_penguin_list[i].label not in self.visited_penguins and sorted_penguin_list[i].visited != 'completed':
                     i_distance = (sorted_penguin_list[i].point.x)**2 + (sorted_penguin_list[i].point.y)**2
                     if sorted_penguin_list[i].point.x > 2: # only take goals in front of robot
                         if i_distance > 1.0: # do not take goals withing 2m of robot - mostly for mobility and so it wont target me during testing
