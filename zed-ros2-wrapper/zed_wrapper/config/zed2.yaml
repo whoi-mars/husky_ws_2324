@@ -11,11 +11,11 @@
 
         depth:
             min_depth:                  0.2            # Min: 0.2, Max: 3.0 - Default 0.7 - Note: reducing this value wil require more computational power and GPU memory
-            max_depth:                  20.0            # Max: 40.0
+            max_depth:                  3.0      # Max: 40.0
 
         pos_tracking:
-            imu_fusion:                 true            # enable/disable IMU fusion. When set to false, only the optical odometry will be used.
-            publish_imu_tf:             true            # enable/disable the static IMU TF broadcasting
+            imu_fusion:                 false            # enable/disable IMU fusion. When set to false, only the optical odometry will be used.
+            publish_imu_tf:             false            # enable/disable the static IMU TF broadcasting
 
         sensors:
             sensors_image_sync:         false           # Synchronize Sensors messages with latest published video/depth message
@@ -26,7 +26,7 @@
             qos_durability:             2               # '1': TRANSIENT_LOCAL - '2': VOLATILE
 
         object_detection:
-            od_enabled:                 false           # True to enable Object Detection [only ZED 2]
+            od_enabled:                 true           # True to enable Object Detection [only ZED 2]
             confidence_threshold:       50.0            # [DYNAMIC] - Minimum value of the detection confidence of an object [0,100]
             model:                      0               # '0': MULTI_CLASS_BOX - '1': MULTI_CLASS_BOX_ACCURATE - '2': HUMAN_BODY_FAST - '3': HUMAN_BODY_ACCURATE - '4': MULTI_CLASS_BOX_MEDIUM - '5': HUMAN_BODY_MEDIUM - '6': PERSON_HEAD_BOX 
             filtering_mode:             1               # '0': NONE - '1': NMS3D - '2': NMS3D_PER_CLASS

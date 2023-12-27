@@ -27,7 +27,7 @@ sleep 1
 screen -S ricoh -d -m ros2 run theta_driver theta_driver_node
 
 sleep 1
-screen -S zed -d -m ros2 launch zed_wrapper zed2.launch.py
+#screen -S zed -d -m ros2 launch zed_wrapper zed2.launch.py
 echo 'ZED should spit data now'
 
 sleep 1

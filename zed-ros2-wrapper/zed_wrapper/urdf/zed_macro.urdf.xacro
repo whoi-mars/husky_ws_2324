@@ -85,11 +85,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </geometry>
       </collision>
     </link>
-    <joint name="${name}_camera_center_joint" type="fixed">
+    <!--joint name="${name}_camera_center_joint" type="fixed">
       <parent link="${name}_base_link"/>
       <child link="${name}_camera_center"/>
       <origin xyz="0 0 ${height/2}" rpy="0 ${bottom_slope} 0" />
-    </joint>
+    </joint-->
 
 
     <!-- Left Camera -->
