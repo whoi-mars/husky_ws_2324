@@ -33,7 +33,7 @@ def usb_reader_open(ports):
         sp.port = port
         # stop when this character timeout expires
         sp.timeout = USB_READ_TIMEOUT
-
+        print(port)
         try:
             sp.open()
             # get b'\x02\r\n' handshake
@@ -41,12 +41,12 @@ def usb_reader_open(ports):
             if ans == OPEN_COMPLETE:
                 print('RFID reader detected on port {}'.format(port))
                 return sp
-            return None
-
+            
         except serial.SerialException as ex:
             print('usb_err: {}'.format(ex), 'on port {}'.format(port))
     print('rfid_reader killed')
     os._exit(1)
+    return None
 
 
 def usb_reader_close(sp):
