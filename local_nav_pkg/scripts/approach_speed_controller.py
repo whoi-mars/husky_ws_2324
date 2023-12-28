@@ -45,7 +45,7 @@ TURN_SPEED = 0.025
 
 # TURN_SPEED = .2
 
-ANTENNA_ON = False
+ANTENNA_ON = True
 
 class HuskyVelocityPublisherNode(Node):
 
