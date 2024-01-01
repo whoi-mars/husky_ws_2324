@@ -22,7 +22,7 @@ def usb_reader_open(ports):
     for i in range(len(ports)):
         port = ports[i]
         assert type(port) is str
-        assert port.startswith('/dev/ttyUSB')
+        #assert port.startswith('/dev/ttyUSB')
 
         sp = serial.Serial()
         # if sp.is_open:

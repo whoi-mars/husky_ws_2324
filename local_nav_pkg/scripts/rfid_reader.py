@@ -9,7 +9,8 @@ from getmac import get_mac_address
 from rfid_reader.utils_usb import usb_reader_open, usb_reader_close, usb_cmd
 
 
-RFID_READER_USB_PORTS = ['/dev/ttyUSB0','/dev/ttyUSB1','/dev/ttyUSB2','/dev/ttyUSB3']
+RFID_READER_USB_PORTS = ['/dev/rfid_port','/dev/ttyUSB0','/dev/ttyUSB1','/dev/ttyUSB2','/dev/ttyUSB3']
+# RFID_READER_USB_PORTS = ['/dev/ttyUSB0','/dev/ttyUSB1','/dev/ttyUSB2','/dev/ttyUSB3']
 
 
 mac = get_mac_address().replace(':', "-")
