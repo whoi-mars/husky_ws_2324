@@ -37,7 +37,7 @@
 
   <!-- Custom addition to xacro file to include ZED2 camera ; by Dev Vaibhav-->
   <xacro:arg name="zed2_enabled" default="$(optenv HUSKY_ZED2_ENABLED 1)" />
-  <xacro:arg name="zed2_xyz" default="$(optenv HUSKY_ZED2_XYZ 0 0.14 0)" />
+  <xacro:arg name="zed2_xyz" default="$(optenv HUSKY_ZED2_XYZ .7 0 -.3)" />
   <xacro:arg name="zed2_rpy" default="$(optenv HUSKY_ZED2_RPY 0 0 0)" />
   <xacro:arg name="zed2_mount" default="$(optenv HUSKY_ZED2_MOUNT_FRAME sensor_arch_mount_link)" />
 

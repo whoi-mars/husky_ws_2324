@@ -22,20 +22,21 @@ class ObjectViz(Node):
         super().__init__('zed_object_vizualizer')
         self.subscriber = self.create_subscription(ObjectsStamped, 'zed2/zed_node/obj_det/objects', self.objects_callback, 1)
         
-        self.object_marker_publisher_ = self.create_publisher(MarkerArray, 'zed_obj_viz', 1)
+        self.object_marker_publisher_ = self.create_publisher(MarkerArray, 'zed_obj_viz_array', 1)
         #self.cloud_timer_ = self.create_timer(.1, self.cluster)
         
     def objects_callback(self, msg):
         objects = msg.objects
         markers = MarkerArray()
         # id = 0
+        print('objects: ', len(objects))
         for object in objects:
             marker = Marker()
             marker.id = int(object.label_id)
             # id += 1
             marker.ns = 'zed_obj'
             marker.type = 1
-            marker.header.frame_id = 'base_link'
+            marker.header.frame_id = 'zed2_camera_center'
             lifetime = Duration()
             lifetime.nanosec = 200000000
             marker.lifetime = lifetime
@@ -52,7 +53,7 @@ class ObjectViz(Node):
             marker.color.a = 1.0
 
             markers.markers.append(marker)
-                       
+        print('publishing')               
         self.object_marker_publisher_.publish(markers)
 
 def main(args=None):
