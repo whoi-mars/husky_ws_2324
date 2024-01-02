@@ -64,6 +64,7 @@ class LidarDetectionNode(Node):
         xs, ys, zs, labels = [], [], [], []
         markers = MarkerArray()
         id = 0
+        
         for i in set(labels1):
             marker = Marker()
             marker.id = id
@@ -81,7 +82,7 @@ class LidarDetectionNode(Node):
             max_min_diff = np.sqrt(np.sum((np.max(cluster, axis=0)[:2] - np.min(cluster, axis=0)[:2])**2))
 
             if max_min_diff > 1.5:
-                
+                # filter points from L shaped clusters
                 for trial in range(10):
                     # if trial !=0:
                         #print(trial)
@@ -111,13 +112,44 @@ class LidarDetectionNode(Node):
                     zs.extend(cluster[:, 2])
                     labels.extend([i] * len(cluster))
 
-                    marker.pose.position.x = np.mean(cluster[:, 0], axis=0)
-                    marker.pose.position.y = np.mean(cluster[:, 1], axis=0)
-                    marker.pose.position.z = np.mean(cluster[:, 2], axis=0)
+                    xmin = np.min(cluster[:, 0])
+                    xmax = np.max(cluster[:, 0])
+                    # xmean = np.mean(cluster[:, 0], axis=0)
+                    
+                    ymin = np.min(cluster[:, 1])
+                    ymax = np.max(cluster[:, 1])
+                    # ymean = np.mean(cluster[:, 1], axis=0)
+                    
+                    zmin = np.min(cluster[:, 2])
+                    zmax = np.max(cluster[:, 2])
+                    # zmean = np.mean(cluster[:, 2], axis=0)
 
-                    marker.scale.x = np.max(cluster[:, 0]) - np.min(cluster[:, 0])
-                    marker.scale.y = np.max(cluster[:, 1]) - np.min(cluster[:, 1])
-                    marker.scale.z = np.max(cluster[:, 2]) - np.min(cluster[:, 2])
+                    for old_marker in markers.markers:
+                        x_old_min = old_marker.pose.position.x - old_marker.scale.x/2
+                        x_old_max = old_marker.pose.position.x + old_marker.scale.x/2
+                        y_old_min = old_marker.pose.position.y - old_marker.scale.y/2
+                        y_old_max = old_marker.pose.position.y + old_marker.scale.y/2
+
+                        if xmin<x_old_min<xmax or xmin<x_old_max<xmax:
+                            if ymin<y_old_min<ymax or ymin<y_old_max<ymax:
+
+                                xmin = np.min([xmin,x_old_min])
+                                xmax = np.max([xmax,x_old_max])
+                                ymin = np.min([ymin,y_old_min])
+                                ymax = np.max([ymax,y_old_max])
+                                markers.markers.remove(old_marker)
+
+                    xmid = (xmin + xmax)/2
+                    ymid = (ymin + ymax)/2
+                    zmid = (zmin + zmax)/2                            
+
+                    marker.pose.position.x = xmid
+                    marker.pose.position.y = ymid
+                    marker.pose.position.z = zmid
+                    
+                    marker.scale.x = xmax-xmin
+                    marker.scale.y = ymax-ymin
+                    marker.scale.z = zmax-zmin
                     
                     markers.markers.append(marker)
                     id += 1
@@ -137,13 +169,44 @@ class LidarDetectionNode(Node):
                         zs.extend(cluster[:, 2])
                         labels.extend([i] * len(cluster))
 
-                        marker.pose.position.x = np.mean(cluster[:, 0], axis=0)
-                        marker.pose.position.y = np.mean(cluster[:, 1], axis=0)
-                        marker.pose.position.z = np.mean(cluster[:, 2], axis=0)
+                        xmin = np.min(cluster[:, 0])
+                        xmax = np.max(cluster[:, 0])
+                        # xmean = np.mean(cluster[:, 0], axis=0)
+                        
+                        ymin = np.min(cluster[:, 1])
+                        ymax = np.max(cluster[:, 1])
+                        # ymean = np.mean(cluster[:, 1], axis=0)
+                        
+                        zmin = np.min(cluster[:, 2])
+                        zmax = np.max(cluster[:, 2])
+                        # zmean = np.mean(cluster[:, 2], axis=0)
 
-                        marker.scale.x = np.max(cluster[:, 0]) - np.min(cluster[:, 0])
-                        marker.scale.y = np.max(cluster[:, 1]) - np.min(cluster[:, 1])
-                        marker.scale.z = np.max(cluster[:, 2]) - np.min(cluster[:, 2])
+                        for old_marker in markers.markers:
+                            x_old_min = old_marker.pose.position.x - old_marker.scale.x/2
+                            x_old_max = old_marker.pose.position.x + old_marker.scale.x/2
+                            y_old_min = old_marker.pose.position.y - old_marker.scale.y/2
+                            y_old_max = old_marker.pose.position.y + old_marker.scale.y/2
+
+                            if xmin<x_old_min<xmax or xmin<x_old_max<xmax:
+                                if ymin<y_old_min<ymax or ymin<y_old_max<ymax:
+                                    
+                                    xmin = np.min([xmin,x_old_min])
+                                    xmax = np.max([xmax,x_old_max])
+                                    ymin = np.min([ymin,y_old_min])
+                                    ymax = np.max([ymax,y_old_max])
+                                    markers.markers.remove(old_marker)
+
+                        xmid = (xmin + xmax)/2
+                        ymid = (ymin + ymax)/2
+                        zmid = (zmin + zmax)/2                            
+
+                        marker.pose.position.x = xmid
+                        marker.pose.position.y = ymid
+                        marker.pose.position.z = zmid
+                        
+                        marker.scale.x = xmax-xmin
+                        marker.scale.y = ymax-ymin
+                        marker.scale.z = zmax-zmin
         
                         markers.markers.append(marker)
                         id += 1
