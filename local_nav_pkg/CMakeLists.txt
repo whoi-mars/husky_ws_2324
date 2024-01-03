@@ -52,6 +52,7 @@ install(PROGRAMS
   scripts/inference.py
   scripts/collision_avoid.py
   scripts/approach_speed_controller.py
+  scripts/zed_obj_detect.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

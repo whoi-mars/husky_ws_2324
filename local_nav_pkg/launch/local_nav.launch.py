@@ -5,6 +5,12 @@ import os
 
 def generate_launch_description(): 
 
+   zed_detect = launch_ros.actions.Node(
+      package='local_nav_pkg',
+      executable='zed_obj_detect.py',
+      name='zed_detect'
+   )
+   
    lidar_detect = launch_ros.actions.Node(
       package='local_nav_pkg',
       executable='lidar_detect.py',
@@ -41,7 +47,8 @@ def generate_launch_description():
       name='approach_speed_controller'
    )
                              
-   return launch.LaunchDescription([ 
+   return launch.LaunchDescription([
+        zed_detect, 
         lidar_detect,
         get_penguin_positions,
         penguin_viz,

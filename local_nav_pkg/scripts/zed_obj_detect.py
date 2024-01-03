@@ -15,7 +15,6 @@ from builtin_interfaces.msg import Duration
 import numpy as np
 from sklearn.cluster import DBSCAN 
 
-colors = [(230, 25, 75), (60, 180, 75), (255, 225, 25), (0, 130, 200), (245, 130, 48), (145, 30, 180), (70, 240, 240), (240, 50, 230), (210, 245, 60), (250, 190, 212), (0, 128, 128), (220, 190, 255), (170, 110, 40), (255, 250, 200), (128, 0, 0), (170, 255, 195), (128, 128, 0), (255, 215, 180), (0, 0, 128), (128, 128, 128), (255, 255, 255), (0, 0, 0)]
 class ObjectViz(Node):
 
     def __init__(self):
@@ -31,28 +30,30 @@ class ObjectViz(Node):
         # id = 0
         print('objects: ', len(objects))
         for object in objects:
-            marker = Marker()
-            marker.id = int(object.label_id)
-            # id += 1
-            marker.ns = 'zed_obj'
-            marker.type = 1
-            marker.header.frame_id = 'zed2_camera_center'
-            lifetime = Duration()
-            lifetime.nanosec = 200000000
-            marker.lifetime = lifetime
-            # print(object.position[0])
-            marker.pose.position.x = float(object.position[0])
-            marker.pose.position.y = float(object.position[1])
-            marker.pose.position.z = float(object.position[2])
-            # print(object.dimensions_3d)
-            marker.scale.x = float(object.dimensions_3d[2])
-            marker.scale.y = float(object.dimensions_3d[0])
-            marker.scale.z = float(object.dimensions_3d[1])
+            if not np.isnan(object.position[0]):
+                # print(object.position[0])
+                marker = Marker()
+                marker.id = int(object.label_id)
+                # id += 1
+                marker.ns = 'zed_obj'
+                marker.type = 1
+                marker.header.frame_id = 'zed2_camera_center'
+                lifetime = Duration()
+                lifetime.nanosec = 300000000
+                marker.lifetime = lifetime
+                # print(object.position[0])
+                marker.pose.position.x = float(object.position[0])
+                marker.pose.position.y = float(object.position[1])
+                marker.pose.position.z = float(object.position[2])
+                # print(object.dimensions_3d)
+                marker.scale.x = float(object.dimensions_3d[2])
+                marker.scale.y = float(object.dimensions_3d[0])
+                marker.scale.z = float(object.dimensions_3d[1])
 
-            marker.color.b = 0.5
-            marker.color.a = 1.0
+                marker.color.b = 0.5
+                marker.color.a = 1.0
 
-            markers.markers.append(marker)
+                markers.markers.append(marker)
         print('publishing')               
         self.object_marker_publisher_.publish(markers)
 

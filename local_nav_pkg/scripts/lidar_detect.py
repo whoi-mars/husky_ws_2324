@@ -30,7 +30,7 @@ class LidarDetectionNode(Node):
         self.cloud_timer_ = self.create_timer(.1, self.cluster)
 
         self.cloud = [[0.0, 0.0, 0.0]]
-        self.markers = MarkerArray()
+        self.zed_markers = MarkerArray()
 
     def velodyne_callback(self, msg):
         
@@ -44,11 +44,12 @@ class LidarDetectionNode(Node):
             print('no cloud detected yet')
 
     def zed_obj_callback(self, msg):
+        self.zed_markers.markers = []
         for marker in msg.markers:
-            self.markers.markers.append(marker)
+            self.zed_markers.markers.append(marker)
                        
     def cluster(self):
-
+        markers = MarkerArray()    
         self.cloud = np.array(self.cloud)
         #print(cloud)
         mask = np.sqrt(self.cloud[:, 0]**2 + self.cloud[:, 1]**2) < RADIUS
@@ -72,7 +73,10 @@ class LidarDetectionNode(Node):
         xs, ys, zs, labels = [], [], [], []
         
         id = 0
-        
+        for marker in self.zed_markers.markers:
+            marker.color.a = 1.0
+            markers.markers.append(marker)
+
         for i in set(labels1):
             marker = Marker()
             marker.id = id
@@ -82,7 +86,7 @@ class LidarDetectionNode(Node):
             marker.type = 1
             marker.header.frame_id = 'velodyne'
             lifetime = Duration()
-            lifetime.nanosec = 200000000
+            lifetime.nanosec = 300000000
             marker.lifetime = lifetime
             cluster_mask = labels1 == i
             cluster = new_cloud[cluster_mask, :3]
@@ -132,7 +136,7 @@ class LidarDetectionNode(Node):
                     zmax = np.max(cluster[:, 2])
                     # zmean = np.mean(cluster[:, 2], axis=0)
 
-                    for old_marker in self.markers.markers:
+                    for old_marker in markers.markers:
                         x_old_min = old_marker.pose.position.x - old_marker.scale.x/2
                         x_old_max = old_marker.pose.position.x + old_marker.scale.x/2
                         y_old_min = old_marker.pose.position.y - old_marker.scale.y/2
@@ -145,7 +149,7 @@ class LidarDetectionNode(Node):
                                 xmax = np.max([xmax,x_old_max])
                                 ymin = np.min([ymin,y_old_min])
                                 ymax = np.max([ymax,y_old_max])
-                                self.markers.markers.remove(old_marker)
+                                markers.markers.remove(old_marker)
 
                     xmid = (xmin + xmax)/2
                     ymid = (ymin + ymax)/2
@@ -159,7 +163,7 @@ class LidarDetectionNode(Node):
                     marker.scale.y = ymax-ymin
                     marker.scale.z = zmax-zmin
                     
-                    self.markers.markers.append(marker)
+                    markers.markers.append(marker)
                     id += 1
                 else:
                     non_cluster_points = new_cloud[new_cloud[:, 3] != i, :3]
@@ -189,7 +193,7 @@ class LidarDetectionNode(Node):
                         zmax = np.max(cluster[:, 2])
                         # zmean = np.mean(cluster[:, 2], axis=0)
 
-                        for old_marker in self.markers.markers:
+                        for old_marker in markers.markers:
                             x_old_min = old_marker.pose.position.x - old_marker.scale.x/2
                             x_old_max = old_marker.pose.position.x + old_marker.scale.x/2
                             y_old_min = old_marker.pose.position.y - old_marker.scale.y/2
@@ -202,7 +206,7 @@ class LidarDetectionNode(Node):
                                     xmax = np.max([xmax,x_old_max])
                                     ymin = np.min([ymin,y_old_min])
                                     ymax = np.max([ymax,y_old_max])
-                                    self.markers.markers.remove(old_marker)
+                                    markers.markers.remove(old_marker)
 
                         xmid = (xmin + xmax)/2
                         ymid = (ymin + ymax)/2
@@ -216,7 +220,7 @@ class LidarDetectionNode(Node):
                         marker.scale.y = ymax-ymin
                         marker.scale.z = zmax-zmin
         
-                        self.markers.markers.append(marker)
+                        markers.markers.append(marker)
                         id += 1
 
         header = Header()
@@ -225,7 +229,7 @@ class LidarDetectionNode(Node):
         pc2 = point_cloud2.create_cloud_xyz32(header, points)
         
         self.filtered_cloud_publisher_.publish(pc2) 
-        self.marker_publisher_.publish(self.markers)
+        self.marker_publisher_.publish(markers)
 
 def main(args=None):
     rclpy.init(args=args)
