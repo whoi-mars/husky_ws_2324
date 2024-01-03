@@ -13,6 +13,7 @@ class CollisionAvoidanceVelocityPublisherNode(Node):
         self.subscriber = self.create_subscription(Twist, 'approach_vel', self.current_velocity_callback, 10)
         self.point_cloud_subscriber = self.create_subscription(MarkerArray, 'visualization_marker_array', self.marker_array_callback, 10)
         self.penguin_list_subscriber = self.create_subscription(PenguinList, 'penguin_list', self.penguin_list_callback, 10)
+        self.zed_obj_subscriber = self.create_subscription(MarkerArray, 'zed_obj_viz_array', self.zed_obj_callback, 10)
         self.goal_pose_subscriber = self.create_subscription(PoseStamped, 'local_goal_pose', self.goal_pose_callback, 10)
         
         self.publisher_ = self.create_publisher(Twist, 'cmd_vel', 20)
@@ -20,6 +21,7 @@ class CollisionAvoidanceVelocityPublisherNode(Node):
 
         self.speed_linear_x = 0.0
         self.speed_angular_z= 0.0
+        self.zed_points = []
         self.list_of_points = []
         self.penguin_points = []
         self.goal_pose_x = 0.0
@@ -32,8 +34,21 @@ class CollisionAvoidanceVelocityPublisherNode(Node):
     def current_velocity_callback(self, msg):
         self.speed_linear_x = msg.linear.x
         self.speed_angular_z = msg.angular.z
-
         self.publish_collision_avoidance()
+
+    def zed_obj_callback(self, msg):
+        self.zed_points = []
+        for i in range(len(msg.markers)):
+            point = []
+            point.append(msg.markers[i].pose.position.x)
+            point.append(msg.markers[i].pose.position.y)
+            point.append(msg.markers[i].pose.position.z)
+            point.append(msg.markers[i].scale.x)
+            point.append(msg.markers[i].scale.y)
+            point.append(msg.markers[i].scale.z)
+            point.append("unvisited")
+            self.zed_points.append(point)
+
 
     def marker_array_callback(self, msg):
         self.list_of_points = []
@@ -66,7 +81,7 @@ class CollisionAvoidanceVelocityPublisherNode(Node):
         new_speed_linear_x = self.speed_linear_x
         new_speed_angular_z = self.speed_angular_z
         # new_list = self.list_of_points + self.penguin_points
-        new_list = self.penguin_points
+        new_list = self.penguin_points + self.zed_points
 
         for point in new_list:
             if point[0] > 0:
