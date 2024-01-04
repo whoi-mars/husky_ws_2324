@@ -31,29 +31,30 @@ class ObjectViz(Node):
         print('objects: ', len(objects))
         for object in objects:
             if not np.isnan(object.position[0]):
-                # print(object.position[0])
-                marker = Marker()
-                marker.id = int(object.label_id)
-                # id += 1
-                marker.ns = 'zed_obj'
-                marker.type = 1
-                marker.header.frame_id = 'zed2_camera_center'
-                lifetime = Duration()
-                lifetime.nanosec = 300000000
-                marker.lifetime = lifetime
-                # print(object.position[0])
-                marker.pose.position.x = float(object.position[0])
-                marker.pose.position.y = float(object.position[1])
-                marker.pose.position.z = float(object.position[2])
-                # print(object.dimensions_3d)
-                marker.scale.x = float(object.dimensions_3d[2])
-                marker.scale.y = float(object.dimensions_3d[0])
-                marker.scale.z = float(object.dimensions_3d[1])
+                if object.sublabel == 'Bird':
+                    # print(object.position[0])
+                    marker = Marker()
+                    marker.id = int(object.label_id)
+                    # id += 1
+                    marker.ns = 'zed_obj'
+                    marker.type = 1
+                    marker.header.frame_id = 'zed2_camera_center'
+                    lifetime = Duration()
+                    lifetime.nanosec = 300000000
+                    marker.lifetime = lifetime
+                    # print(object.position[0])
+                    marker.pose.position.x = float(object.position[0])
+                    marker.pose.position.y = float(object.position[1])
+                    marker.pose.position.z = float(object.position[2])
+                    # print(object.dimensions_3d)
+                    marker.scale.x = float(object.dimensions_3d[2])
+                    marker.scale.y = float(object.dimensions_3d[0])
+                    marker.scale.z = float(object.dimensions_3d[1])
 
-                marker.color.b = 0.5
-                marker.color.a = 1.0
+                    marker.color.b = 0.5
+                    marker.color.a = 1.0
 
-                markers.markers.append(marker)
+                    markers.markers.append(marker)
         print('publishing')               
         self.object_marker_publisher_.publish(markers)
 
