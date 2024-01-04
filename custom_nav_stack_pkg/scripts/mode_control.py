@@ -25,6 +25,8 @@ import time
 import numpy as np
 import array as arr
 import statistics
+import subprocess
+from signal import SIGINT
 
 import os
 from mpl_toolkits import mplot3d
@@ -654,10 +656,15 @@ def main(args=None):
 
 
             elif mode_control.mode == 'local' and mode_control.joy_msg.buttons[mode_control.button_script_control] == 1: #Enter into force local navigation mode. Used for testing purpose
-                pass
+                if old_mode != mode_control.mode:
+                    print('launching')
+                    launch_process = subprocess.Popen(["ros2","launch","/home/administrator/husky_ws2/install/local_nav_pkg/share/local_nav_pkg/launch/local_nav.launch.py"],text=True)
+
             elif mode_control.mode == 'auto' and mode_control.joy_msg.buttons[mode_control.button_script_control] == 1: #Enter automatic mode which can auto-switch between gps and local mode
                 pass
-
+            if old_mode == 'local' and mode_control.mode != 'local':
+                launch_process.send_signal(SIGINT)
+                launch_process.wait(timeout=30)
         old_mode = mode_control.mode
         # mode_control.destroy_subscription(mode_control.subscription)
             # logger.warning("While end")

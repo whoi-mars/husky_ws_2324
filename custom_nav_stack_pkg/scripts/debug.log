@@ -1,11 +1,6 @@
-2024-01-04 15:52:49 WARNING  ############################## LOGGING STARTED ##############################
-2024-01-04 15:52:49 WARNING  Current mode is: auto
-2024-01-04 15:52:49 WARNING  Please enable button # 7 to run the script.
-2024-01-04 15:52:51 WARNING  Changed mode from: auto to local
-2024-01-04 15:52:52 WARNING  Changed mode from: local to manual
-2024-01-04 15:53:04 WARNING  Changed mode from: manual to local
-2024-01-04 15:53:22 WARNING  Changed mode from: local to manual
-2024-01-04 15:53:47 WARNING  Changed mode from: manual to local
-2024-01-04 15:54:17 WARNING  Changed mode from: local to manual
-2024-01-04 15:54:26 WARNING  Changed mode from: manual to local
-2024-01-04 15:54:29 WARNING  Changed mode from: local to manual
+2024-01-04 16:00:17 WARNING  ############################## LOGGING STARTED ##############################
+2024-01-04 16:00:17 INFO     Line2: -70.593867 -8.134091
+2024-01-04 16:00:17 INFO     Line3: -70.593765 -8.132962
+2024-01-04 16:00:17 INFO     Line4: -70.593354 -8.133359
+2024-01-04 16:00:17 WARNING  Current mode is: auto
+2024-01-04 16:00:17 WARNING  Please enable button # 7 to run the script.
