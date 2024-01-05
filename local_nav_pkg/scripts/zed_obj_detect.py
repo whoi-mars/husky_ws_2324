@@ -21,7 +21,7 @@ class ObjectViz(Node):
         super().__init__('zed_object_vizualizer')
         self.subscriber = self.create_subscription(ObjectsStamped, 'zed2/zed_node/obj_det/objects', self.objects_callback, 1)
         
-        self.object_marker_publisher_ = self.create_publisher(MarkerArray, 'zed_obj_viz_array', 1)
+        self.object_marker_publisher_ = self.create_publisher(MarkerArray, 'zed_obj_viz_array2', 1)
         #self.cloud_timer_ = self.create_timer(.1, self.cluster)
         
     def objects_callback(self, msg):
@@ -29,9 +29,15 @@ class ObjectViz(Node):
         markers = MarkerArray()
         # id = 0
         print('objects: ', len(objects))
+        print_list = []
         for object in objects:
+                
             if not np.isnan(object.position[0]):
-                if object.sublabel == 'Bird':
+                if float(object.dimensions_3d[1]) > 0.25:
+                    print(float(object.dimensions_3d[1])) 
+            
+                    print_list.append([object.sublabel, object.confidence])
+                    # if object.sublabel == 'Bird':
                     # print(object.position[0])
                     marker = Marker()
                     marker.id = int(object.label_id)
@@ -52,10 +58,15 @@ class ObjectViz(Node):
                     marker.scale.z = float(object.dimensions_3d[1])
 
                     marker.color.b = 0.5
+                    if object.sublabel == 'Bird':
+                        marker.color.g = 0.75
+                    if object.sublabel == 'Person':
+                        marker.color.r = 0.75
                     marker.color.a = 1.0
 
                     markers.markers.append(marker)
-        print('publishing')               
+        print(print_list)
+        # print('publishing')               
         self.object_marker_publisher_.publish(markers)
 
 def main(args=None):
