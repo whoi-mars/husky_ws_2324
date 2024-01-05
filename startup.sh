@@ -56,6 +56,7 @@ echo 'RVIZ should open now and display sensor data'
 
 sleep 1
 #screen -S mode_control -m ros2 run custom_nav_stack_pkg mode_control.py
+screen -S mode_control -m ros2 run custom_nav_stack_pkg mode_control_gps_removed.py
 echo 'Mode control script is running now'
 
 #screen -S husky_control_joystick -d -m /home/administrator/husky_ws2/src/husky_control_joystick.sh
