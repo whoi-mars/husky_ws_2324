@@ -1,0 +1,31 @@
+ros2 run custom_nav_stack_pkg cpp_executable2
+ros2 launch local_nav_pkg local_nav.launch.py
+
+
+ros2 launch local_nav_pkg inference.launch.py
+
+
+python3 husky_ws2/src/local_nav_pkg/scripts/get_penguin_positions.py
+python3 husky_ws2/src/local_nav_pkg/scripts/approach_speed_controller.py
+
+
+--
+test 11/18:
+running with researcher detect
+test diff. drive
+test LiDar results on snow
+
+
+test 11/15:
+running on pure odometry
+
+run the above scripts
+approaching goals?
+turn on odom filtered again?
+
+
+create visual marker for current peng./
+check out changes in goal pose - is this updateing correctly
+angle see,s right - but sometimes echo is moving away fromthe target?
+also y goal isnt useful - change to just x
+

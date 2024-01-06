@@ -1,6 +1,15 @@
+<<<<<<< Updated upstream
 2024-01-04 16:00:17 WARNING  ############################## LOGGING STARTED ##############################
 2024-01-04 16:00:17 INFO     Line2: -70.593867 -8.134091
 2024-01-04 16:00:17 INFO     Line3: -70.593765 -8.132962
 2024-01-04 16:00:17 INFO     Line4: -70.593354 -8.133359
 2024-01-04 16:00:17 WARNING  Current mode is: auto
 2024-01-04 16:00:17 WARNING  Please enable button # 7 to run the script.
+=======
+2024-01-05 12:49:12 WARNING  ############################## LOGGING STARTED ##############################
+2024-01-05 12:49:13 INFO     Line2: -70.593867 -8.134091
+2024-01-05 12:49:13 INFO     Line3: -70.593765 -8.132962
+2024-01-05 12:49:13 INFO     Line4: -70.593354 -8.133359
+2024-01-05 12:49:13 WARNING  Current mode is: auto
+2024-01-05 12:49:13 WARNING  Please enable button # 7 to run the script.
+>>>>>>> Stashed changes
