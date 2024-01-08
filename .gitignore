@@ -1,2 +1,3 @@
 **/*.log
 custom_nav_stack_pkg/scripts/*.log
+local_nav_pkg/scripts/__pycache__/

@@ -99,6 +99,7 @@ target_link_libraries (cpp_executable2 ${PCL_LIBRARIES})
 install(PROGRAMS
   scripts/custom_nav_stack.py
   scripts/mode_control.py
+  scripts/mode_control_gps_removed.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

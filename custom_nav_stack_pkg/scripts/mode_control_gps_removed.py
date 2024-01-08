@@ -171,11 +171,14 @@ def main(args=None):
                 if old_mode != mode_control.mode:
                     print('launching')
                     launch_process = subprocess.Popen(["ros2","launch","/home/administrator/husky_ws2/install/local_nav_pkg/share/local_nav_pkg/launch/local_nav.launch.py"],text=True)
-                    # launch_process.run_async()
+                    cwd = '/media/administrator/Seagate Portable Drive/rosbagdir'
+                    record_process = subprocess.Popen(["ros2","bag","record","/zed2/zed_node/stereo/image_rect_color","/zed_obj_viz_array","/velodyne_points","/zed2/zed_node/obj_det/objects","/approach_vel","/clicked_point","/cmd_vel","/collision_override_vel","/device/status","/diagnostics","/dynamic_joint_states","/e_stop","/filtered_cloud","/goal_pose","/gps/data","/husky_velocity_controller/cmd_vel_unstamped","/image_object","/image_object_array","/imu/data","/inference","/initialpose","/joint_states","/joy_teleop/cmd_vel","/joy_teleop/joy","/joy_teleop/joy/set_feedback","/local_goal_pose","/mag","/microstrain_inertial_driver/transition_event","/moving_ang","/nav/dual_antenna_status","/nav/filtered_imu/data","/nav/heading","/nav/heading_state","/nav/odom","/nav/status","/odom","/odometry/filtered","/parameter_events","/penguin_approach_status","/penguin_list","/penguin_viz","/robot_description","/rosout","/scan","/set_pose","/status","/target_object","/target_object_array","/tf","/tf_static","/twist_marker_server/cmd_vel","/visualization_marker_array"],text=True, cwd=cwd)
+                    
             elif mode_control.mode == 'auto' and mode_control.joy_msg.buttons[mode_control.button_script_control] == 1: #Enter automatic mode which can auto-switch between gps and local mode
                 pass
             if old_mode == 'local' and mode_control.mode != 'local':
                 launch_process.send_signal(SIGINT)
+                record_process.send_signal(SIGINT)
                 launch_process.wait(timeout=30)
         old_mode = mode_control.mode
         

@@ -54,6 +54,6 @@ def generate_launch_description():
         penguin_viz,
         #peng_inference,
         collision_avoidance,
-        #approach_speed_controller,
+        approach_speed_controller,
     ])
 
