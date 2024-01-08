@@ -1,15 +1,9 @@
 #! /usr/bin/env python3
 
-# Convert pointcloud obstacle readout to list of penguins
-
-from xml.etree.ElementTree import tostring
+# Run object detection on images published by the 360 camera
 import rclpy
-#import rospy
 from rclpy.node import Node
-from visualization_msgs.msg import MarkerArray
-from nav_msgs.msg import Odometry
-from geometry_msgs.msg import PoseStamped
-from std_msgs.msg import String
+
 from local_nav_pkg.msg import PenguinInference
 from local_nav_pkg.msg import PenguinInferenceList
 from local_nav_pkg.msg import Corner
@@ -42,7 +36,7 @@ else:
     print("No GPU found")
 
 # other import
-new_image = [[[0, 0, 0]]]
+
 path2scripts = '/home/administrator/TensorFlow/models/research/' # TODO: provide pass to the research folder
 sys.path.insert(0, path2scripts) # making scripts in models/research available for import
 
@@ -52,9 +46,7 @@ from object_detection.utils import config_util
 from object_detection.utils import visualization_utils as viz_utils
 from object_detection.builders import model_builder
 
-# NOTE: your current working directory should be Tensorflow.
-
-# TODO: specify two pathes: to the pipeline.config file and to the folder with trained model.
+# Specify two paths: to the pipeline.config file and to the folder with trained model.
 path2config ='/home/administrator/TensorFlow/penguin_detection_model/exported_models/eff_det_3_23_3/pipeline.config'
 path2model = '/home/administrator/TensorFlow/penguin_detection_model/exported_models/eff_det_3_23_3/checkpoint'
 
@@ -80,16 +72,19 @@ class PenguinInferenceNode(Node):
 
         self.penguin_inference_timer_ = self.create_timer(1, self.publish_inference)
 
+        self.new_image = [[[0, 0, 0]]]
+
     def image_callback(self, msg):
-        global new_image
         bridge = CvBridge()
-        new_image = bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
+        self.new_image = bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
         
     def publish_inference(self):
+        # For testing
         path2images = {'/home/administrator/TensorFlow/penguin_detection_model/images/R0010003_st_Moment(23).jpg'}
         #path2images = {'/home/administrator/Desktop/test.jpg'}
+        # call inference function
         inference_list, detections, num_detections = self.inference_as_raw_output(path2images)
-        if PUBLISH_IMAGE:
+        if PUBLISH_IMAGE: #if we want to publish the annotated image for RVIZ
             annotated_image = self.inference_with_plot(path2images, detections, num_detections)
             self.image_publisher_.publish(annotated_image)
         self.publisher_.publish(inference_list) 
@@ -105,22 +100,8 @@ class PenguinInferenceNode(Node):
             #self.get_logger().info('\n')
             
             if not USE_STATIC:
-                image_np = np.array(new_image)
+                image_np = np.array(self.new_image)
             
-            #input_tensor = tf.convert_to_tensor(np.expand_dims(image_np, 0), dtype=tf.float32)
-            #detections = self.detect_fn(input_tensor)
-
-            # All outputs are batches tensors.
-            # Convert to numpy arrays, and take index [0] to remove the batch dimension.
-            # We're only interested in the first num_detections.
-            #num_detections = int(detections.pop('num_detections'))
-            #detections = {key: value[0, :num_detections].numpy()
-            #                for key, value in detections.items()}
-            
-            #detections['num_detections'] = num_detections
-
-            # detection_classes should be ints.
-            #detections['detection_classes'] = detections['detection_classes'].astype(np.int64)
 
             label_id_offset = 1
             image_np_with_detections = image_np.copy()
@@ -277,7 +258,7 @@ class PenguinInferenceNode(Node):
         
         for image_path in tqdm(path2images):
             
-            if USE_STATIC:
+            if USE_STATIC: #for testing on a static image
                 if path2dir: # if a path to a directory where images are stored was passed in
                     image_path = os.path.join(path2dir, image_path.strip())
                     
@@ -287,8 +268,8 @@ class PenguinInferenceNode(Node):
             #self.get_logger().info(str(np.shape(image_np)))
             #self.get_logger().info('\n')
             
-            if not USE_STATIC:
-                image_np = np.array(new_image)
+            if not USE_STATIC: # otherwies read from ros message
+                image_np = np.array(self.new_image)
 
             #self.get_logger().info('test2')
             #self.get_logger().info(str(np.shape(image_np)))
@@ -340,7 +321,7 @@ class PenguinInferenceNode(Node):
             detections_raw = detections.copy()    
             
             image_h, image_w, _ = image_np.shape
-            if TO_FILE:
+            if TO_FILE: #for testing - if we want to log to a file
                 file_name = f'pred_result_{data}.txt'
             
                 line2write = list()
@@ -367,7 +348,7 @@ class PenguinInferenceNode(Node):
 
                     line2write = ' '.join(line2write)
                     text_file.write(line2write + os.linesep)
-            
+            # extract information for publication
             for b, s, c in zip(boxes, scores, classes):
                 #self.get_logger().info(str(s))
                 inference = PenguinInference()

@@ -1,5 +1,8 @@
 #! /usr/bin/env python3
 
+# Script which checks for obstacles in front of ECHO, from the LiDar, from the penguin list manages by the penguin position tracker, and from the ZED.\
+# This will take the velocity from the approach speed controller, and either pass it or overwrite it with zero if there is an object.
+
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist, PoseStamped
@@ -13,29 +16,22 @@ class CollisionAvoidanceVelocityPublisherNode(Node):
         self.subscriber = self.create_subscription(Twist, 'approach_vel', self.current_velocity_callback, 10)
         self.point_cloud_subscriber = self.create_subscription(MarkerArray, 'visualization_marker_array', self.marker_array_callback, 10)
         self.penguin_list_subscriber = self.create_subscription(PenguinList, 'penguin_list', self.penguin_list_callback, 10)
-        self.zed_obj_subscriber = self.create_subscription(MarkerArray, 'zed_obj_viz_array', self.zed_obj_callback, 10)
-        self.goal_pose_subscriber = self.create_subscription(PoseStamped, 'local_goal_pose', self.goal_pose_callback, 10)
-        
+        self.zed_obj_subscriber = self.create_subscription(MarkerArray, 'zed_obj_viz_array', self.zed_obj_callback, 10)        
         self.publisher_ = self.create_publisher(Twist, 'cmd_vel', 20)
-        #self.collision_timer_ = self.create_timer(0.1, self.publish_collision_avoidance)
 
         self.speed_linear_x = 0.0
         self.speed_angular_z= 0.0
         self.zed_points = []
         self.list_of_points = []
         self.penguin_points = []
-        self.goal_pose_x = 0.0
-        self.goal_pose_y = 0.0
-        
-    def goal_pose_callback(self, msg):
-        self.goal_pose_x = msg.pose.position.x
-        self.goal_pose_y = msg.pose.position.y
-        
+
+    # Get velocity published the approach speed controller            
     def current_velocity_callback(self, msg):
         self.speed_linear_x = msg.linear.x
         self.speed_angular_z = msg.angular.z
         self.publish_collision_avoidance()
 
+    # Read objects from ZED
     def zed_obj_callback(self, msg):
         self.zed_points = []
         for i in range(len(msg.markers)):
@@ -49,7 +45,7 @@ class CollisionAvoidanceVelocityPublisherNode(Node):
             point.append("unvisited")
             self.zed_points.append(point)
 
-
+    # Read objects from lidar
     def marker_array_callback(self, msg):
         self.list_of_points = []
         for i in range(len(msg.markers)):
@@ -63,6 +59,7 @@ class CollisionAvoidanceVelocityPublisherNode(Node):
             point.append("unvisited")
             self.list_of_points.append(point)
 
+    # Read objects from penguin list
     def penguin_list_callback(self, msg):
         self.penguin_points = []
         for i in range(len(msg.penguins)):
@@ -80,10 +77,12 @@ class CollisionAvoidanceVelocityPublisherNode(Node):
         collision_avoid_vel = Twist()
         new_speed_linear_x = self.speed_linear_x
         new_speed_angular_z = self.speed_angular_z
-        # new_list = self.list_of_points + self.penguin_points
-        new_list = self.penguin_points + self.zed_points
+        # actually only using zed and penguin list for the time being
+        #new_list = self.penguin_points + self.zed_points + self.list_of_points
+        new_list = self.penguin_points
 
         for point in new_list:
+            # Check in Front
             if point[0] > 0:
                 closest_point = point[0]-point[3]/2
                 if self.speed_linear_x > 0:
@@ -91,7 +90,7 @@ class CollisionAvoidanceVelocityPublisherNode(Node):
                         print('forwards collision imminent - stopping', point[6])
                         new_speed_linear_x = 0.0
                         new_speed_angular_z = 0.0
-                       
+            # Check behind if moving backwards           
             else:
                 closest_point = point[0] + point[3]/2
                 if self.speed_linear_x < 0:

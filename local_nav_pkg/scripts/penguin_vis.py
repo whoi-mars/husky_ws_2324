@@ -1,18 +1,12 @@
 #! /usr/bin/env python3
 
-# Convert pointcloud obstacle readout to list of penguins
+# Visualize the prnguin list
 
-from xml.etree.ElementTree import tostring
 import rclpy
-import point_cloud2
 from rclpy.node import Node
-from sensor_msgs.msg import PointCloud2
 from local_nav_pkg.msg import PenguinList
 from visualization_msgs.msg import MarkerArray, Marker
-from std_msgs.msg import Header
 from builtin_interfaces.msg import Duration
-import numpy as np
-from sklearn.cluster import DBSCAN 
 
 colors = [(230, 25, 75), (60, 180, 75), (255, 225, 25), (0, 130, 200), (245, 130, 48), (145, 30, 180), (70, 240, 240), (240, 50, 230), (210, 245, 60), (250, 190, 212), (0, 128, 128), (220, 190, 255), (170, 110, 40), (255, 250, 200), (128, 0, 0), (170, 255, 195), (128, 128, 0), (255, 215, 180), (0, 0, 128), (128, 128, 128), (255, 255, 255), (0, 0, 0)]
 class PenguinViz(Node):
@@ -22,8 +16,7 @@ class PenguinViz(Node):
         self.subscriber = self.create_subscription(PenguinList, 'penguin_list', self.list_callback, 1)
         
         self.marker_publisher_ = self.create_publisher(MarkerArray, 'penguin_viz', 1)
-        #self.cloud_timer_ = self.create_timer(.1, self.cluster)
-        
+
     def list_callback(self, msg):
         penguins = msg.penguins
         markers = MarkerArray()
@@ -45,9 +38,8 @@ class PenguinViz(Node):
             marker.scale.x = penguin.scale.x
             marker.scale.y = penguin.scale.y
             marker.scale.z = penguin.scale.z
-
+            # give each unvisited penguin its own color for tracking
             if penguin.visited == 'unvisited':
-                
                 color = colors[marker.id%20]
                 marker.color.r = float(color[0])/255
                 marker.color.b = float(color[1])/255
