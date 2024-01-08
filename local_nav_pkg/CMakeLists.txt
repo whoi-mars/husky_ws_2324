@@ -24,7 +24,6 @@ find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(visualization_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
-find_package(custom_nav_stack_pkg REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Penguin.msg"
@@ -39,7 +38,7 @@ ament_export_dependencies(rosidl_default_runtime)
 include_directories(include)
 
 install(
-  DIRECTORY launch rviz config world scripts msg
+  DIRECTORY launch rviz world scripts msg
   DESTINATION share/${PROJECT_NAME}
 )
 
