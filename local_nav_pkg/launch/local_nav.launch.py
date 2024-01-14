@@ -52,7 +52,7 @@ def generate_launch_description():
         lidar_detect,
         get_penguin_positions,
         penguin_viz,
-        #peng_inference,
+      #   peng_inference,
         collision_avoidance,
         approach_speed_controller,
     ])

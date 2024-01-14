@@ -86,7 +86,7 @@ class CollisionAvoidanceVelocityPublisherNode(Node):
             if point[0] > 0:
                 closest_point = point[0]-point[3]/2
                 if self.speed_linear_x > 0:
-                    if closest_point < 1.25 and abs(point[1]) < .75 and point[6] != "current": #if there is a point right in front of the robot - stop.
+                    if closest_point < .85 and abs(point[1]) < .75 and point[6] != "current": #if there is a point right in front of the robot - stop.
                         print('forwards collision imminent - stopping', point[6])
                         new_speed_linear_x = 0.0
                         new_speed_angular_z = 0.0

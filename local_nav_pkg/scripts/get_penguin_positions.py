@@ -236,8 +236,11 @@ class ObstaclePublisherNode(Node):
                 if sorted_penguin_list[i].label == self.current_penguin_label:
                     match_found = True
                     if self.y_goal != sorted_penguin_list[i].point.y: # if the position is not exactly the same, then we know we recieved new data
-                        self.reset_counter = 0
-                        print('goal updated!')                    
+                        if self.x_goal > 0:
+                            self.reset_counter = 0
+                            print('goal updated!')
+                        else: #if the goal moved behind the robot, we should let it expire
+                            self.reset_counter += 1                    
                     else: # if we didnt recieve new data then add to the reset counter which counts to setting a new goal
                         self.reset_counter += 1
                     self.x_goal = sorted_penguin_list[i].point.x - sorted_penguin_list[i].scale.x/2
